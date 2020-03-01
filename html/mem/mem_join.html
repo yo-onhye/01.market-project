@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
+<title>회원 정보 기입 > 송이마켓</title>
+<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/sub_page.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+</head>
+<body>
+
+<div id="skip">
+	<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
+</div>
+
+<div id="wrap" class="songe_wrap">
+	<div id="header" class="songe_header">
+		<div class="songe_gnb">
+			<h1 class="songe_gnb_logo">
+				<a href="#" class="icon-logo"><span class="blind">송이마켓</span></a>
+			</h1>
+			<div class="songe_gnb_inner">
+				<div class="songe_gnb_member">
+					<a href="#" class="songe_member_link"><i class="songe_member_ico icon-account"><span class="blind">로그인</span></i><span class="songe_member_txt" aria-hidden="true">로그인</span></a>
+					<a href="#" class="songe_member_link"><i class="songe_member_ico icon-keep"><span class="blind">Keep</span></i><span class="songe_member_txt" aria-hidden="true">Keep</span></a>
+					<a href="#" class="songe_member_link"><i class="songe_member_ico icon-cart"><span class="blind">장바구니</span></i><span class="songe_member_txt" aria-hidden="true">장바구니</span></a>
+				</div>
+				<div class="songe_gnb_menu">
+					<ul class="songe_gnb_lst">
+						<li><a href="#"><span>GOODS</span></a></li>
+						<li><a href="#"><span>FUNDING</span></a></li>
+						<li><a href="#"><span>COMUNITY</span></a></li>
+						<li><a href="#"><span>EVENT</span></a></li>
+						<li><a href="#"><span>ETC</span></a></li>
+					</ul>
+				</div>
+				<button type="button" class="btn_gnb_menu">
+					<span class="btn_menu_box">
+						<span class="btn_menu_inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="container" class="songe_container">
+		<div id="content" class="songe_content join_signup">
+			<div class="songe_cont_header">
+				<h2 class="songe_tit"><span>회원가입</span></h2>
+			</div>
+			<div class="songe_cont_area">
+				<div class="songe_dlst_bx">
+					<form id="frmUserInfo" name="frmUserInfo" method="post">
+						<dl class="songe_dlst">
+							<dt><label for="mem_email">이메일</label></dt>
+							<dd>
+								<div class="songe_inpset">
+									<!-- [D] 입력 값이 맞을 경우 .songe_inptxt에 .on_valid 추가,
+											  입력 값이 틀릴 경우 .songe_inptxt에 .on_invalid 추가 -->
+									<div class="songe_inptxt">
+										<input type="text" class="songe_inp" id="mem_email" name="mem_email" placeholder="이메일을 입력해주세요. (ex. sample@naver.com)">
+										<span class="songe_valid"></span>
+										<span class="songe_invalid"></span>
+										<span class="songe_txt_valid">사용할 수 있는 이메일입니다.</span>
+										<span class="songe_invalid_txt">사용 중인 이메일입니다.</span>
+									</div>
+									<button type="button" class="songe_btn" onclick="checkEmail()"><span>중복확인</span></button>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_pw">비밀번호</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="password" class="songe_inp" id="mem_pw" name="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()">
+									<span class="songe_valid"></span>
+									<span class="songe_invalid"></span>
+									<span class="songe_txt_valid">사용할 수 있는 비밀번호입니다.</span>
+									<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
+									<span class="songe_txt_info">문자, 숫자, 기호를 조합한 6자 이상의 비밀번호를 입력해주세요.</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_repw">비밀번호 확인</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="password" class="songe_inp" id="mem_repw" name="mem_repw" placeholder="비밀번호를 재입력해주세요." onchange="checkPassword()">
+									<span class="songe_valid"></span>
+									<span class="songe_invalid"></span>
+									<span class="songe_txt_valid">비밀번호가 일치합니다.</span>
+									<span class="songe_invalid_txt">비밀번호가 일치하지 않습니다.</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_name">이름</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="text" class="songe_inp" id="mem_name" name="mem_name" placeholder="성함을 입력해주세요.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_nickname">닉네임</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="text" class="songe_inp" id="mem_nickname" name="mem_nickname" placeholder="닉네임 입력해주세요.">
+									<span class="songe_valid"></span>
+									<span class="songe_invalid"></span>
+									<span class="songe_txt_valid">사용할 수 있는 닉네임입니다.</span>
+									<span class="songe_invalid_txt">사용할 수 없는 닉네임입니다.</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt>최애선택</dt>
+							<dd>
+								<div class="songe_inpset">
+									<div class="songe_select">
+										<select title="최애 그룹을 선택하세요.">
+											<option>최애그룹 선택</option>
+											<option>SF9</option>
+											<option>WANNA ONE</option>
+											<option>방탄소년단</option>
+										</select>
+									</div>
+									<div class="songe_select">
+										<select title="최애 멤버를 선택하세요.">
+											<option>최애멤버 선택</option>
+											<option>영빈</option>
+											<option>인성</option>
+											<option>재윤</option>
+											<option>다원</option>
+											<option>로운</option>
+											<option>주호</option>
+											<option>태양</option>
+											<option>휘영</option>
+											<option>찬희</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_phone">휴대폰</label></dt>
+							<dd>
+								<div class="songe_inpset">
+									<div class="songe_inptxt">
+										<input type="number" class="songe_inp" id="mem_phone" name="mem_phone" placeholder="'-'를 제외한 숫자를 입력해주세요.">
+										<span class="songe_valid"></span>
+										<span class="songe_invalid"></span>
+										<span class="songe_txt_valid">사용할 수 있는 번호입니다.</span>
+										<span class="songe_invalid_txt">사용 중인 번호입니다.</span>
+									</div>
+									<button type="button" class="songe_btn" onclick="verifyPhone()"><span>인증번호 받기</span></button>
+								</div>
+								<div class="songe_inpset ty_verify">
+									<div class="songe_inptxt">
+										<input type="text" class="songe_inp" id="mem_verify" name="mem_verify" title="인증번호를 입력해주세요." placeholder="인증번호를 입력해주세요.">
+										<span class="verify_timer">1:30</span>
+										<span class="songe_valid"></span>
+										<span class="songe_invalid"></span>
+										<span class="songe_txt_valid">인증번호가 일치합니다.</span>
+										<span class="songe_invalid_txt">인증번호가 일치하지 않습니다.</span>
+									</div>
+									<button type="button" class="songe_btn"><span>휴대폰 인증</span></button>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt>주소</dt>
+							<dd>
+								<div class="songe_inpset">
+									<div class="songe_inptxt">
+										<input type="text" class="songe_inp" id="mem_postcode" name="mem_postcode" readonly>
+									</div>
+									<button type="button" class="songe_btn" title="새창 열림" onclick="searchUserPostcode()"><span>우편번호 검색</span></button>
+								</div>
+								<div class="songe_inptxt">
+									<!-- [D] 우편번호 검색으로 받은 정보를 지명 + 건물명을 아래 입력창에 value값으로 입력 -->
+									<input type="text" class="songe_inp" id="user_address" name="user_address" title ="상세 주소를 입력해주세요">
+								</div>
+							</dd>
+						</dl>
+					</form>
+				</div>
+				<p class="songe_txt_caution">입력되지 않은 정보가 있습니다. 확인해주세요.</p>
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><button type="button" class="songe_btn" onclick="fn_cancel()"><span>취소</span></button></li>
+						<li><button type="button" class="songe_btn songe_btn_green" onclick="fn_join()"><span>확인</span></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer" class="songe_footer">
+		<div class="songe_support">
+			<div class="songe_support_in">
+				<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
+				<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+			</div>
+		</div>
+		<div class="songe_corp">
+			<div class="songe_footer_in">
+				<div class="songe_corp_info">
+					<p class="songe_corp_tit">(주)송이마켓</p>
+					<p class="songe_corp_infotx">대표 : 송이</p>
+					<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
+					<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+function searchUserPostcode() {
+	new daum.Postcode({
+		oncomplete: function(data) {
+			var addr = ''; // 주소 변수
+			var extraAddr = ''; // 참고항목 변수
+
+			if (data.userSelectedType === 'R') {
+					addr = data.roadAddress + ' ';
+			} else {
+					addr = data.jibunAddress + ' ';
+			}
+
+			if(data.userSelectedType === 'R'){
+					if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+							extraAddr += data.bname;
+					}
+
+					if(data.buildingName !== '' && data.apartment === 'Y'){
+							extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+					}
+
+					if(extraAddr !== ''){
+							extraAddr = ' (' + extraAddr + ')';
+					}
+					document.getElementById('user_address').value = extraAddr;
+				
+				} else {
+						document.getElementById('user_address').value = '';
+				}
+
+				// 우편번호와 주소 정보를 해당 필드에 넣는다.
+				document.getElementById('mem_postcode').value = data.zonecode;
+				document.getElementById('user_address').value = addr;
+				// 커서를 상세주소 필드로 이동한다.
+				document.getElementById('user_address').focus();
+			}
+	}).open();
+}
+
+function checkEmail() {
+	var valEmail = $('#mem_email').val();
+	
+	if( valEmail == '' || valEmail == 'undefined') {
+		$('#mem_email').focus();
+	} else {
+		if(!/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/.test(valEmail)){
+			$('#mem_email').closest('.songe_inptxt').attr('class', 'songe_inptxt on_invalid');
+			$('#mem_email').siblings('.songe_invalid_txt').text('이메일 형식이 맞지않습니다.');
+		} else {
+			$('#mem_email').closest('.songe_inptxt').attr('class', 'songe_inptxt on_valid');
+		}
+	}
+}
+
+function checkPassword() {
+	var valOriginPw = $('#mem_pw').val(),
+		valCheckPw = $('#mem_repw').val();
+
+	if (!/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,}$/.test(valOriginPw)) {
+		$('#mem_pw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_invalid');
+	} else {
+		$('#mem_pw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_valid');
+	}
+
+	if (valOriginPw != '' && valCheckPw != '') {
+		if (valOriginPw == valCheckPw) {
+			$('#mem_repw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_valid');
+		} else {
+			$('#mem_repw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_invalid');
+		}
+	}
+}
+
+function checkNecessary() {
+	if ($('mem_email').closest('.songe_inptxt').hasClass('on_invalid') || $('#mem_pw').closest('.songe_inptxt').hasClass('on_invalid') || $('#mem_repw').closest('.songe_inptxt').hasClass('on_invalid') || $('#mem_name').closest('.songe_inptxt').hasClass('.on_invalid') || $('#mem_nickname').closest('.songe_inptxt').hasClass('on_invalid') || $('#mem_phone').closest('.songe_inptxt').hasClass('on_invalid')) {
+		$('.songe_txt_caution').css('display','block').text('인증되지 않은 값이 있습니다. 확인해주세요.');
+		return false;
+	} 
+	else if (!$('#mem_email').val() || !$('#mem_pw').val() || !$('#mem_repw').val() || !$('#mem_name').val() || !$('#mem_nickname').val() || !$('#mem_phone').val() || !$('#mem_verify').val() || !$('#mem_postcode').val() || !$('#user_address').val()) {
+		$('.songe_txt_caution').css('display','block').text('입력되지 않은 값이 있습니다. 확인해주세요.');
+		return false;
+	}
+	else if (!$('#mem_email').closest('.songe_inptxt').hasClass('on_valid')) {
+		$('.songe_txt_caution').css('display','block').text('이메일 인증이 필요합니다. 확인해주세요.');
+		return false;
+	}
+	else {
+		$('.songe_txt_caution').css('display','none');
+		return true;
+	}
+}
+
+function verifyPhone() {
+	var valPhone = $('#mem_phone').val();
+
+	if( valPhone == '' || valPhone == 'undefined') {
+		$('#mem_phone').focus();
+	} else {
+		$('#mem_phone').closest('.songe_inpset').siblings('.ty_verify').show();
+	}
+}
+
+function fn_join() {
+	if (checkNecessary()) {
+		document.getElementById('frmUserInfo').submit();
+		location.href = "/01.market-project/html/mem/mem_result.html";
+	}
+}
+
+function fn_cancel() {
+	location.href = "/01.market-project/html/main.html";
+}
+</script>
+</body>
+</html>
