@@ -1,0 +1,122 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-account {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -26px -65px;
+  width: 15px;
+  height: 15px;
+}
+.icon-cart {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -45px -65px;
+  width: 15px;
+  height: 15px;
+}
+.icon-keep {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -64px -65px;
+  width: 15px;
+  height: 15px;
+}
+.icon-logo {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px 0px;
+  width: 134px;
+  height: 35px;
+}
+.icon-logo_apple {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px -39px;
+  width: 22px;
+  height: 22px;
+}
+.icon-logo_fb {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -26px -39px;
+  width: 22px;
+  height: 22px;
+}
+.icon-logo_google {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -52px -39px;
+  width: 22px;
+  height: 22px;
+}
+.icon-logo_kakao {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -78px -39px;
+  width: 22px;
+  height: 22px;
+}
+.icon-logo_mail {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -104px -39px;
+  width: 22px;
+  height: 22px;
+}
+.icon-logo_naver {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px -65px;
+  width: 22px;
+  height: 22px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-account {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-cart {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-keep {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_apple {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_fb {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_google {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_kakao {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_mail {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+  .icon-logo_naver {
+    background-image: url(../img/sprites/sprite@2x.png);
+    background-size: 134px 87px;
+  }
+}
