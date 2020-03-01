@@ -449,3 +449,39 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   100% { transform: translateY(0); } }
 
 .join_modify { max-width: 650px; margin: 50px auto; }
+
+.login_signin { max-width: 650px; margin: 50px auto; }
+
+.login_signin .songe_login_chk { margin-top: 20px; }
+
+.login_signin .songe_login_guide { margin-top: 30px; text-align: center; }
+
+.login_signin .songe_login_guide .songe_guide_link { display: inline-block; margin: 0 5px; border-bottom: 1px solid #3b574f; font-size: 13px; color: #3b574f; }
+
+.login_signin .songe_signin_bx { margin-top: 50px; }
+
+.login_signin .songe_signin_bx .songe_signin_lst { display: table; width: 100%; table-layout: fixed; }
+
+.login_signin .songe_signin_bx .songe_signin_lst li { position: relative; display: table-cell; text-align: center; }
+
+.login_signin .songe_signin_bx .songe_signin_lst li:before { position: absolute; top: 10%; left: 0; width: 1px; height: 80%; background: #e0e0e0; content: ""; }
+
+.login_signin .songe_signin_bx .songe_signin_lst li:first-child:before { display: none; }
+
+.login_signin .songe_signin_bx .songe_signin_lst a { position: relative; display: block; padding: 5px 0; font-size: 11px; line-height: 18px; color: #2f332f; word-break: keep-all; }
+
+.login_signin .songe_signin_bx .songe_signin_lst a strong { display: block; margin-top: 5px; font-size: 13px; letter-spacing: 1.5px; }
+
+.login_signin .songe_signin_bx .songe_signin_lst a span { display: block; }
+
+.login_signin .songe_signin_bx .songe_signin_lst a .logo { display: inline-block; width: 22px; height: 22px; vertical-align: top; }
+
+.login_findid { max-width: 650px; margin: 50px auto; }
+
+.login_findpw { max-width: 650px; margin: 50px auto; }
+
+.login_result { max-width: 650px; margin: 50px auto; }
+
+.login_result .songe_result_bx { width: 400px; margin: 20px auto; }
+
+.login_modifypw { max-width: 650px; margin: 50px auto; }
