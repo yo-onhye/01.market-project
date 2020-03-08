@@ -6,7 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 유형 선택 > 송이마켓</title>
+<title>회원정보 찾기 결과 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/sub_page.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
@@ -49,55 +49,26 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content join_certify">
+		<div id="content" class="songe_content login_result">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>회원유형 선택</span></h2>
+				<h2 class="songe_tit"><span>회원정보 찾기 결과</span></h2>
 			</div>
 			<div class="songe_cont_area">
-				<div class="songe_certify_top">
-					<div class="songe_certify_ico">
-						<img src="/01.market-project/dist/img/bn_wlecome.png" srcset="/01.market-project/dist/img/bn_wlecome@2x.png 2x" alt="WLECOME">
-					</div>
-					<h3 class="songe_certify_tit">회원가입 방식을 선택해주세요.</h3>
+				<div class="songe_result_top">
+					<p class="songe_result_tit">회원정보 리스트입니다.</p>
+					<!-- [D] 비밀번호 변경 시 노출 -->
+					<!-- <p class="songe_result_tit">비밀번호 변경이 완료되었습니다.</p> -->
 				</div>
-				<div class="songe_certify_bx">
-					<ul class="songe_certify_lst">
-						<li>
-							<a href="/01.market-project/html/mem/mem_terms.html">
-								<i class="logo icon-logo_mail"></i>
-								<strong>이메일로 회원가입</strong>
-								<span>이메일 주소와 비밀번호로 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_fb"></i>
-								<strong>Facebook으로 회원가입</strong>
-								<span>페이스북으로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_google"></i>
-								<strong>Google로 회원가입</strong>
-								<span>구글로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_naver"></i>
-								<strong>Naver로 회원가입</strong>
-								<span>네이버로 인증하여 회원가입</span>
-							</a>
-						</li>
-							</a>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_apple"></i>
-								<strong>Apple로 회원가입</strong>
-								<span>애플로 인증하여 회원가입</span>
-							</a>
-						</li>
+				<!-- [D] 회원정보 변경 시 노출 -->
+				<div class="songe_result_bx">
+					<ul class="songe_info_lst">
+						<li>회원명 : 김*한무</li>
+						<li>이메일 : tes***@naver.com</li>
+					</ul>
+				</div>
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><a href="/01.market-project/html/main.html" class="songe_btn"><span>메인으로</span></a></li>
 					</ul>
 				</div>
 			</div>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 유형 선택 > 송이마켓</title>
+<title>비밀번호 재설정 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/sub_page.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
@@ -49,55 +49,44 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content join_certify">
+		<div id="content" class="songe_content login_modifypw">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>회원유형 선택</span></h2>
+				<h2 class="songe_tit"><span>비밀번호 재설정</span></h2>
 			</div>
 			<div class="songe_cont_area">
-				<div class="songe_certify_top">
-					<div class="songe_certify_ico">
-						<img src="/01.market-project/dist/img/bn_wlecome.png" srcset="/01.market-project/dist/img/bn_wlecome@2x.png 2x" alt="WLECOME">
-					</div>
-					<h3 class="songe_certify_tit">회원가입 방식을 선택해주세요.</h3>
+				<div class="songe_dlst_bx">
+					<form id="frmModifyPw" name="frmModifyPw" method="post">
+						<dl class="songe_dlst">
+							<dt><label for="mem_pw">비밀번호</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="password" class="songe_inp" id="mem_pw" name="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()">
+									<span class="songe_valid"></span>
+									<span class="songe_invalid"></span>
+									<span class="songe_txt_valid">사용할 수 있는 비밀번호입니다.</span>
+									<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
+									<span class="songe_txt_info">문자, 숫자, 기호를 조합한 6자 이상의 비밀번호를 입력해주세요.</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_repw">비밀번호 확인</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="password" class="songe_inp" id="mem_repw" name="mem_repw" placeholder="비밀번호를 재입력해주세요." onchange="checkPassword()">
+									<span class="songe_valid"></span>
+									<span class="songe_invalid"></span>
+									<span class="songe_txt_valid">비밀번호가 일치합니다.</span>
+									<span class="songe_invalid_txt">비밀번호가 일치하지 않습니다.</span>
+								</div>
+							</dd>
+						</dl>
+					</form>
 				</div>
-				<div class="songe_certify_bx">
-					<ul class="songe_certify_lst">
-						<li>
-							<a href="/01.market-project/html/mem/mem_terms.html">
-								<i class="logo icon-logo_mail"></i>
-								<strong>이메일로 회원가입</strong>
-								<span>이메일 주소와 비밀번호로 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_fb"></i>
-								<strong>Facebook으로 회원가입</strong>
-								<span>페이스북으로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_google"></i>
-								<strong>Google로 회원가입</strong>
-								<span>구글로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_naver"></i>
-								<strong>Naver로 회원가입</strong>
-								<span>네이버로 인증하여 회원가입</span>
-							</a>
-						</li>
-							</a>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_apple"></i>
-								<strong>Apple로 회원가입</strong>
-								<span>애플로 인증하여 회원가입</span>
-							</a>
-						</li>
+				<p class="songe_txt_caution"></p>
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><button type="submit" class="songe_btn songe_btn_green" onclick="fn_modifypw()"><span>비밀번호 변경</span></button></li>
 					</ul>
 				</div>
 			</div>
@@ -123,5 +112,43 @@
 		</div>
 	</div>
 </div>
+<script>
+function checkPassword() {
+	var valOriginPw = $('#mem_pw').val(),
+		valCheckPw = $('#mem_repw').val();
+
+	if (!/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,}$/.test(valOriginPw)) {
+		$('#mem_pw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_invalid');
+	} else {
+		$('#mem_pw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_valid');
+	}
+
+	if (valOriginPw != '' && valCheckPw != '') {
+		if (valOriginPw == valCheckPw) {
+			$('#mem_repw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_valid');
+		} else {
+			$('#mem_repw').closest('.songe_inptxt').attr('class', 'songe_inptxt on_invalid');
+		}
+	}
+}
+
+function checkNecessary() {
+	if ($('#mem_pw').closest('.songe_inptxt').hasClass('on_invalid') || $('#mem_repw').closest('.songe_inptxt').hasClass('on_invalid')) {
+		$('.songe_txt_caution').css('display','block').text('비밀번호를 확인해주세요.');
+		return false;
+	} 
+	else {
+		$('.songe_txt_caution').css('display','none');
+		return true;
+	}
+}
+
+function fn_modifypw() {
+	if (checkNecessary()) {
+		document.getElementById('frmModifyPw').submit();
+		location.href = "/01.market-project/html/login/login_find_result.html";
+	}
+}
+</script>
 </body>
 </html>

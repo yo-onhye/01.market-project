@@ -49,53 +49,80 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content join_certify">
+		<div id="content" class="songe_content login_signin">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>회원유형 선택</span></h2>
+				<h2 class="songe_tit"><span>로그인</span></h2>
 			</div>
 			<div class="songe_cont_area">
-				<div class="songe_certify_top">
-					<div class="songe_certify_ico">
-						<img src="/01.market-project/dist/img/bn_wlecome.png" srcset="/01.market-project/dist/img/bn_wlecome@2x.png 2x" alt="WLECOME">
+				<div class="songe_dlst_bx">
+					<form id="frmLoginInfo" name="frmLoginInfo" method="post">
+						<dl class="songe_dlst">
+							<dt><label for="usr_id">아이디</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="text" class="songe_inp" id="usr_id" placeholder="이메일을 입력해주세요.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_pw">비밀번호</label></dt>
+							<dd>
+								<!-- [D] 입력 값이 맞을 경우 .songe_inptxt에 .on_valid 추가,
+													입력 값이 틀릴 경우 .songe_inptxt에 .on_invalid 추가 -->
+								<div class="songe_inptxt">
+									<input type="password" class="songe_inp" id="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()">
+									<span class="songe_invalid"></span>
+									<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
+								</div>
+							</dd>
+						</dl>
+					</form>
+					<div class="songe_login_chk">
+						<span class="songe_chk">
+							<input type="checkbox" name="keepLogin" id="keepLogin">
+							<label for="keepLogin">로그인 상태 유지</label>
+						</span>
 					</div>
-					<h3 class="songe_certify_tit">회원가입 방식을 선택해주세요.</h3>
+					<div class="songe_login_guide">
+						<a href="#" class="songe_guide_link">회원정보 찾기</a>
+						<a href="#" class="songe_guide_link">비밀번호 찾기</a>
+						<a href="#" class="songe_guide_link">회원가입</a>
+					</div>
 				</div>
-				<div class="songe_certify_bx">
-					<ul class="songe_certify_lst">
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><button type="submit" class="songe_btn songe_btn_green"><span>로그인</span></button></li>
+					</ul>
+				</div>
+				<div class="songe_signin_bx">
+					<ul class="songe_signin_lst">
 						<li>
-							<a href="/01.market-project/html/mem/mem_terms.html">
-								<i class="logo icon-logo_mail"></i>
-								<strong>이메일로 회원가입</strong>
-								<span>이메일 주소와 비밀번호로 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
+							<a href="#">
 								<i class="logo icon-logo_fb"></i>
-								<strong>Facebook으로 회원가입</strong>
-								<span>페이스북으로 인증하여 회원가입</span>
+								<strong>Facebook</strong>
+								<span>로그인</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
+							<a href="#">
 								<i class="logo icon-logo_google"></i>
-								<strong>Google로 회원가입</strong>
-								<span>구글로 인증하여 회원가입</span>
+								<strong>Google</strong>
+								<span>로그인</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
+							<a href="#">
 								<i class="logo icon-logo_naver"></i>
-								<strong>Naver로 회원가입</strong>
-								<span>네이버로 인증하여 회원가입</span>
+								<strong>Naver</strong>
+								<span>로그인</span>
 							</a>
 						</li>
-							</a>
+							
 						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
+							<a href="#">
 								<i class="logo icon-logo_apple"></i>
-								<strong>Apple로 회원가입</strong>
-								<span>애플로 인증하여 회원가입</span>
+								<strong>Apple</strong>
+								<span>로그인</span>
 							</a>
 						</li>
 					</ul>

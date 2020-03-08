@@ -1,4 +1,4 @@
-@import "common.scss";
+@import "songe.scss";
 
 /* page style */
 .songe_certify_top {
@@ -16,7 +16,7 @@
 		margin-top: 20px;
 		font-family: "S-CoreDream-4Regular", sans-serif;
 		font-size: 19px;
-		color: $songe-point-color1;
+		color: $point_color1;
 	}
 }
 .songe_certify_bx {
@@ -32,14 +32,14 @@
 			border: 1px solid #e0e0e0;
 			font-size: 0;
 			line-height: 22px;
-			color: $songe-primary-color;
+			color: $primary_color;
 			strong {
 				display: inline-block;
 				margin-right: 10px;
 				vertical-align: top;
 				font-family: "S-CoreDream-5Medium";
 				font-size: 15px;
-				color: $songe-primary-color;
+				color: $primary_color;
 			}
 			span {
 				display: inline-block;
@@ -72,7 +72,7 @@
 	}
 	.songe_result_tit {
 		margin-top: 20px;
-		color: $songe-point-color1;
+		color: $point_color1;
 		font-weight: normal;
 		font-family: "S-CoreDream-5Medium", sans-serif;
 		font-size: 24px;
@@ -120,7 +120,7 @@
 				margin-top: 8px;
 				padding: 12px;
 				border: 1px solid #e0e0e0;
-				background: #fff;
+				background: $white_color;
 				color: #777;
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
@@ -129,7 +129,7 @@
 				scrollbar-arrow-color: #bcbcbc;
 				scrollbar-base-color: #bcbcbc;
 				scrollbar-face-color: #bcbcbc;
-				scrollbar-track-color: #fff;
+				scrollbar-track-color: $white_color;
 				scrollbar-darkshadow-color: #bcbcbc;
 				scrollbar-highlight-color: #bcbcbc;
 				scrollbar-shadow-color: #bcbcbc;
@@ -178,6 +178,100 @@
 }
 
 .join_modify {
+	max-width: 650px;
+	margin: 50px auto;
+}
+
+.login_signin {
+	max-width: 650px;
+	margin: 50px auto;
+	.songe_login_chk {
+		margin-top: 20px;
+	}
+	.songe_login_guide {
+		margin-top: 30px;
+		text-align: center;
+		.songe_guide_link {
+			display: inline-block;
+			margin: 0 5px;
+			border-bottom: 1px solid $point_color1;
+			font-size: 13px;
+			color: $point_color1;
+		}
+	}
+	.songe_signin_bx {
+		margin-top: 50px;
+		.songe_signin_lst {
+			display: table;
+			width: 100%;
+			table-layout: fixed;
+			li {
+				position: relative;
+				display: table-cell;
+				text-align: center;
+				&:before {
+					position: absolute;
+					top: 10%;
+					left: 0;
+					width: 1px;
+					height: 80%;
+					background: #e0e0e0;
+					content: "";
+				}
+				&:first-child {
+					&:before {
+						display: none;
+					}
+				}
+			}
+			a {
+				position: relative;
+				display: block;
+				padding: 5px 0;
+				font-size: 11px;
+				line-height: 18px;
+				color: $primary_color;
+				word-break: keep-all;
+				strong {
+					display: block;
+					margin-top: 5px;
+					font-size: 13px;
+					letter-spacing: 1.5px;
+				}
+				span {
+					display: block;
+				}
+				.logo {
+					display: inline-block;
+					width: 22px;
+					height: 22px;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+}
+
+.login_findid {
+	max-width: 650px;
+	margin: 50px auto;
+}
+
+.login_findpw {
+	max-width: 650px;
+	margin: 50px auto;
+}
+
+.login_result {
+	max-width: 650px;
+	margin: 50px auto;
+	.songe_result_bx {
+		width: 400px;
+		margin: 20px auto;
+	}
+}
+
+.login_modifypw {
 	max-width: 650px;
 	margin: 50px auto;
 }

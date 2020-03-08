@@ -6,7 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 유형 선택 > 송이마켓</title>
+<title>회원정보 찾기 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/sub_page.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
@@ -49,55 +49,53 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content join_certify">
+		<div id="content" class="songe_content login_findid">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>회원유형 선택</span></h2>
+				<h2 class="songe_tit"><span>회원정보 찾기</span></h2>
 			</div>
 			<div class="songe_cont_area">
-				<div class="songe_certify_top">
-					<div class="songe_certify_ico">
-						<img src="/01.market-project/dist/img/bn_wlecome.png" srcset="/01.market-project/dist/img/bn_wlecome@2x.png 2x" alt="WLECOME">
-					</div>
-					<h3 class="songe_certify_tit">회원가입 방식을 선택해주세요.</h3>
+				<div class="songe_dlst_bx">
+					<form id="frmFindId" name="frmFindId" method="post">
+						<dl class="songe_dlst">
+							<dt><label for="mem_name">이름</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="text" class="songe_inp" id="mem_name" name="mem_name" placeholder="성함을 입력해주세요.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="mem_phone">휴대폰</label></dt>
+							<dd>
+								<div class="songe_inpset">
+									<div class="songe_inptxt">
+										<input type="number" class="songe_inp" id="mem_phone" name="mem_phone" placeholder="'-'를 제외한 숫자를 입력해주세요.">
+										<span class="songe_valid"></span>
+										<span class="songe_invalid"></span>
+										<span class="songe_txt_valid">사용할 수 있는 번호입니다.</span>
+										<span class="songe_invalid_txt">사용 중인 번호입니다.</span>
+									</div>
+									<button type="button" class="songe_btn" onclick="verifyPhone()"><span>인증번호 받기</span></button>
+								</div>
+								<div class="songe_inpset ty_verify">
+									<div class="songe_inptxt">
+										<input type="text" class="songe_inp" id="mem_verify" name="mem_verify" title="인증번호를 입력해주세요." placeholder="인증번호를 입력해주세요.">
+										<span class="verify_timer">1:30</span>
+										<span class="songe_valid"></span>
+										<span class="songe_invalid"></span>
+										<span class="songe_txt_valid">인증번호가 일치합니다.</span>
+										<span class="songe_invalid_txt">인증번호가 일치하지 않습니다.</span>
+									</div>
+									<button type="button" class="songe_btn"><span>휴대폰 인증</span></button>
+								</div>
+							</dd>
+						</dl>
+					</form>
 				</div>
-				<div class="songe_certify_bx">
-					<ul class="songe_certify_lst">
-						<li>
-							<a href="/01.market-project/html/mem/mem_terms.html">
-								<i class="logo icon-logo_mail"></i>
-								<strong>이메일로 회원가입</strong>
-								<span>이메일 주소와 비밀번호로 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_fb"></i>
-								<strong>Facebook으로 회원가입</strong>
-								<span>페이스북으로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_google"></i>
-								<strong>Google로 회원가입</strong>
-								<span>구글로 인증하여 회원가입</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_naver"></i>
-								<strong>Naver로 회원가입</strong>
-								<span>네이버로 인증하여 회원가입</span>
-							</a>
-						</li>
-							</a>
-						<li>
-							<a href="javascript:alert('시스템 준비중입니다.');">
-								<i class="logo icon-logo_apple"></i>
-								<strong>Apple로 회원가입</strong>
-								<span>애플로 인증하여 회원가입</span>
-							</a>
-						</li>
+				<p class="songe_txt_caution"></p>
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><button type="submit" class="songe_btn songe_btn_green" onclick="fn_findid()"><span>회원정보 찾기</span></button></li>
 					</ul>
 				</div>
 			</div>
@@ -123,5 +121,33 @@
 		</div>
 	</div>
 </div>
+<script>
+function checkValue() {
+	var valName = $('#mem_name').val(),
+			valPhone = $('#mem_phone').val();
+
+	if( valName == '' || valName == 'undefined' ) {
+		$('#mem_name').focus();
+		$('.songe_txt_caution').css('display','block').text('이름을 입력해주세요.');
+		return false;
+	}
+	else if ( valPhone == '' || valPhone == 'undefined' ){
+		$('#mem_phone').focus();
+		$('.songe_txt_caution').css('display','block').text('핸드폰 번호를 입력해주세요.');
+		return false;
+	}
+	else {
+		$('.songe_txt_caution').css('display','none');
+		return true;
+	}
+}
+
+function fn_findid() {
+	if (checkValue()) {
+		document.getElementById('frmFindId').submit();
+		location.href = "/01.market-project/html/login/login_find_result.html";
+	}
+}
+</script>
 </body>
 </html>
