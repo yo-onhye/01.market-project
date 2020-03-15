@@ -1,6 +1,10 @@
-@import "songe.scss";
+@charset "utf-8";
 
-/* page style */
+@import "common/variables";
+@import "common/mixins";
+@import "common/sprite";
+
+/* _sub_page.scss */
 .songe_certify_top {
 	text-align: center;
 	.songe_certify_ico {
@@ -52,6 +56,21 @@
 				left: 20px;
 				width: 22px;
 				height: 22px;
+				&.logo_mail {
+					@include sprite($sp-logo_mail);
+				}
+				&.logo_facebook {
+					@include sprite($sp-logo_fb);
+				}
+				&.logo_google {
+					@include sprite($sp-logo_google);
+				}
+				&.logo_naver {
+					@include sprite($sp-logo_naver);
+				}
+				&.logo_apple {
+					@include sprite($sp-logo_apple);
+				}
 			}
 		}
 	}
@@ -243,9 +262,22 @@
 				}
 				.logo {
 					display: inline-block;
-					width: 22px;
-					height: 22px;
 					vertical-align: top;
+					&.logo_mail {
+						@include sprite($sp-logo_mail);
+					}
+					&.logo_facebook {
+						@include sprite($sp-logo_fb);
+					}
+					&.logo_google {
+						@include sprite($sp-logo_google);
+					}
+					&.logo_naver {
+						@include sprite($sp-logo_naver);
+					}
+					&.logo_apple {
+						@include sprite($sp-logo_apple);
+					}
 				}
 			}
 		}

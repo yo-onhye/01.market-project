@@ -1,8 +1,10 @@
 @charset "utf-8";
 
-// sprites
-@import "sp_sprite.css";
+@import "common/variables";
+@import "common/mixins";
+@import "common/base";
+@import "common/common";
+@import "import/sub_page";
 
-// scss
-@import "mixin.scss";
-@import "common.scss";
+// sprites
+@import "common/sprite";

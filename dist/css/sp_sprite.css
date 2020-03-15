@@ -16,107 +16,147 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-account {
+.icon-sp-account {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -26px -65px;
+  background-position: -19px -209px;
   width: 15px;
   height: 15px;
 }
-.icon-cart {
+.icon-sp-account@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -45px -65px;
+  background-position: -48px -161px;
+  width: 30px;
+  height: 30px;
+}
+.icon-sp-cart {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px -209px;
   width: 15px;
   height: 15px;
 }
-.icon-keep {
+.icon-sp-cart@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -64px -65px;
+  background-position: -218px -74px;
+  width: 30px;
+  height: 30px;
+}
+.icon-sp-cunit_keep {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -246px -161px;
+  width: 18px;
+  height: 17px;
+}
+.icon-sp-cunit_keep@2x {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -178px -74px;
+  width: 36px;
+  height: 34px;
+}
+.icon-sp-cunit_keep_on {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -240px -139px;
+  width: 18px;
+  height: 17px;
+}
+.icon-sp-cunit_keep_on@2x {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -138px -74px;
+  width: 36px;
+  height: 34px;
+}
+.icon-sp-keep {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -252px -74px;
   width: 15px;
   height: 15px;
 }
-.icon-logo {
+.icon-sp-keep@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: 0px 0px;
+  background-position: -82px -161px;
+  width: 30px;
+  height: 30px;
+}
+.icon-sp-logo {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px -74px;
   width: 134px;
   height: 35px;
 }
-.icon-logo_apple {
+.icon-sp-logo@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: 0px -39px;
+  background-position: 0px 0px;
+  width: 268px;
+  height: 70px;
+}
+.icon-sp-logo_apple {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -142px -161px;
   width: 22px;
   height: 22px;
 }
-.icon-logo_fb {
+.icon-sp-logo_apple@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -26px -39px;
+  background-position: -96px -113px;
+  width: 44px;
+  height: 44px;
+}
+.icon-sp-logo_fb {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -116px -161px;
   width: 22px;
   height: 22px;
 }
-.icon-logo_google {
+.icon-sp-logo_fb@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -52px -39px;
+  background-position: -48px -113px;
+  width: 44px;
+  height: 44px;
+}
+.icon-sp-logo_google {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -168px -161px;
   width: 22px;
   height: 22px;
 }
-.icon-logo_kakao {
+.icon-sp-logo_google@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -78px -39px;
+  background-position: -192px -113px;
+  width: 44px;
+  height: 44px;
+}
+.icon-sp-logo_kakao {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -220px -161px;
   width: 22px;
   height: 22px;
 }
-.icon-logo_mail {
+.icon-sp-logo_kakao@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: -104px -39px;
+  background-position: -144px -113px;
+  width: 44px;
+  height: 44px;
+}
+.icon-sp-logo_mail {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -194px -161px;
   width: 22px;
   height: 22px;
 }
-.icon-logo_naver {
+.icon-sp-logo_mail@2x {
   background-image: url(../img/sprites/sprite.png);
-  background-position: 0px -65px;
+  background-position: 0px -161px;
+  width: 44px;
+  height: 44px;
+}
+.icon-sp-logo_naver {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: -240px -113px;
   width: 22px;
   height: 22px;
 }
-
-@media (-webkit-min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi) {
-  .icon-account {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-cart {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-keep {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_apple {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_fb {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_google {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_kakao {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_mail {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
-  .icon-logo_naver {
-    background-image: url(../img/sprites/sprite@2x.png);
-    background-size: 134px 87px;
-  }
+.icon-sp-logo_naver@2x {
+  background-image: url(../img/sprites/sprite.png);
+  background-position: 0px -113px;
+  width: 44px;
+  height: 44px;
 }

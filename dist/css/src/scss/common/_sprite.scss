@@ -1,0 +1,418 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sp-account-name: 'sp-account';
+$sp-account-x: 108px;
+$sp-account-y: 65px;
+$sp-account-offset-x: -108px;
+$sp-account-offset-y: -65px;
+$sp-account-width: 15px;
+$sp-account-height: 15px;
+$sp-account-total-width: 134px;
+$sp-account-total-height: 87px;
+$sp-account-image: '../img/sprites/sprite.png';
+$sp-account: (108px, 65px, -108px, -65px, 15px, 15px, 134px, 87px, '../img/sprites/sprite.png', 'sp-account', );
+$sp-cart-name: 'sp-cart';
+$sp-cart-x: 70px;
+$sp-cart-y: 65px;
+$sp-cart-offset-x: -70px;
+$sp-cart-offset-y: -65px;
+$sp-cart-width: 15px;
+$sp-cart-height: 15px;
+$sp-cart-total-width: 134px;
+$sp-cart-total-height: 87px;
+$sp-cart-image: '../img/sprites/sprite.png';
+$sp-cart: (70px, 65px, -70px, -65px, 15px, 15px, 134px, 87px, '../img/sprites/sprite.png', 'sp-cart', );
+$sp-cunit-keep-name: 'sp-cunit_keep';
+$sp-cunit-keep-x: 48px;
+$sp-cunit-keep-y: 65px;
+$sp-cunit-keep-offset-x: -48px;
+$sp-cunit-keep-offset-y: -65px;
+$sp-cunit-keep-width: 18px;
+$sp-cunit-keep-height: 17px;
+$sp-cunit-keep-total-width: 134px;
+$sp-cunit-keep-total-height: 87px;
+$sp-cunit-keep-image: '../img/sprites/sprite.png';
+$sp-cunit-keep: (48px, 65px, -48px, -65px, 18px, 17px, 134px, 87px, '../img/sprites/sprite.png', 'sp-cunit_keep', );
+$sp-cunit-keep-on-name: 'sp-cunit_keep_on';
+$sp-cunit-keep-on-x: 26px;
+$sp-cunit-keep-on-y: 65px;
+$sp-cunit-keep-on-offset-x: -26px;
+$sp-cunit-keep-on-offset-y: -65px;
+$sp-cunit-keep-on-width: 18px;
+$sp-cunit-keep-on-height: 17px;
+$sp-cunit-keep-on-total-width: 134px;
+$sp-cunit-keep-on-total-height: 87px;
+$sp-cunit-keep-on-image: '../img/sprites/sprite.png';
+$sp-cunit-keep-on: (26px, 65px, -26px, -65px, 18px, 17px, 134px, 87px, '../img/sprites/sprite.png', 'sp-cunit_keep_on', );
+$sp-keep-name: 'sp-keep';
+$sp-keep-x: 89px;
+$sp-keep-y: 65px;
+$sp-keep-offset-x: -89px;
+$sp-keep-offset-y: -65px;
+$sp-keep-width: 15px;
+$sp-keep-height: 15px;
+$sp-keep-total-width: 134px;
+$sp-keep-total-height: 87px;
+$sp-keep-image: '../img/sprites/sprite.png';
+$sp-keep: (89px, 65px, -89px, -65px, 15px, 15px, 134px, 87px, '../img/sprites/sprite.png', 'sp-keep', );
+$sp-logo-name: 'sp-logo';
+$sp-logo-x: 0px;
+$sp-logo-y: 0px;
+$sp-logo-offset-x: 0px;
+$sp-logo-offset-y: 0px;
+$sp-logo-width: 134px;
+$sp-logo-height: 35px;
+$sp-logo-total-width: 134px;
+$sp-logo-total-height: 87px;
+$sp-logo-image: '../img/sprites/sprite.png';
+$sp-logo: (0px, 0px, 0px, 0px, 134px, 35px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo', );
+$sp-logo-apple-name: 'sp-logo_apple';
+$sp-logo-apple-x: 0px;
+$sp-logo-apple-y: 39px;
+$sp-logo-apple-offset-x: 0px;
+$sp-logo-apple-offset-y: -39px;
+$sp-logo-apple-width: 22px;
+$sp-logo-apple-height: 22px;
+$sp-logo-apple-total-width: 134px;
+$sp-logo-apple-total-height: 87px;
+$sp-logo-apple-image: '../img/sprites/sprite.png';
+$sp-logo-apple: (0px, 39px, 0px, -39px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_apple', );
+$sp-logo-fb-name: 'sp-logo_fb';
+$sp-logo-fb-x: 0px;
+$sp-logo-fb-y: 65px;
+$sp-logo-fb-offset-x: 0px;
+$sp-logo-fb-offset-y: -65px;
+$sp-logo-fb-width: 22px;
+$sp-logo-fb-height: 22px;
+$sp-logo-fb-total-width: 134px;
+$sp-logo-fb-total-height: 87px;
+$sp-logo-fb-image: '../img/sprites/sprite.png';
+$sp-logo-fb: (0px, 65px, 0px, -65px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_fb', );
+$sp-logo-google-name: 'sp-logo_google';
+$sp-logo-google-x: 78px;
+$sp-logo-google-y: 39px;
+$sp-logo-google-offset-x: -78px;
+$sp-logo-google-offset-y: -39px;
+$sp-logo-google-width: 22px;
+$sp-logo-google-height: 22px;
+$sp-logo-google-total-width: 134px;
+$sp-logo-google-total-height: 87px;
+$sp-logo-google-image: '../img/sprites/sprite.png';
+$sp-logo-google: (78px, 39px, -78px, -39px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_google', );
+$sp-logo-kakao-name: 'sp-logo_kakao';
+$sp-logo-kakao-x: 52px;
+$sp-logo-kakao-y: 39px;
+$sp-logo-kakao-offset-x: -52px;
+$sp-logo-kakao-offset-y: -39px;
+$sp-logo-kakao-width: 22px;
+$sp-logo-kakao-height: 22px;
+$sp-logo-kakao-total-width: 134px;
+$sp-logo-kakao-total-height: 87px;
+$sp-logo-kakao-image: '../img/sprites/sprite.png';
+$sp-logo-kakao: (52px, 39px, -52px, -39px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_kakao', );
+$sp-logo-mail-name: 'sp-logo_mail';
+$sp-logo-mail-x: 26px;
+$sp-logo-mail-y: 39px;
+$sp-logo-mail-offset-x: -26px;
+$sp-logo-mail-offset-y: -39px;
+$sp-logo-mail-width: 22px;
+$sp-logo-mail-height: 22px;
+$sp-logo-mail-total-width: 134px;
+$sp-logo-mail-total-height: 87px;
+$sp-logo-mail-image: '../img/sprites/sprite.png';
+$sp-logo-mail: (26px, 39px, -26px, -39px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_mail', );
+$sp-logo-naver-name: 'sp-logo_naver';
+$sp-logo-naver-x: 104px;
+$sp-logo-naver-y: 39px;
+$sp-logo-naver-offset-x: -104px;
+$sp-logo-naver-offset-y: -39px;
+$sp-logo-naver-width: 22px;
+$sp-logo-naver-height: 22px;
+$sp-logo-naver-total-width: 134px;
+$sp-logo-naver-total-height: 87px;
+$sp-logo-naver-image: '../img/sprites/sprite.png';
+$sp-logo-naver: (104px, 39px, -104px, -39px, 22px, 22px, 134px, 87px, '../img/sprites/sprite.png', 'sp-logo_naver', );
+$sp-account-2x-name: 'sp-account@2x';
+$sp-account-2x-x: 216px;
+$sp-account-2x-y: 130px;
+$sp-account-2x-offset-x: -216px;
+$sp-account-2x-offset-y: -130px;
+$sp-account-2x-width: 30px;
+$sp-account-2x-height: 30px;
+$sp-account-2x-total-width: 268px;
+$sp-account-2x-total-height: 174px;
+$sp-account-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-account-2x: (216px, 130px, -216px, -130px, 30px, 30px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-account@2x', );
+$sp-cart-2x-name: 'sp-cart@2x';
+$sp-cart-2x-x: 140px;
+$sp-cart-2x-y: 130px;
+$sp-cart-2x-offset-x: -140px;
+$sp-cart-2x-offset-y: -130px;
+$sp-cart-2x-width: 30px;
+$sp-cart-2x-height: 30px;
+$sp-cart-2x-total-width: 268px;
+$sp-cart-2x-total-height: 174px;
+$sp-cart-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-cart-2x: (140px, 130px, -140px, -130px, 30px, 30px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-cart@2x', );
+$sp-cunit-keep-2x-name: 'sp-cunit_keep@2x';
+$sp-cunit-keep-2x-x: 96px;
+$sp-cunit-keep-2x-y: 130px;
+$sp-cunit-keep-2x-offset-x: -96px;
+$sp-cunit-keep-2x-offset-y: -130px;
+$sp-cunit-keep-2x-width: 36px;
+$sp-cunit-keep-2x-height: 34px;
+$sp-cunit-keep-2x-total-width: 268px;
+$sp-cunit-keep-2x-total-height: 174px;
+$sp-cunit-keep-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-cunit-keep-2x: (96px, 130px, -96px, -130px, 36px, 34px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-cunit_keep@2x', );
+$sp-cunit-keep-on-2x-name: 'sp-cunit_keep_on@2x';
+$sp-cunit-keep-on-2x-x: 52px;
+$sp-cunit-keep-on-2x-y: 130px;
+$sp-cunit-keep-on-2x-offset-x: -52px;
+$sp-cunit-keep-on-2x-offset-y: -130px;
+$sp-cunit-keep-on-2x-width: 36px;
+$sp-cunit-keep-on-2x-height: 34px;
+$sp-cunit-keep-on-2x-total-width: 268px;
+$sp-cunit-keep-on-2x-total-height: 174px;
+$sp-cunit-keep-on-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-cunit-keep-on-2x: (52px, 130px, -52px, -130px, 36px, 34px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-cunit_keep_on@2x', );
+$sp-keep-2x-name: 'sp-keep@2x';
+$sp-keep-2x-x: 178px;
+$sp-keep-2x-y: 130px;
+$sp-keep-2x-offset-x: -178px;
+$sp-keep-2x-offset-y: -130px;
+$sp-keep-2x-width: 30px;
+$sp-keep-2x-height: 30px;
+$sp-keep-2x-total-width: 268px;
+$sp-keep-2x-total-height: 174px;
+$sp-keep-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-keep-2x: (178px, 130px, -178px, -130px, 30px, 30px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-keep@2x', );
+$sp-logo-2x-name: 'sp-logo@2x';
+$sp-logo-2x-x: 0px;
+$sp-logo-2x-y: 0px;
+$sp-logo-2x-offset-x: 0px;
+$sp-logo-2x-offset-y: 0px;
+$sp-logo-2x-width: 268px;
+$sp-logo-2x-height: 70px;
+$sp-logo-2x-total-width: 268px;
+$sp-logo-2x-total-height: 174px;
+$sp-logo-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-2x: (0px, 0px, 0px, 0px, 268px, 70px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo@2x', );
+$sp-logo-apple-2x-name: 'sp-logo_apple@2x';
+$sp-logo-apple-2x-x: 0px;
+$sp-logo-apple-2x-y: 78px;
+$sp-logo-apple-2x-offset-x: 0px;
+$sp-logo-apple-2x-offset-y: -78px;
+$sp-logo-apple-2x-width: 44px;
+$sp-logo-apple-2x-height: 44px;
+$sp-logo-apple-2x-total-width: 268px;
+$sp-logo-apple-2x-total-height: 174px;
+$sp-logo-apple-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-apple-2x: (0px, 78px, 0px, -78px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_apple@2x', );
+$sp-logo-fb-2x-name: 'sp-logo_fb@2x';
+$sp-logo-fb-2x-x: 0px;
+$sp-logo-fb-2x-y: 130px;
+$sp-logo-fb-2x-offset-x: 0px;
+$sp-logo-fb-2x-offset-y: -130px;
+$sp-logo-fb-2x-width: 44px;
+$sp-logo-fb-2x-height: 44px;
+$sp-logo-fb-2x-total-width: 268px;
+$sp-logo-fb-2x-total-height: 174px;
+$sp-logo-fb-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-fb-2x: (0px, 130px, 0px, -130px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_fb@2x', );
+$sp-logo-google-2x-name: 'sp-logo_google@2x';
+$sp-logo-google-2x-x: 156px;
+$sp-logo-google-2x-y: 78px;
+$sp-logo-google-2x-offset-x: -156px;
+$sp-logo-google-2x-offset-y: -78px;
+$sp-logo-google-2x-width: 44px;
+$sp-logo-google-2x-height: 44px;
+$sp-logo-google-2x-total-width: 268px;
+$sp-logo-google-2x-total-height: 174px;
+$sp-logo-google-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-google-2x: (156px, 78px, -156px, -78px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_google@2x', );
+$sp-logo-kakao-2x-name: 'sp-logo_kakao@2x';
+$sp-logo-kakao-2x-x: 104px;
+$sp-logo-kakao-2x-y: 78px;
+$sp-logo-kakao-2x-offset-x: -104px;
+$sp-logo-kakao-2x-offset-y: -78px;
+$sp-logo-kakao-2x-width: 44px;
+$sp-logo-kakao-2x-height: 44px;
+$sp-logo-kakao-2x-total-width: 268px;
+$sp-logo-kakao-2x-total-height: 174px;
+$sp-logo-kakao-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-kakao-2x: (104px, 78px, -104px, -78px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_kakao@2x', );
+$sp-logo-mail-2x-name: 'sp-logo_mail@2x';
+$sp-logo-mail-2x-x: 52px;
+$sp-logo-mail-2x-y: 78px;
+$sp-logo-mail-2x-offset-x: -52px;
+$sp-logo-mail-2x-offset-y: -78px;
+$sp-logo-mail-2x-width: 44px;
+$sp-logo-mail-2x-height: 44px;
+$sp-logo-mail-2x-total-width: 268px;
+$sp-logo-mail-2x-total-height: 174px;
+$sp-logo-mail-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-mail-2x: (52px, 78px, -52px, -78px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_mail@2x', );
+$sp-logo-naver-2x-name: 'sp-logo_naver@2x';
+$sp-logo-naver-2x-x: 208px;
+$sp-logo-naver-2x-y: 78px;
+$sp-logo-naver-2x-offset-x: -208px;
+$sp-logo-naver-2x-offset-y: -78px;
+$sp-logo-naver-2x-width: 44px;
+$sp-logo-naver-2x-height: 44px;
+$sp-logo-naver-2x-total-width: 268px;
+$sp-logo-naver-2x-total-height: 174px;
+$sp-logo-naver-2x-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$sp-logo-naver-2x: (208px, 78px, -208px, -78px, 44px, 44px, 268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', 'sp-logo_naver@2x', );
+$spritesheet-width: 134px;
+$spritesheet-height: 87px;
+$spritesheet-image: '../img/sprites/sprite.png';
+$spritesheet-sprites: ($sp-account, $sp-cart, $sp-cunit-keep, $sp-cunit-keep-on, $sp-keep, $sp-logo, $sp-logo-apple, $sp-logo-fb, $sp-logo-google, $sp-logo-kakao, $sp-logo-mail, $sp-logo-naver, );
+$spritesheet: (134px, 87px, '../img/sprites/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 268px;
+$retina-spritesheet-height: 174px;
+$retina-spritesheet-image: '../../../../../dist/img/sprites/sprite@2x.png';
+$retina-spritesheet-sprites: ($sp-account-2x, $sp-cart-2x, $sp-cunit-keep-2x, $sp-cunit-keep-on-2x, $sp-keep-2x, $sp-logo-2x, $sp-logo-apple-2x, $sp-logo-fb-2x, $sp-logo-google-2x, $sp-logo-kakao-2x, $sp-logo-mail-2x, $sp-logo-naver-2x, );
+$retina-spritesheet: (268px, 174px, '../../../../../dist/img/sprites/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$sp-account-group-name: 'sp-account';
+$sp-account-group: ('sp-account', $sp-account, $sp-account-2x, );
+$sp-cart-group-name: 'sp-cart';
+$sp-cart-group: ('sp-cart', $sp-cart, $sp-cart-2x, );
+$sp-cunit-keep-group-name: 'sp-cunit_keep';
+$sp-cunit-keep-group: ('sp-cunit_keep', $sp-cunit-keep, $sp-cunit-keep-2x, );
+$sp-cunit-keep-on-group-name: 'sp-cunit_keep_on';
+$sp-cunit-keep-on-group: ('sp-cunit_keep_on', $sp-cunit-keep-on, $sp-cunit-keep-on-2x, );
+$sp-keep-group-name: 'sp-keep';
+$sp-keep-group: ('sp-keep', $sp-keep, $sp-keep-2x, );
+$sp-logo-group-name: 'sp-logo';
+$sp-logo-group: ('sp-logo', $sp-logo, $sp-logo-2x, );
+$sp-logo-apple-group-name: 'sp-logo_apple';
+$sp-logo-apple-group: ('sp-logo_apple', $sp-logo-apple, $sp-logo-apple-2x, );
+$sp-logo-fb-group-name: 'sp-logo_fb';
+$sp-logo-fb-group: ('sp-logo_fb', $sp-logo-fb, $sp-logo-fb-2x, );
+$sp-logo-google-group-name: 'sp-logo_google';
+$sp-logo-google-group: ('sp-logo_google', $sp-logo-google, $sp-logo-google-2x, );
+$sp-logo-kakao-group-name: 'sp-logo_kakao';
+$sp-logo-kakao-group: ('sp-logo_kakao', $sp-logo-kakao, $sp-logo-kakao-2x, );
+$sp-logo-mail-group-name: 'sp-logo_mail';
+$sp-logo-mail-group: ('sp-logo_mail', $sp-logo-mail, $sp-logo-mail-2x, );
+$sp-logo-naver-group-name: 'sp-logo_naver';
+$sp-logo-naver-group: ('sp-logo_naver', $sp-logo-naver, $sp-logo-naver-2x, );
+$retina-groups: ($sp-account-group, $sp-cart-group, $sp-cunit-keep-group, $sp-cunit-keep-on-group, $sp-keep-group, $sp-logo-group, $sp-logo-apple-group, $sp-logo-fb-group, $sp-logo-google-group, $sp-logo-kakao-group, $sp-logo-mail-group, $sp-logo-naver-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

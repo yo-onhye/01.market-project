@@ -1,7 +1,8 @@
 // gulpfile.js
 var gulp = require("gulp"),
 	sass = require("gulp-sass"),
-	spritesmith = require("gulp.spritesmith");
+	spritesmith = require("gulp.spritesmith"),
+	del = require("del");
 
 // 일반 컴파일
 gulp.task("sass", function() {
@@ -24,18 +25,30 @@ gulp.task("sass:watch", function() {
 
 // image sprite
 gulp.task("sprite", function(done) {
-	var spriteData = gulp.src("./src/img/sprites/*.png").pipe(
+	const spriteData = gulp.src("./src/img/sprites/*.png").pipe(
 		spritesmith({
+			imgName: "sprite.png",
+			imgPath: "../img/sprites/sprite.png",
 			retinaSrcFilter: "./src/img/sprites/*@2x.png",
-			imgName: "../img/sprites/sprite.png",
 			retinaImgName: "../img/sprites/sprite@2x.png",
+			cssName: "_sprite.scss",
 			padding: 4,
-			cssName: "sp_sprite.css"
+			algorithm: "binary-tree",
+			cssVarMap: function(sprite) {
+				sprite.name = "sp-" + sprite.name;
+			}
 		})
 	);
-	spriteData.img.pipe(gulp.dest("./dist/img/sprites"));
-	spriteData.css.pipe(gulp.dest("./dist/css"));
-	done();
+
+	const imgStream = new Promise(function(resolve) {
+		spriteData.img.pipe(gulp.dest("dist/img/sprites")).on("end", resolve);
+	});
+
+	const cssStream = new Promise(function(resolve) {
+		spriteData.css.pipe(gulp.dest("src/scss/common")).on("end", resolve);
+	});
+
+	return Promise.all([imgStream, cssStream]);
 });
 
 // Clean Sprite
