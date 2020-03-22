@@ -244,115 +244,11 @@
 	}
 }
 
-@include tablet-media {
-	.songe_wrap {
-		padding-top: 66px;
-	}
-	.songe_header {
-		position: fixed;
-		.songe_gnb {
-			overflow: visible;
-			padding: 0;
-			height: auto;
-			.btn_gnb_menu {
-				display: block;
-			}
-			.songe_gnb_menu {
-				overflow: hidden;
-				top: 12px;
-				height: 0;
-				opacity: 0;
-				margin: 0;
-				transition: opacity 0.35s ease-out, top 0.2s ease-out;
-			}
-			.songe_gnb_lst {
-				float: left;
-				width: 50%;
-				margin-left: 25px;
-				border-top: 1px solid $point_color1;
-				text-align: left;
-				li {
-					float: none;
-					width: 100%;
-					height: 40px;
-					padding: 15px 0 0;
-					line-height: 40px;
-					a {
-						display: block;
-						width: 100%;
-						padding: 0 20px;
-						color: $primary_color;
-						font-size: 14px;
-						font-weight: 400;
-					}
-				}
-			}
-			.songe_gnb_member {
-				position: relative;
-				float: right;
-				height: 0;
-				margin-right: 25px;
-				border-top: 1px solid $point_color1;
-				opacity: 0;
-				.songe_member_link {
-					display: block;
-					font-size: 13px;
-					height: 34px;
-					line-height: 34px;
-				}
-				.songe_member_txt {
-					display: inline-block;
-					padding-left: 8px;
-					vertical-align: top;
-				}
-			}
-			&.is-active {
-				.songe_gnb_inner {
-					overflow: auto;
-					display: block;
-					position: fixed;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					width: 100%;
-					height: auto;
-					padding-top: 60px;
-					background-color: $white_color;
-					opacity: 1;
-					-webkit-overflow-scrolling: touch;
-				}
-				.songe_gnb_logo {
-					display: none;
-				}
-				.songe_gnb_menu {
-					height: auto;
-					margin-top: 15px;
-					opacity: 1;
-				}
-				.songe_gnb_member {
-					height: auto;
-					margin-top: 2px;
-					padding-top: 15px;
-					opacity: 1;
-					.songe_member_link {
-						margin: 0;
-						padding: 0 20px;
-						.songe_member_txt {
-							display: inline-block;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 /* footer */
 .songe_footer {
 	.songe_support_in {
 		padding: 15px 30px;
-		background: #c5a76a;
+		background: $point_color3;
 		font-size: 12px;
 		color: $primary_color;
 		&:after {
@@ -436,9 +332,8 @@
 	margin: 20px 0 10px;
 	dt {
 		margin-bottom: 7px;
-		font-family: "S-CoreDream-4Regular", sans-serif;
+		font-family: "S-CoreDream-5Medium", sans-serif;
 		font-size: 15px;
-		font-weight: bold;
 	}
 	dd {
 		margin-top: 5px;
@@ -502,8 +397,19 @@
 	letter-spacing: 1px;
 	text-align: center;
 	span {
+		position: relative;
 		display: inline-block;
-		border-bottom: 2px solid $primary_color;
+		&:before {
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			right: -3px;
+			height: 17px;
+			background-color: $point_color3;
+			opacity: 0.3;
+			z-index: -1;
+			content: "";
+		}
 	}
 }
 .songe_subtit {
@@ -1170,11 +1076,11 @@
 	}
 	thead {
 		tr {
-			border-color: #c5a76a;
+			border-color: $point_color3;
 		}
 		th {
-			border-color: #c5a76a;
-			background: #c5a76a;
+			border-color: $point_color3;
+			background: $point_color3;
 		}
 	}
 	tbody {
@@ -1265,6 +1171,7 @@
 		height: 30px;
 		margin-right: 10px;
 		border: 1px solid #e0e0e0;
+		border-radius: 5px;
 		box-sizing: border-box;
 		vertical-align: top;
 		.songe_sort_btn {
@@ -1300,6 +1207,7 @@
 		}
 	}
 }
+
 .songe_cunit_bx {
 	margin: -25px -10px 20px;
 	.songe_cunit_lst {
@@ -1318,6 +1226,7 @@
 				position: relative;
 			}
 			&.cunit_soldout {
+				filter: grayscale(0.7);
 				.songe_cunit_tmumb {
 					&:after {
 						position: absolute;
@@ -1332,16 +1241,18 @@
 						content: "SOLD OUT";
 					}
 				}
-				.songe_cunit_item {
-					color: #666;
+				.songe_cunit_info {
+					color: #888;
 				}
 			}
 		}
 		.songe_cunit_tmumb {
+			overflow: hidden;
 			display: inline-block;
 			position: relative;
 			width: 100%;
 			padding-bottom: 100%;
+			border-radius: 10px;
 			font-size: 0;
 			vertical-align: top;
 			&:before {
@@ -1390,7 +1301,7 @@
 				display: block;
 				margin-top: 15px;
 				.txt_price {
-					font-weight: bold;
+					font-family: "S-CoreDream-5Medium", sans-serif;
 					font-size: 16px;
 				}
 				.txt_won {
@@ -1428,6 +1339,225 @@
 		}
 	}
 }
+
+.songe_dealunit_bx {
+	margin: -25px -10px 20px;
+	.songe_dealunit_lst {
+		width: 100%;
+		font-size: 0;
+		.songe_dealunit_item {
+			position: relative;
+			display: inline-block;
+			width: 33.33%;
+			margin-top: 25px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			vertical-align: top;
+			& > a {
+				display: block;
+				position: relative;
+			}
+			&.dealunit_soldout {
+				filter: grayscale(0.7);
+				.songe_dealunit_tmumb {
+					&:after {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						padding: 15px 0;
+						background: rgba(34, 34, 34, 0.6);
+						color: #fff;
+						font-size: 14px;
+						text-align: center;
+						content: "SOLD OUT";
+					}
+				}
+				.songe_dealunit_item {
+					color: #d1d1d1;
+				}
+			}
+		}
+		.songe_dealunit_tmumb {
+			overflow: hidden;
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			padding-bottom: 57%;
+			border-radius: 10px;
+			font-size: 0;
+			vertical-align: top;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.03);
+				z-index: 3;
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			.deal_badge_bx {
+				position: absolute;
+				bottom: 15px;
+				left: 0;
+				.deal_badge {
+					display: block;
+					padding: 5px 10px;
+					border-radius: 5px 5px 5px 0;
+					color: $white_color;
+					font-size: 13px;
+					line-height: 1.2;
+					opacity: 0.85;
+					&.deadline {
+						background-color: $point_color2;
+					}
+					&.d_day {
+						background-color: $point_color1;
+					}
+					&.new {
+						background-color: $point_color3;
+					}
+					& + .deal_badge {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+		.songe_dealunit_info {
+			display: inline-block;
+			width: 100%;
+			margin-top: 15px;
+			font-size: 13px;
+			vertical-align: top;
+			.songe_dealunit_idol {
+				display: block;
+				em {
+					display: inline-block;
+					padding: 0 4px;
+					background-color: #222;
+					color: #fff;
+					font-size: 11px;
+					line-height: 16px;
+					vertical-align: top;
+				}
+			}
+			.songe_dealunit_tit {
+				display: block;
+				margin-top: 10px;
+				@include ellipsis();
+			}
+			.songe_dealunit_txt {
+				display: block;
+				margin-top: 10px;
+				color: #666;
+				font-size: 12px;
+				@include multi-ellipsis(2);
+			}
+			.songe_dealunit_graph {
+				display: block;
+				height: 3px;
+				margin-top: 35px;
+				background-color: #e5e5e5;
+				font-size: 0;
+				line-height: 0;
+				.graph_bar {
+					position: relative;
+					float: left;
+					width: 0;
+					max-width: 100%;
+					height: 3px;
+					background-color: $point_color2;
+					font-size: 0;
+					line-height: 0;
+					.graph_per {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						min-width: 50px;
+						&:before {
+							position: absolute;
+							top: -22px;
+							right: 0;
+							min-width: 40px;
+							padding: 0 5px;
+							border-radius: 5px 5px 5px 0;
+							background-color: $point_color2;
+							color: #fff;
+							font-size: 11px;
+							line-height: 17px;
+							text-align: center;
+							content: attr(data-graph-rate);
+						}
+					}
+				}
+			}
+			.songe_dealunit_fund {
+				display: block;
+				margin-top: 5px;
+				color: $point_color2;
+				font-size: 11px;
+				@include clearfix;
+				.songe_deadline {
+					float: left;
+				}
+				.songe_goal {
+					float: right;
+				}
+			}
+			.songe_dealunit_price {
+				display: block;
+				margin-top: 15px;
+				.txt_price {
+					font-family: "S-CoreDream-5Medium", sans-serif;
+					font-size: 16px;
+				}
+				.txt_won {
+					display: inline-block;
+					margin-left: 3px;
+				}
+			}
+		}
+		.btn_item_keep {
+			position: absolute;
+			top: 14px;
+			right: 24px;
+			@include sprite($sp-cunit_keep);
+			transform: perspective(1px) translateZ(0);
+			z-index: 3;
+			&.on {
+				@include sprite($sp-cunit_keep_on);
+				animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+				opacity: 1;
+			}
+		}
+		&.ty_list {
+			.songe_dealunit_item {
+				width: 50%;
+				.songe_dealunit_tmumb {
+					width: 50%;
+					padding-bottom: 50%;
+				}
+				.songe_dealunit_info {
+					width: 50%;
+					padding-left: 15px;
+					box-sizing: border-box;
+				}
+			}
+		}
+	}
+}
+
 @keyframes heart-in {
 	0% {
 		opacity: 0;
@@ -1441,42 +1571,6 @@
 
 	100% {
 		opacity: 0;
-	}
-}
-
-@include tablet-media {
-	.songe_cunit_bx {
-		.songe_cunit_lst {
-			.songe_cunit_item {
-				width: 33.33%;
-			}
-		}
-	}
-}
-@include mobile-media {
-	.songe_dlst_bx {
-		padding: 30px 20px;
-	}
-	.songe_inpset {
-		.songe_inptxt {
-			width: 60%;
-		}
-		.songe_btn {
-			width: 38%;
-			font-size: 12px;
-		}
-	}
-	.songe_cunit_bx {
-		.songe_cunit_lst {
-			.songe_cunit_item {
-				width: 50%;
-			}
-			&.ty_list {
-				.songe_cunit_item {
-					width: 100%;
-				}
-			}
-		}
 	}
 }
 
@@ -1537,6 +1631,411 @@
 				border-top: 2px solid #2f332f;
 				border-left: 2px solid #2f332f;
 			}
+		}
+	}
+}
+
+.songe_board_lst {
+	width: 100%;
+	margin: 0 -3px;
+	font-size: 0;
+	.songe_board_bx {
+		display: block;
+		padding: 20px 10px;
+		border: 2px solid #e0e0e0;
+		border-radius: 10px;
+		background: #fff;
+	}
+	.songe_board_item {
+		display: inline-block;
+		width: 33.33%;
+		padding: 5px;
+		box-sizing: border-box;
+		vertical-align: top;
+		.songe_board_top {
+			@include clearfix;
+			.songe_board_idol {
+				display: inline-block;
+				em {
+					display: inline-block;
+					padding: 0 4px;
+					background-color: #222;
+					color: #fff;
+					font-size: 11px;
+					line-height: 16px;
+					vertical-align: top;
+				}
+			}
+			.songe_board_publisher {
+				display: inline-block;
+				margin-left: 5px;
+				font-size: 13px;
+				line-height: 16px;
+				vertical-align: top;
+			}
+			.songe_board_post {
+				float: right;
+				color: #666;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		.songe_board_cont {
+			margin-top: 10px;
+			.songe_board_tmumb {
+				overflow: hidden;
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 100%;
+				border-radius: 10px;
+				font-size: 0;
+				vertical-align: top;
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-color: rgba(0, 0, 0, 0.03);
+					z-index: 3;
+				}
+				img {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+			}
+			.songe_board_btn {
+				display: block;
+				margin-top: 15px;
+				text-align: right;
+				.songe_btn_like {
+					display: inline-block;
+					margin-right: 7px;
+					@include sprite($sp-cunit_keep);
+					transform: perspective(1px) translateZ(0);
+					&.on {
+						@include sprite($sp-cunit_keep_on);
+						animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+						opacity: 1;
+					}
+				}
+				.songe_like_num {
+					display: inline-block;
+					font-size: 11px;
+					line-height: 17px;
+					vertical-align: top;
+				}
+			}
+			.songe_board_tit {
+				display: block;
+				margin-top: 10px;
+				color: $primary_color;
+				font-size: 14px;
+				@include ellipsis();
+			}
+			.songe_board_txt {
+				display: block;
+				margin-top: 10px;
+				color: #666;
+				font-size: 13px;
+				@include multi-ellipsis(3);
+			}
+		}
+	}
+}
+
+.songe_board_article {
+	padding: 30px 20px;
+	border: 2px solid #e0e0e0;
+	border-radius: 15px;
+	box-sizing: border-box;
+	.songe_board_top {
+		.songe_board_idol {
+			display: inline-block;
+			em {
+				display: inline-block;
+				padding: 0 10px;
+				background-color: #222;
+				color: #fff;
+				font-size: 14px;
+				line-height: 20px;
+				vertical-align: top;
+			}
+		}
+		.songe_board_post {
+			float: right;
+			color: #666;
+			font-size: 14px;
+			line-height: 20px;
+			.board_posted {
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: top;
+			}
+		}
+	}
+	.songe_board_tit {
+		margin-top: 15px;
+		color: $primary_color;
+		font-size: 17px;
+		line-height: 1.5;
+	}
+	.songe_board_cont {
+		margin-top: 10px;
+		text-align: center;
+		img {
+			display: inline-block;
+			max-width: 650px;
+			width: 100%;
+			margin-top: 10px;
+			vertical-align: top;
+		}
+		p {
+			margin-top: 15px;
+			color: $primary_color;
+			font-size: 14px;
+		}
+	}
+	.songe_board_comment {
+		margin-top: 20px;
+		.songe_comment_top {
+			overflow: hidden;
+			font-size: 0;
+			.songe_inptxt {
+				float: left;
+				width: calc(100% - 145px);
+			}
+			.songe_comment_btn {
+				float: left;
+				width: 130px;
+				margin-left: 15px;
+			}
+			.songe_btn {
+				width: 100px;
+				height: 40px;
+				font-size: 13px;
+				line-height: 40px;
+			}
+			.songe_btn_like {
+				display: inline-block;
+				margin: 11px 0 0 7px;
+				@include sprite($sp-cunit_keep);
+				transform: perspective(1px) translateZ(0);
+				&.on {
+					@include sprite($sp-cunit_keep_on);
+					animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+					opacity: 1;
+				}
+			}
+		}
+		.songe_comment_cont {
+			margin-top: 20px;
+			.songe_comment_lst {
+				li {
+					margin-top: 10px;
+				}
+				.songe_comment_bx {
+					display: table;
+					width: 100%;
+					table-layout: fixed;
+					.songe_mem_link {
+						display: table-cell;
+						width: 30px;
+					}
+					.songe_mem_img {
+						position: relative;
+						overflow: hidden;
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						img {
+							position: absolute;
+							top: 50%;
+							left: 0;
+							width: 100%;
+							-webkit-transform: translateY(-50%);
+							transform: translateY(-50%);
+						}
+					}
+					.songe_mem_comment {
+						display: table-cell;
+						padding-left: 15px;
+						vertical-align: top;
+					}
+					.songe_mem_name {
+						display: block;
+						font-family: "S-CoreDream-5Medium", sans-serif;
+						font-size: 13px;
+					}
+					.songe_mem_txt {
+						display: block;
+						margin-top: 5px;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet-media {
+	.songe_wrap {
+		padding-top: 66px;
+	}
+	.songe_header {
+		position: fixed;
+		.songe_gnb {
+			overflow: visible;
+			padding: 0;
+			height: auto;
+			.btn_gnb_menu {
+				display: block;
+			}
+			.songe_gnb_menu {
+				overflow: hidden;
+				top: 12px;
+				height: 0;
+				opacity: 0;
+				margin: 0;
+				transition: opacity 0.35s ease-out, top 0.2s ease-out;
+			}
+			.songe_gnb_lst {
+				float: left;
+				width: 50%;
+				margin-left: 25px;
+				border-top: 1px solid $point_color1;
+				text-align: left;
+				li {
+					float: none;
+					width: 100%;
+					height: 40px;
+					padding: 15px 0 0;
+					line-height: 40px;
+					a {
+						display: block;
+						width: 100%;
+						padding: 0 20px;
+						color: $primary_color;
+						font-size: 14px;
+						font-weight: 400;
+					}
+				}
+			}
+			.songe_gnb_member {
+				position: relative;
+				float: right;
+				height: 0;
+				margin-right: 25px;
+				border-top: 1px solid $point_color1;
+				opacity: 0;
+				.songe_member_link {
+					display: block;
+					font-size: 13px;
+					height: 34px;
+					line-height: 34px;
+				}
+				.songe_member_txt {
+					display: inline-block;
+					padding-left: 8px;
+					vertical-align: top;
+				}
+			}
+			&.is-active {
+				.songe_gnb_inner {
+					overflow: auto;
+					display: block;
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: auto;
+					padding-top: 60px;
+					background-color: $white_color;
+					opacity: 1;
+					-webkit-overflow-scrolling: touch;
+				}
+				.songe_gnb_logo {
+					display: none;
+				}
+				.songe_gnb_menu {
+					height: auto;
+					margin-top: 15px;
+					opacity: 1;
+				}
+				.songe_gnb_member {
+					height: auto;
+					margin-top: 2px;
+					padding-top: 15px;
+					opacity: 1;
+					.songe_member_link {
+						margin: 0;
+						padding: 0 20px;
+						.songe_member_txt {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.songe_cunit_bx {
+		.songe_cunit_lst {
+			.songe_cunit_item {
+				width: 33.33%;
+			}
+		}
+	}
+	.songe_dealunit_lst {
+		.songe_dealunit_item {
+			width: 50%;
+		}
+	}
+}
+
+@include mobile-media {
+	.songe_inpset {
+		.songe_inptxt {
+			width: 60%;
+		}
+		.songe_btn {
+			width: 38%;
+			font-size: 12px;
+		}
+	}
+	.songe_dlst_bx {
+		padding: 30px 20px;
+	}
+	.songe_cunit_bx {
+		.songe_cunit_lst {
+			.songe_cunit_item {
+				width: 50%;
+			}
+			&.ty_list {
+				.songe_cunit_item {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.songe_dealunit_bx {
+		.songe_dealunit_lst {
+			.songe_dealunit_item {
+				width: 100%;
+			}
+		}
+	}
+	.songe_board_lst {
+		.songe_board_item {
+			width: 50%;
 		}
 	}
 }

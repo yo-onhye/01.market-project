@@ -1,8 +1,7 @@
 // gulpfile.js
 var gulp = require("gulp"),
 	sass = require("gulp-sass"),
-	spritesmith = require("gulp.spritesmith"),
-	del = require("del");
+	spritesmith = require("gulp.spritesmith");
 
 // 일반 컴파일
 gulp.task("sass", function() {
@@ -29,8 +28,8 @@ gulp.task("sprite", function(done) {
 		spritesmith({
 			imgName: "sprite.png",
 			imgPath: "../img/sprites/sprite.png",
-			retinaSrcFilter: "./src/img/sprites/*@2x.png",
-			retinaImgName: "../img/sprites/sprite@2x.png",
+			// retinaSrcFilter: "./src/img/sprites/*@2x.png",
+			// retinaImgName: "../img/sprites/sprite@2x.png",
 			cssName: "_sprite.scss",
 			padding: 4,
 			algorithm: "binary-tree",
@@ -49,9 +48,4 @@ gulp.task("sprite", function(done) {
 	});
 
 	return Promise.all([imgStream, cssStream]);
-});
-
-// Clean Sprite
-gulp.task("clean-sprite", function() {
-	return del("./dist/img/sprites");
 });
