@@ -27,14 +27,14 @@ Songe.View.common.ctrlItemList = {
 	init: function() {
 		this._assignElements();
 		this._attachEventHandlers();
+		this._setDisabledBtn();
 	},
 	_assignElements: function() {
-		this._elSortBox = $(".songe_sort_bx");
+		this._elSortBox = $("._js_sort_bx");
 		this._elSortInner = this._elSortBox.find(".songe_sort_type");
-		this._elSortBtn = this._elSortInner.find(".songe_sort_btn");
-		this._elUnitBox = $(".songe_cunit_bx");
-		this._elUnitList = this._elUnitBox.find(".songe_cunit_lst");
-		this._elUnitItem = this._elUnitList.find(".songe_cunit_item");
+		this._elSortBtn = this._elSortBox.find(".songe_sort_btn");
+		this._elUnitList = $("._js_unit_lst");
+		this._elUnitItem = this._elUnitList.find("._js_unit_item");
 		this._elUnitIdol = this._elUnitItem.find(".songe_cunit_idol em");
 		this._elKeepBtn = this._elUnitItem.find("._js_btn_keep");
 	},
@@ -42,11 +42,15 @@ Songe.View.common.ctrlItemList = {
 		this._elSortBtn.on("click", $.proxy(this._onClickSortBtn, this));
 		this._elKeepBtn.on("click", $.proxy(this._onClickKeepBtn, this));
 	},
-	_onClickSortBtn: function(e) {
-		var welTarget = $(e.currentTarget);
+	_setDisabledBtn: function() {
+		this._elUnitItem.each(function(i, el) {
+			var welItem = $(el),
+				welItemBtn = welItem.find("._js_btn_keep");
 
-		this._ctrlSortBtn(welTarget);
-		this._ctrlSortlList(welTarget);
+			if (welItem.hasClass("cunit_soldout")) {
+				welItemBtn.attr("disabled", "disabled");
+			}
+		});
 	},
 	_onClickKeepBtn: function(e) {
 		var welTarget = $(e.currentTarget),
@@ -59,6 +63,12 @@ Songe.View.common.ctrlItemList = {
 		} else {
 			welTargetText.text("상품 찜하기");
 		}
+	},
+	_onClickSortBtn: function(e) {
+		var welTarget = $(e.currentTarget);
+
+		this._ctrlSortBtn(welTarget);
+		this._ctrlSortlList(welTarget);
 	},
 	_ctrlSortBtn: function(welTarget) {
 		var welTargetParent = welTarget.parent(".songe_sort_type");
@@ -85,5 +95,16 @@ $(function() {
 
 	$(".btn_gnb_menu").click(function() {
 		$(".songe_gnb, .btn_gnb_menu").toggleClass("is-active");
+	});
+
+	$(".songe_btn_like").click(function() {
+		var welTargetText = $(this).find(".blind");
+		$(this).toggleClass("on");
+
+		if ($(this).hasClass("on")) {
+			welTargetText.text("게시글 좋아요 취소");
+		} else {
+			welTargetText.text("게시글 좋아요");
+		}
 	});
 });

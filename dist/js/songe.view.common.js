@@ -96,4 +96,15 @@ $(function() {
 	$(".btn_gnb_menu").click(function() {
 		$(".songe_gnb, .btn_gnb_menu").toggleClass("is-active");
 	});
+
+	$(".songe_btn_like").click(function() {
+		var welTargetText = $(this).find(".blind");
+		$(this).toggleClass("on");
+
+		if ($(this).hasClass("on")) {
+			welTargetText.text("게시글 좋아요 취소");
+		} else {
+			welTargetText.text("게시글 좋아요");
+		}
+	});
 });
