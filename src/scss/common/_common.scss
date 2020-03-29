@@ -38,9 +38,9 @@
 	top: -100px;
 	left: -999px;
 	display: inline-block;
-	border: 1px solid #24242c;
-	background: #31313b;
-	color: white;
+	border: 1px solid $primary_color;
+	background: $primary_color;
+	color: $white_color;
 }
 #skip a:focus,
 #skip a:active {
@@ -51,15 +51,15 @@
 	display: inline-block;
 	margin-right: 9px;
 	padding: 5px 8px 4px;
-	background: #31313b;
+	background: $primary_color;
 	font-weight: normal;
 	font-size: 11px;
-	line-height: 1.4em;
+	line-height: 1.5;
 }
 
 /* layout */
 #header {
-	background: #f9f8f7;
+	background: $base_color;
 }
 #content {
 	position: relative;
@@ -75,7 +75,7 @@
 	top: 0;
 	width: 100%;
 	padding: 15px 0;
-	background-color: #f9f8f7;
+	background-color: $base_color;
 	text-align: center;
 	z-index: 9;
 	.songe_gnb {
@@ -135,7 +135,7 @@
 						height: auto;
 						margin-top: 0;
 						opacity: 1;
-						color: #969696;
+						color: $grey_color1;
 					}
 				}
 			}
@@ -321,12 +321,6 @@
 	}
 }
 
-@include desktop-media {
-	.songe_content {
-		width: 964px;
-	}
-}
-
 /* Guide layout*/
 .songe_guide {
 	margin: 20px 0 10px;
@@ -341,7 +335,7 @@
 	.songe_tag {
 		display: inline-block;
 		padding: 1px;
-		background: #f5f0e7;
+		background: $grey_color5;
 		border-radius: 4px;
 	}
 	.songe_dsc {
@@ -355,7 +349,7 @@
 	width: 100%;
 	padding-top: 1px;
 	border: none;
-	background: #f9f8f7;
+	background: $base_color;
 	font-family: "S-CoreDream-4Regular", sans-serif;
 	font-size: 14px;
 	line-height: 50px;
@@ -368,9 +362,9 @@
 		text-decoration: underline;
 	}
 	&:disabled {
-		border-color: #f1f1f1;
-		background: #f9f9f9;
-		color: #bbb;
+		border-color: $grey_color5;
+		background: $grey_color4;
+		color: $grey_color1;
 		cursor: default;
 	}
 	&.songe_btn_green {
@@ -378,6 +372,7 @@
 		color: $white_color;
 	}
 }
+
 .songe_btn_bx {
 	margin-top: 50px;
 	.songe_btn_lst {
@@ -439,7 +434,7 @@
 	margin-top: 5px;
 	font-size: 12px;
 	letter-spacing: -0.5px;
-	color: #888;
+	color: $grey_color1;
 }
 .songe_txt_valid {
 	display: block;
@@ -471,7 +466,7 @@
 		height: 40px;
 		padding: 5px 0;
 		border: 0 none;
-		border-bottom: 2px solid #e0e0e0;
+		border-bottom: 2px solid $grey_color3;
 		background: $white_color;
 		font-size: 13px;
 		line-height: 30px;
@@ -480,14 +475,14 @@
 		outline: transparent;
 		&::placeholder,
 		&::-webkit-input-placeholder {
-			color: #888;
+			color: $grey_color1;
 		}
 		&::-moz-placeholder {
-			color: #888;
+			color: $grey_color1;
 			opacity: 1;
 		}
 		&:-ms-input-placeholder {
-			color: #888;
+			color: $grey_color1;
 		}
 		&::-ms-clear {
 			display: none;
@@ -498,14 +493,14 @@
 			border-color: $primary_color;
 		}
 		&:disabled {
-			border-color: #f1f1f1;
-			background: #f9f9f9;
-			color: #bbb;
+			border-color: $grey_color5;
+			background: $grey_color4;
+			color: $grey_color1;
 		}
 		&[readonly="readonly"],
 		&[readonly] {
 			z-index: 0;
-			border-color: #e0e0e0;
+			border-color: $grey_color3;
 		}
 	}
 	.songe_placeholder {
@@ -520,7 +515,7 @@
 		border: 1px solid transparent;
 		font-size: 13px;
 		line-height: 30px;
-		color: #888;
+		color: $grey_color1;
 		vertical-align: top;
 		white-space: nowrap;
 		box-sizing: border-box;
@@ -649,7 +644,7 @@
 		padding-left: 9px;
 		padding-right: 38px;
 		border: 0 none;
-		border-bottom: 2px solid #e0e0e0;
+		border-bottom: 2px solid $grey_color3;
 		border-radius: 0;
 		background: $white_color;
 		font-size: 13px;
@@ -676,10 +671,10 @@
 		}
 	}
 	&.disabled select {
-		border-color: #f1f1f1;
-		background-color: #f9f9f9;
+		border-color: $grey_color5;
+		background-color: $grey_color4;
 		background-position: 100% -38px;
-		color: #bbb;
+		color: $grey_color1;
 	}
 	&:after {
 		content: "";
@@ -742,7 +737,7 @@
 				height: 14px;
 				margin-top: -8px;
 				background-color: $white_color;
-				border: 1px solid #969696;
+				border: 1px solid $grey_color1;
 				border-radius: 50%;
 				content: "";
 			}
@@ -756,7 +751,7 @@
 				width: 8px;
 				height: 8px;
 				margin-top: -5px;
-				border: 1px solid #969696;
+				border: 1px solid $grey_color1;
 				border-radius: 50%;
 				content: "";
 			}
@@ -792,26 +787,24 @@
 
 		&:disabled {
 			& + label {
-				color: #888;
-
+				color: $grey_color1;
 				&:before {
-					border-color: #d1d1d1;
+					border-color: $grey_color5;
 				}
 			}
 		}
 
 		&:checked:disabled {
 			& + label {
-				color: #888;
-
+				color: $grey_color1;
 				&:before {
-					border-color: #d1d1d1;
+					border-color: $grey_color5;
 				}
 
 				&:after {
 					display: inline-block;
-					border-color: #d1d1d1;
-					background-color: #d1d1d1;
+					border-color: $grey_color5;
+					background-color: $grey_color5;
 				}
 			}
 		}
@@ -853,7 +846,7 @@
 				width: 16px;
 				height: 16px;
 				background-color: $white_color;
-				border: 1px solid #969696;
+				border: 1px solid $grey_color1;
 				cursor: pointer;
 				content: "";
 			}
@@ -899,32 +892,32 @@
 
 		&:disabled {
 			& + label {
-				color: #bbb;
+				color: $grey_color1;
 
 				&:before {
-					border-color: #d1d1d1;
-					background-color: #f5f5f5;
+					border-color: $grey_color5;
+					background-color: $grey_color4;
 				}
 
 				&:after {
-					border-color: #d1d1d1;
-					background-color: #f5f5f5;
+					border-color: $grey_color5;
+					background-color: $grey_color4;
 				}
 			}
 		}
 
 		&:checked:disabled {
 			& + label {
-				color: #bbb;
+				color: $grey_color1;
 
 				&:before {
-					border-color: #d1d1d1;
-					background-color: #f5f5f5;
+					border-color: $grey_color5;
+					background-color: $grey_color4;
 				}
 
 				&:after {
 					border-color: $white_color;
-					background-color: #f5f5f5;
+					background-color: $grey_color4;
 				}
 			}
 		}
@@ -978,7 +971,7 @@
 		label {
 			display: block;
 			position: relative;
-			border: 1px solid #e0e0e0;
+			border: 1px solid $grey_color3;
 			border-left-width: 0;
 			background: $white_color;
 			font-size: 14px;
@@ -993,28 +986,74 @@
 		}
 
 		&.focus label {
-			outline: 1px dotted #888;
+			outline: 1px dotted $grey_color1;
 		}
 
 		&.checked label {
-			border-color: #555;
-			background-color: #555;
+			border-color: $grey_color2;
+			background-color: $grey_color2;
 			color: $white_color;
 		}
 	}
 }
 .songe_ta {
 	width: 100%;
-	height: 58px;
-	padding: 9px;
-	border: 1px solid #e0e0e0;
-	font-size: 14px;
-	line-height: 19px;
+	height: 150px;
+	padding: 9px 0;
+	border: 0;
+	border-bottom: 2px solid $grey_color3;
+	font-size: 13px;
+	line-height: 21px;
 	resize: none;
 	outline: transparent;
 	box-sizing: border-box;
 	&:focus {
 		border-color: $primary_color;
+	}
+}
+.songe_atch {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: 2px solid $grey_color3;
+	border-radius: 5px;
+	box-sizing: border-box;
+	vertical-align: top;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include sprite($sp-ico_camera);
+		content: "";
+	}
+	&.focus {
+		border-color: $primary_color;
+	}
+	.songe_inp {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0 none;
+		opacity: 0.01;
+		filter: alpha(opacity=1);
+		cursor: pointer;
+		outline: 0 none;
+		font-size: 0;
+		line-height: 0;
+		z-index: 5;
+	}
+	img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 }
 .songe_inpset {
@@ -1025,13 +1064,16 @@
 	}
 	.songe_select {
 		float: left;
-		width: 48%;
+		width: 49%;
+		margin-right: 1%;
 		& + .songe_select {
-			margin-left: 2%;
+			margin-left: 1%;
+			margin-right: 0;
 		}
 		& + .songe_inptxt {
-			width: 48%;
-			margin-left: 2%;
+			width: 49%;
+			margin-left: 1%;
+			margin-right: 0;
 		}
 	}
 	.songe_btn {
@@ -1064,6 +1106,26 @@
 		}
 	}
 }
+.songe_attach_bx {
+	margin-top: 25px;
+	.songe_attach_lst {
+		@include clearfix;
+		li {
+			float: left;
+			width: 100px;
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.songe_info_lst {
+		margin-top: 15px;
+		li {
+			color: $grey_color2;
+		}
+	}
+}
 
 /* table */
 .songe_tbl {
@@ -1086,7 +1148,7 @@
 	tbody {
 		border-top: 0;
 		tr {
-			border-top: 1px solid #e0e0e0;
+			border-top: 1px solid $grey_color3;
 			&:first-child {
 				border-top: 0;
 			}
@@ -1119,7 +1181,7 @@
 		margin-top: 5px;
 		padding-left: 7px;
 		color: $primary_color;
-		font-size: 13px;
+		font-size: 12px;
 		line-height: 1.5;
 		&:before {
 			position: absolute;
@@ -1135,7 +1197,7 @@
 }
 .songe_dlst_bx {
 	padding: 40px 50px;
-	border: 1px solid #e0e0e0;
+	border: 2px solid $grey_color3;
 	border-radius: 15px;
 	box-sizing: border-box;
 	.songe_dlst {
@@ -1170,7 +1232,7 @@
 		width: 30px;
 		height: 30px;
 		margin-right: 10px;
-		border: 1px solid #e0e0e0;
+		border: 1px solid $grey_color3;
 		border-radius: 5px;
 		box-sizing: border-box;
 		vertical-align: top;
@@ -1235,14 +1297,14 @@
 						width: 100%;
 						padding: 15px 0;
 						background: rgba(34, 34, 34, 0.6);
-						color: #fff;
+						color: $white_color;
 						font-size: 14px;
 						text-align: center;
 						content: "SOLD OUT";
 					}
 				}
 				.songe_cunit_info {
-					color: #888;
+					color: $grey_color1;
 				}
 			}
 		}
@@ -1278,15 +1340,17 @@
 			display: inline-block;
 			width: 100%;
 			margin-top: 15px;
-			font-size: 13px;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 14px;
+			line-height: 1.5;
 			vertical-align: top;
 			.songe_cunit_idol {
 				display: block;
 				em {
 					display: inline-block;
 					padding: 0 4px;
-					background-color: #222;
-					color: #fff;
+					background-color: $primary_color;
+					color: $white_color;
 					font-size: 11px;
 					line-height: 16px;
 					vertical-align: top;
@@ -1367,14 +1431,14 @@
 						width: 100%;
 						padding: 15px 0;
 						background: rgba(34, 34, 34, 0.6);
-						color: #fff;
+						color: $white_color;
 						font-size: 14px;
 						text-align: center;
 						content: "SOLD OUT";
 					}
 				}
 				.songe_dealunit_item {
-					color: #d1d1d1;
+					color: $grey_color5;
 				}
 			}
 		}
@@ -1436,15 +1500,16 @@
 			display: inline-block;
 			width: 100%;
 			margin-top: 15px;
-			font-size: 13px;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 14px;
 			vertical-align: top;
 			.songe_dealunit_idol {
 				display: block;
 				em {
 					display: inline-block;
 					padding: 0 4px;
-					background-color: #222;
-					color: #fff;
+					background-color: $primary_color;
+					color: $white_color;
 					font-size: 11px;
 					line-height: 16px;
 					vertical-align: top;
@@ -1458,7 +1523,7 @@
 			.songe_dealunit_txt {
 				display: block;
 				margin-top: 10px;
-				color: #666;
+				color: $grey_color2;
 				font-size: 12px;
 				@include multi-ellipsis(2);
 			}
@@ -1466,7 +1531,7 @@
 				display: block;
 				height: 3px;
 				margin-top: 35px;
-				background-color: #e5e5e5;
+				background-color: $grey_color3;
 				font-size: 0;
 				line-height: 0;
 				.graph_bar {
@@ -1493,7 +1558,7 @@
 							padding: 0 5px;
 							border-radius: 5px 5px 5px 0;
 							background-color: $point_color2;
-							color: #fff;
+							color: $white_color;
 							font-size: 11px;
 							line-height: 17px;
 							text-align: center;
@@ -1586,7 +1651,7 @@
 			display: inline-block;
 			width: 30px;
 			height: 30px;
-			border: 1px solid #e0e0e0;
+			border: 1px solid $grey_color3;
 			box-sizing: border-box;
 			font-size: 14px;
 			line-height: 30px;
@@ -1614,8 +1679,8 @@
 				width: 8px;
 				height: 8px;
 				margin: -4px -4px 0 0;
-				border-top: 2px solid #2f332f;
-				border-left: 2px solid #2f332f;
+				border-top: 2px solid $primary_color;
+				border-left: 2px solid $primary_color;
 			}
 		}
 		.btn_next {
@@ -1628,8 +1693,8 @@
 				width: 8px;
 				height: 8px;
 				margin: -4px -4px 0 0;
-				border-top: 2px solid #2f332f;
-				border-left: 2px solid #2f332f;
+				border-top: 2px solid $primary_color;
+				border-left: 2px solid $primary_color;
 			}
 		}
 	}
@@ -1642,9 +1707,10 @@
 	.songe_board_bx {
 		display: block;
 		padding: 20px 10px;
-		border: 2px solid #e0e0e0;
+		border: 2px solid $grey_color3;
 		border-radius: 10px;
-		background: #fff;
+		background: $white_color;
+		color: $primary_color;
 	}
 	.songe_board_item {
 		display: inline-block;
@@ -1656,26 +1722,27 @@
 			@include clearfix;
 			.songe_board_idol {
 				display: inline-block;
+				vertical-align: top;
 				em {
 					display: inline-block;
 					padding: 0 4px;
-					background-color: #222;
-					color: #fff;
+					background-color: $primary_color;
+					color: $white_color;
 					font-size: 11px;
 					line-height: 16px;
 					vertical-align: top;
 				}
 			}
 			.songe_board_publisher {
-				display: inline-block;
-				margin-left: 5px;
-				font-size: 13px;
+				float: right;
+				font-size: 12px;
 				line-height: 16px;
 				vertical-align: top;
 			}
 			.songe_board_post {
-				float: right;
-				color: #666;
+				display: block;
+				margin-top: 5px;
+				color: $grey_color2;
 				font-size: 12px;
 				line-height: 16px;
 			}
@@ -1713,7 +1780,6 @@
 			.songe_board_btn {
 				display: block;
 				margin-top: 15px;
-				text-align: right;
 				.songe_btn_like {
 					display: inline-block;
 					margin-right: 7px;
@@ -1735,15 +1801,17 @@
 			.songe_board_tit {
 				display: block;
 				margin-top: 10px;
+				font-family: "S-CoreDream-5Medium";
+				font-size: 15px;
 				color: $primary_color;
-				font-size: 14px;
 				@include ellipsis();
 			}
 			.songe_board_txt {
 				display: block;
 				margin-top: 10px;
-				color: #666;
+				color: $grey_color2;
 				font-size: 13px;
+				line-height: 1.5;
 				@include multi-ellipsis(3);
 			}
 		}
@@ -1751,42 +1819,90 @@
 }
 
 .songe_board_article {
-	padding: 30px 20px;
-	border: 2px solid #e0e0e0;
+	padding: 50px 30px;
+	border: 2px solid $grey_color3;
 	border-radius: 15px;
 	box-sizing: border-box;
 	.songe_board_top {
+		@include clearfix;
 		.songe_board_idol {
 			display: inline-block;
+			margin-top: 5px;
+			vertical-align: top;
 			em {
 				display: inline-block;
 				padding: 0 10px;
-				background-color: #222;
-				color: #fff;
+				background-color: $primary_color;
+				color: $white_color;
 				font-size: 14px;
 				line-height: 20px;
 				vertical-align: top;
 			}
 		}
-		.songe_board_post {
+		.songe_board_publisher {
 			float: right;
-			color: #666;
-			font-size: 14px;
-			line-height: 20px;
-			.board_posted {
+			.publisher_link {
+				display: block;
+			}
+			.publisher_img {
+				overflow: hidden;
 				display: inline-block;
-				margin-right: 5px;
+				position: relative;
+				width: 30px;
+				height: 30px;
+				background-color: rgba(0, 0, 0, 0.03);
+				border-radius: 50%;
+				vertical-align: top;
+				img {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+			}
+			.publisher_tx {
+				display: inline-block;
+				margin-left: 5px;
+				font-size: 13px;
+				line-height: 30px;
 				vertical-align: top;
 			}
 		}
 	}
 	.songe_board_tit {
 		margin-top: 15px;
-		color: $primary_color;
-		font-size: 17px;
-		line-height: 1.5;
+		&:first-child {
+			margin-top: 0;
+		}
+		.songe_board_dday {
+			display: inline-block;
+			margin-right: 5px;
+			padding: 5px 10px;
+			border-radius: 5px 5px 5px 0;
+			background-color: $point_color2;
+			color: $white_color;
+			font-size: 13px;
+			line-height: 16px;
+			vertical-align: top;
+		}
+		h3 {
+			display: inline-block;
+			color: $primary_color;
+			font-size: 17px;
+			line-height: 26px;
+			vertical-align: top;
+		}
 	}
-	.songe_board_cont {
+	.songe_board_posted {
+		display: block;
+		margin-top: 5px;
+		color: $grey_color2;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.songe_board_content {
 		margin-top: 10px;
 		text-align: center;
 		img {
@@ -1797,9 +1913,107 @@
 			vertical-align: top;
 		}
 		p {
-			margin-top: 15px;
+			max-width: 650px;
+			margin: 15px auto 0;
 			color: $primary_color;
 			font-size: 14px;
+			line-height: 1.5;
+		}
+		.songe_vote_info {
+			margin-top: 5px;
+			color: $grey_color2;
+			font-size: 12px;
+			text-align: left;
+		}
+	}
+	.songe_board_ranking {
+		max-width: 650px;
+		margin: 30px auto 0;
+		border-top: 2px solid $grey_color3;
+		.songe_ranking_lst {
+			li {
+				position: relative;
+				padding: 5px 100px 5px 10px;
+				border-bottom: 2px solid $grey_color3;
+				font-size: 0;
+
+				@include clearfix;
+				.ranking_num {
+					display: inline-block;
+					margin-right: 20px;
+					font-family: "S-CoreDream-6Bold";
+					font-size: 21px;
+					line-height: 80px;
+					vertical-align: middle;
+				}
+				.ranking_artist_img {
+					overflow: hidden;
+					position: relative;
+					display: inline-block;
+					width: 80px;
+					height: 80px;
+					margin-right: 20px;
+					background-color: rgba(0, 0, 0, 0.03);
+					border-radius: 10px;
+					vertical-align: middle;
+					img {
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 100%;
+						-webkit-transform: translateY(-50%);
+						transform: translateY(-50%);
+					}
+				}
+				.ranking_artist_info {
+					display: inline-block;
+					padding: 15px 0;
+					font-family: "S-CoreDream-5Medium";
+					font-size: 14px;
+					line-height: 25px;
+					vertical-align: middle;
+					.ranking_artist_name {
+						display: block;
+						font-size: 16px;
+					}
+					em {
+						display: block;
+						color: $grey_color1;
+					}
+				}
+				.ranking_btn {
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					padding: 10px 13px;
+					background: $point_color1;
+					border-radius: 10px;
+					color: $white_color;
+					font-size: 14px;
+					line-height: 1;
+					vertical-align: middle;
+					transform: translateY(-50%);
+					-webkit-transition: 0.3s ease;
+					transition: 0.3s ease;
+					&:hover {
+						margin-top: -3px;
+					}
+					&:before {
+						display: inline-block;
+						margin: 1px 5px 0 0;
+						@include sprite($sp-ico_heart);
+						vertical-align: top;
+						content: "";
+					}
+					&.on {
+						&:before {
+							animation-name: likeAnimation;
+							animation-iteration-count: 1;
+							animation-duration: 0.65s;
+						}
+					}
+				}
+			}
 		}
 	}
 	.songe_board_comment {
@@ -1882,6 +2096,159 @@
 				}
 			}
 		}
+	}
+	.songe_board_paginate {
+		display: table;
+		position: relative;
+		width: 100%;
+		table-layout: fixed;
+		margin-top: 50px;
+		border: 2px solid $grey_color3;
+		border-width: 2px 0;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 2px;
+			height: 100%;
+			margin-left: -1px;
+			background: $grey_color3;
+			content: "";
+		}
+		.songe_paginate_cell {
+			display: table-cell;
+			width: 50%;
+			a {
+				display: block;
+			}
+			.prev_article,
+			.next_article {
+				@include ellipsis;
+				position: relative;
+				padding: 0 10px;
+				font-size: 12px;
+				line-height: 40px;
+				box-sizing: border-box;
+				&:before {
+					position: absolute;
+					top: 50%;
+					display: inline-block;
+					width: 0px;
+					height: 0px;
+					margin-top: -3px;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid $primary_color;
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					content: "";
+				}
+			}
+			.prev_article {
+				padding-left: 20px;
+				&:before {
+					left: 10px;
+					content: "";
+				}
+			}
+			.next_article {
+				padding-right: 20px;
+				&:before {
+					right: 10px;
+					transform: rotate(225deg);
+					-webkit-transform: rotate(225deg);
+					content: "";
+				}
+			}
+		}
+	}
+}
+
+@keyframes likeAnimation {
+	0% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.songe_vote_lst {
+	width: 100%;
+	margin: 0 -3px;
+	font-size: 0;
+	.songe_vote_bx {
+		display: block;
+		padding: 20px 10px;
+		border: 2px solid $grey_color3;
+		border-radius: 10px;
+		background: $white_color;
+		color: $primary_color;
+	}
+	.songe_vote_item {
+		display: inline-block;
+		width: 50%;
+		padding: 5px;
+		box-sizing: border-box;
+		vertical-align: top;
+		.songe_vote_top {
+			.songe_vote_tit {
+				display: block;
+				color: $primary_color;
+				font-family: "S-CoreDream-5Medium";
+				font-size: 15px;
+			}
+			.songe_vote_period {
+				display: block;
+				margin-top: 10px;
+				color: $grey_color2;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		.songe_vote_cont {
+			margin-top: 10px;
+			.songe_vote_tmumb {
+				overflow: hidden;
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 57%;
+				border-radius: 10px;
+				font-size: 0;
+				vertical-align: top;
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-color: rgba(0, 0, 0, 0.03);
+					z-index: 3;
+				}
+				img {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+			}
+			.songe_vote_txt {
+				display: block;
+				margin-top: 15px;
+				color: $grey_color2;
+				font-size: 12px;
+				line-height: 1.5;
+			}
+		}
+	}
+}
+
+@include desktop-media {
+	.songe_content {
+		width: 964px;
 	}
 }
 
@@ -2036,6 +2403,33 @@
 	.songe_board_lst {
 		.songe_board_item {
 			width: 50%;
+		}
+	}
+}
+
+@include small-mobile-media {
+	.songe_board_article {
+		.songe_board_ranking {
+			.songe_ranking_lst {
+				li {
+					.ranking_num {
+						display: block;
+						margin: 0;
+						line-height: 28px;
+						text-align: center;
+					}
+					.ranking_artist_img {
+						display: block;
+						margin: 0 auto;
+						text-align: center;
+					}
+					.ranking_artist_info {
+						display: block;
+						padding: 5px 0 0;
+						text-align: center;
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
+<title>게시글 등록 > 송이마켓</title>
+<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
+<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+</head>
+<body>
+
+<div id="skip">
+	<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
+</div>
+
+<div id="wrap" class="songe_wrap">
+	<div id="header" class="songe_header">
+		<div class="songe_gnb">
+			<h1 class="songe_gnb_logo">
+				<a href="#" class="icon_logo"><span class="blind">송이마켓</span></a>
+			</h1>
+			<div class="songe_gnb_inner">
+				<div class="songe_gnb_member">
+					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">로그인</span></i><span class="songe_member_txt" aria-hidden="true">로그인</span></a>
+					<a href="#" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">Keep</span></i><span class="songe_member_txt" aria-hidden="true">Keep</span></a>
+
+				</div>
+				<div class="songe_gnb_menu">
+					<ul class="songe_gnb_lst">
+						<li><a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a></li>
+						<li><a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a></li>
+						<li><a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a></li>
+						<li><a href="#"><span>EVENT</span></a></li>
+						<li><a href="#"><span>CUSTOMER</span></a></li>
+					</ul>
+				</div>
+				<button type="button" class="btn_gnb_menu">
+					<span class="btn_menu_box">
+						<span class="btn_menu_inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="container" class="songe_container">
+		<div id="content" class="songe_content board_post">
+			<div class="songe_cont_header">
+				<h2 class="songe_tit"><span>게시글 등록</span></h2>
+			</div>
+			<div class="songe_cont_area">
+				<div class="songe_dlst_bx">
+					<form id="frmBoardPost" name="frmBoardPost" method="post">
+						<dl class="songe_dlst">
+							<dt><label for="post_subject">게시글 제목</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<input type="text" class="songe_inp" id="post_subject" name="post_subject" placeholder="게시글 제목을 입력해주세요.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt>관련 그룹 선택</dt>
+							<dd>
+								<div class="songe_inpset">
+									<div class="songe_select">
+										<select title="관련 그룹을 선택하세요.">
+											<option>관련 그룹 선택</option>
+											<option>SF9</option>
+											<option>WANNA ONE</option>
+											<option>방탄소년단</option>
+										</select>
+									</div>
+									<div class="songe_select">
+										<select title="관련 멤버를 선택하세요.">
+											<option>관련 멤버 선택</option>
+											<option>영빈</option>
+											<option>인성</option>
+											<option>재윤</option>
+											<option>다원</option>
+											<option>로운</option>
+											<option>주호</option>
+											<option>태양</option>
+											<option>휘영</option>
+											<option>찬희</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="post_text">게시글 내용</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<textarea class="songe_ta" name="post_text" id="post_text" cols="30" rows="10" placeholder="게시글 내용을 입력해주세요."></textarea>
+								</div>
+							</dd>
+							<dd>
+								<div class="songe_attach_bx">
+									<ul class="songe_attach_lst">
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+									</ul>
+									<ul class="songe_info_lst">
+										<li>욕설/비방, 광고성 글 등 게시판 글의 성격과 무관한 내용은 임의로 삭제 될 수 있습니다. </li>
+										<li>2MB미만의 JPG, GIF, PNG 파일만 첨부하실 수 있습니다.</li>
+										<li>모든 법적책임은 작성자에게 있습니다.</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</form>
+				</div>
+				<div class="songe_btn_bx">
+					<ul class="songe_btn_lst">
+						<li><button type="button" class="songe_btn" onclick="fn_cancel()"><span>취소</span></button></li>
+						<li><button type="button" class="songe_btn songe_btn_green" onclick="fn_join()"><span>확인</span></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer" class="songe_footer">
+		<div class="songe_support">
+			<div class="songe_support_in">
+				<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
+				<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+			</div>
+		</div>
+		<div class="songe_corp">
+			<div class="songe_footer_in">
+				<div class="songe_corp_info">
+					<p class="songe_corp_tit">(주)송이마켓</p>
+					<p class="songe_corp_infotx">대표 : 송이</p>
+					<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
+					<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function changeImageUrl(input) {
+	var welTargetInput = input,
+			welTargetImg = $(input).siblings('img');
+
+	if (welTargetInput.files && welTargetInput.files[0]) {
+		var reader = new FileReader();
+
+		reader.onload = function (e) {
+			welTargetImg.attr('src', e.target.result);  
+	}
+
+		reader.readAsDataURL(welTargetInput.files[0]);
+	}
+}
+  
+$(".songe_atch .songe_inp").change(function(){
+   changeImageUrl(this);
+});
+
+function fn_join() {
+	if (checkNecessary()) {
+		document.getElementById('frmBoardPost').submit();
+		location.href = "/01.market-project/html/mem/mem_result.html";
+	}
+}
+
+function fn_cancel() {
+	location.href = "/01.market-project/html/main.html";
+}
+</script>
+</body>
+</html>

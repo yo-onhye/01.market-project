@@ -60,3 +60,10 @@
 		@content;
 	}
 }
+
+// only Small Mobile
+@mixin small-mobile-media {
+	@media #{$small-mobile-width} {
+		@content;
+	}
+}

@@ -90,8 +90,55 @@ Songe.View.common.ctrlItemList = {
 	}
 };
 
+Songe.View.common.ctrlAttachList = {
+	init: function() {
+		this._assignElements();
+		this._assignComponents();
+		this._setControlImage();
+	},
+	_assignElements: function() {
+		this._welAttachListWrap = $(".songe_attach_bx");
+		this._welAttachList = this._welAttachListWrap.find(".songe_attach_lst");
+		this._welAttachItem = this._welAttachList.find("> li");
+		this._welAttachBtn = this._welAttachList.find(".songe_atch");
+	},
+	_assignComponents: function() {
+		this._ctrlBtnFocus();
+	},
+	_ctrlBtnFocus: function() {
+		this._welAttachItem.each(function(i, el) {
+			var welTarget = $(el),
+				welAttachBtn = welTarget.find(".songe_atch input");
+
+			welAttachBtn.on("focus", function(e) {
+				var welTargetBtn = $(e.currentTarget),
+					welTargetParent = welTargetBtn.closest(".songe_atch");
+
+				welTargetParent.addClass("focus");
+			});
+
+			welAttachBtn.on("focusout", function(e) {
+				var welTargetBtn = $(e.currentTarget),
+					welTargetParent = welTargetBtn.closest(".songe_atch");
+
+				welTargetParent.removeClass("focus");
+			});
+		});
+	},
+	_setControlImage: function() {
+		this._welAttachItem.each(function(i, el) {
+			var welItem = $(el),
+				welItemIndex = welItem.index(),
+				welItemBtn = welItem.find(".songe_atch input");
+
+			welItemBtn.after('<img src="" alt="" id="attach_file' + welItemIndex + '">');
+		});
+	}
+};
+
 $(function() {
 	Songe.View.common.ctrlItemList.init();
+	Songe.View.common.ctrlAttachList.init();
 
 	$(".btn_gnb_menu").click(function() {
 		$(".songe_gnb, .btn_gnb_menu").toggleClass("is-active");
@@ -106,5 +153,9 @@ $(function() {
 		} else {
 			welTargetText.text("게시글 좋아요");
 		}
+	});
+
+	$(".ranking_btn").click(function() {
+		$(this).addClass("on");
 	});
 });
