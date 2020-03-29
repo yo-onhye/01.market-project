@@ -131,7 +131,7 @@
 				<div class="songe_btn_bx">
 					<ul class="songe_btn_lst">
 						<li><button type="button" class="songe_btn" onclick="fn_cancel()"><span>취소</span></button></li>
-						<li><button type="button" class="songe_btn songe_btn_green" onclick="fn_join()"><span>확인</span></button></li>
+						<li><button type="button" class="songe_btn songe_btn_green" onclick="fn_post()"><span>확인</span></button></li>
 					</ul>
 				</div>
 			</div>
@@ -177,10 +177,10 @@ $(".songe_atch .songe_inp").change(function(){
    changeImageUrl(this);
 });
 
-function fn_join() {
+function fn_post() {
 	if (checkNecessary()) {
 		document.getElementById('frmBoardPost').submit();
-		location.href = "/01.market-project/html/mem/mem_result.html";
+		location.href = "/01.market-project/html/board/community_detail.html";
 	}
 }
 
