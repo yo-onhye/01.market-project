@@ -1227,6 +1227,7 @@
 
 .songe_sort_bx {
 	margin-bottom: 20px;
+	@include clearfix;
 	.songe_sort_type {
 		display: inline-block;
 		width: 30px;
@@ -1243,6 +1244,9 @@
 			}
 			&.btn_list {
 				@include sprite($sp-sort_info);
+			}
+			&:focus {
+				border-color: $primary_color;
 			}
 		}
 		&.ty_img {
@@ -1265,6 +1269,19 @@
 				height: 30px;
 				border-width: 1px;
 				line-height: 29px;
+			}
+		}
+	}
+	.songe_post_article {
+		float: right;
+		.btn_post {
+			display: inline-block;
+			@include sprite($sp-ico_post);
+			border: 1px solid $grey_color3;
+			border-radius: 5px;
+			vertical-align: top;
+			&:focus {
+				border-color: $primary_color;
 			}
 		}
 	}

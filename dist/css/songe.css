@@ -109,11 +109,11 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico { display: inline-block; margin-top: -1px; line-height: 34px; vertical-align: middle; }
 
-.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_account { background-image: url(../img/sprites/sprite.png); background-position: -272px -106px; width: 15px; height: 15px; }
+.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_account { background-image: url(../img/sprites/sprite.png); background-position: -167px -225px; width: 15px; height: 15px; }
 
-.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_keep { background-image: url(../img/sprites/sprite.png); background-position: -272px -68px; width: 15px; height: 15px; }
+.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_keep { background-image: url(../img/sprites/sprite.png); background-position: -240px -205px; width: 15px; height: 15px; }
 
-.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_cart { background-image: url(../img/sprites/sprite.png); background-position: -272px -87px; width: 15px; height: 15px; }
+.songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_ico.ico_cart { background-image: url(../img/sprites/sprite.png); background-position: -148px -225px; width: 15px; height: 15px; }
 
 .songe_header .songe_gnb .songe_gnb_member .songe_member_link .songe_member_txt { display: none; }
 
@@ -387,7 +387,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_atch { overflow: hidden; position: relative; display: inline-block; width: 100px; height: 100px; border: 2px solid #e0e0e0; border-radius: 5px; box-sizing: border-box; vertical-align: top; }
 
-.songe_atch:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-image: url(../img/sprites/sprite.png); background-position: -232px -113px; width: 30px; height: 30px; content: ""; }
+.songe_atch:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-image: url(../img/sprites/sprite.png); background-position: -138px -74px; width: 30px; height: 30px; content: ""; }
 
 .songe_atch.focus { border-color: #2f332f; }
 
@@ -467,13 +467,17 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_sort_bx { margin-bottom: 20px; }
 
+.songe_sort_bx:after { clear: both; content: ""; display: block; }
+
 .songe_sort_bx .songe_sort_type { display: inline-block; width: 30px; height: 30px; margin-right: 10px; border: 1px solid #e0e0e0; border-radius: 5px; box-sizing: border-box; vertical-align: top; }
 
 .songe_sort_bx .songe_sort_type .songe_sort_btn { display: none; }
 
-.songe_sort_bx .songe_sort_type .songe_sort_btn.btn_img { background-image: url(../img/sprites/sprite.png); background-position: -68px -225px; width: 28px; height: 28px; }
+.songe_sort_bx .songe_sort_type .songe_sort_btn.btn_img { background-image: url(../img/sprites/sprite.png); background-position: -272px -192px; width: 28px; height: 28px; }
 
-.songe_sort_bx .songe_sort_type .songe_sort_btn.btn_list { background-image: url(../img/sprites/sprite.png); background-position: -240px -177px; width: 28px; height: 28px; }
+.songe_sort_bx .songe_sort_type .songe_sort_btn.btn_list { background-image: url(../img/sprites/sprite.png); background-position: -238px -74px; width: 28px; height: 28px; }
+
+.songe_sort_bx .songe_sort_type .songe_sort_btn:focus { border-color: #2f332f; }
 
 .songe_sort_bx .songe_sort_type.ty_img .btn_img { display: block; }
 
@@ -482,6 +486,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .songe_sort_bx .songe_sort_item { display: inline-block; width: 150px; vertical-align: top; }
 
 .songe_sort_bx .songe_sort_item .songe_select select { height: 30px; border-width: 1px; line-height: 29px; }
+
+.songe_sort_bx .songe_post_article { float: right; }
+
+.songe_sort_bx .songe_post_article .btn_post { display: inline-block; background-image: url(../img/sprites/sprite.png); background-position: -206px -74px; width: 28px; height: 28px; border: 1px solid #e0e0e0; border-radius: 5px; vertical-align: top; }
+
+.songe_sort_bx .songe_post_article .btn_post:focus { border-color: #2f332f; }
 
 .songe_cunit_bx { margin: -25px -10px 20px; }
 
@@ -517,9 +527,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_cunit_bx .songe_cunit_lst .songe_cunit_info .songe_cunit_price .txt_won { display: inline-block; margin-left: 3px; }
 
-.songe_cunit_bx .songe_cunit_lst .btn_item_keep { position: absolute; top: 14px; right: 24px; background-image: url(../img/sprites/sprite.png); background-position: -272px -47px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); z-index: 3; }
+.songe_cunit_bx .songe_cunit_lst .btn_item_keep { position: absolute; top: 14px; right: 24px; background-image: url(../img/sprites/sprite.png); background-position: -126px -225px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); z-index: 3; }
 
-.songe_cunit_bx .songe_cunit_lst .btn_item_keep.on { background-image: url(../img/sprites/sprite.png); background-position: -272px -26px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
+.songe_cunit_bx .songe_cunit_lst .btn_item_keep.on { background-image: url(../img/sprites/sprite.png); background-position: -104px -225px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
 
 .songe_cunit_bx .songe_cunit_lst.ty_list .songe_cunit_item { width: 50%; }
 
@@ -591,9 +601,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_dealunit_bx .songe_dealunit_lst .songe_dealunit_info .songe_dealunit_price .txt_won { display: inline-block; margin-left: 3px; }
 
-.songe_dealunit_bx .songe_dealunit_lst .btn_item_keep { position: absolute; top: 14px; right: 24px; background-image: url(../img/sprites/sprite.png); background-position: -272px -47px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); z-index: 3; }
+.songe_dealunit_bx .songe_dealunit_lst .btn_item_keep { position: absolute; top: 14px; right: 24px; background-image: url(../img/sprites/sprite.png); background-position: -126px -225px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); z-index: 3; }
 
-.songe_dealunit_bx .songe_dealunit_lst .btn_item_keep.on { background-image: url(../img/sprites/sprite.png); background-position: -272px -26px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
+.songe_dealunit_bx .songe_dealunit_lst .btn_item_keep.on { background-image: url(../img/sprites/sprite.png); background-position: -104px -225px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
 
 .songe_dealunit_bx .songe_dealunit_lst.ty_list .songe_dealunit_item { width: 50%; }
 
@@ -645,9 +655,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn { display: block; margin-top: 15px; }
 
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like { display: inline-block; margin-right: 7px; background-image: url(../img/sprites/sprite.png); background-position: -272px -47px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
+.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like { display: inline-block; margin-right: 7px; background-image: url(../img/sprites/sprite.png); background-position: -126px -225px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
 
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -272px -26px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
+.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -104px -225px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
 
 .songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_like_num { display: inline-block; font-size: 11px; line-height: 17px; vertical-align: top; }
 
@@ -713,7 +723,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_btn:hover { margin-top: -3px; }
 
-.songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_btn:before { display: inline-block; margin: 1px 5px 0 0; background-image: url(../img/sprites/sprite.png); background-position: -272px -125px; width: 13px; height: 12px; vertical-align: top; content: ""; }
+.songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_btn:before { display: inline-block; margin: 1px 5px 0 0; background-image: url(../img/sprites/sprite.png); background-position: -186px -225px; width: 13px; height: 12px; vertical-align: top; content: ""; }
 
 .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_btn.on:before { animation-name: likeAnimation; animation-iteration-count: 1; animation-duration: 0.65s; }
 
@@ -727,9 +737,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_board_article .songe_board_comment .songe_comment_top .songe_btn { width: 100px; height: 40px; font-size: 13px; line-height: 40px; }
 
-.songe_board_article .songe_board_comment .songe_comment_top .songe_btn_like { display: inline-block; margin: 11px 0 0 7px; background-image: url(../img/sprites/sprite.png); background-position: -272px -47px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
+.songe_board_article .songe_board_comment .songe_comment_top .songe_btn_like { display: inline-block; margin: 11px 0 0 7px; background-image: url(../img/sprites/sprite.png); background-position: -126px -225px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
 
-.songe_board_article .songe_board_comment .songe_comment_top .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -272px -26px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
+.songe_board_article .songe_board_comment .songe_comment_top .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -104px -225px; width: 18px; height: 17px; animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
 
 .songe_board_article .songe_board_comment .songe_comment_cont { margin-top: 20px; }
 
@@ -847,15 +857,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_certify_bx .songe_certify_lst a .logo { position: absolute; top: 14px; left: 20px; width: 22px; height: 22px; }
 
-.songe_certify_bx .songe_certify_lst a .logo.logo_mail { background-image: url(../img/sprites/sprite.png); background-position: -234px -225px; width: 22px; height: 22px; }
+.songe_certify_bx .songe_certify_lst a .logo.logo_mail { background-image: url(../img/sprites/sprite.png); background-position: 0px -225px; width: 22px; height: 22px; }
 
-.songe_certify_bx .songe_certify_lst a .logo.logo_facebook { background-image: url(../img/sprites/sprite.png); background-position: -208px -225px; width: 22px; height: 22px; }
+.songe_certify_bx .songe_certify_lst a .logo.logo_facebook { background-image: url(../img/sprites/sprite.png); background-position: -26px -225px; width: 22px; height: 22px; }
 
-.songe_certify_bx .songe_certify_lst a .logo.logo_google { background-image: url(../img/sprites/sprite.png); background-position: -130px -225px; width: 22px; height: 22px; }
+.songe_certify_bx .songe_certify_lst a .logo.logo_google { background-image: url(../img/sprites/sprite.png); background-position: -78px -225px; width: 22px; height: 22px; }
 
-.songe_certify_bx .songe_certify_lst a .logo.logo_naver { background-image: url(../img/sprites/sprite.png); background-position: -272px 0px; width: 22px; height: 22px; }
+.songe_certify_bx .songe_certify_lst a .logo.logo_naver { background-image: url(../img/sprites/sprite.png); background-position: -52px -225px; width: 22px; height: 22px; }
 
-.songe_certify_bx .songe_certify_lst a .logo.logo_apple { background-image: url(../img/sprites/sprite.png); background-position: -156px -225px; width: 22px; height: 22px; }
+.songe_certify_bx .songe_certify_lst a .logo.logo_apple { background-image: url(../img/sprites/sprite.png); background-position: -244px -139px; width: 22px; height: 22px; }
 
 .songe_result_top { text-align: center; }
 
@@ -927,15 +937,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .login_signin .songe_signin_bx .songe_signin_lst a .logo { display: inline-block; vertical-align: top; }
 
-.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_mail { background-image: url(../img/sprites/sprite.png); background-position: -234px -225px; width: 22px; height: 22px; }
+.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_mail { background-image: url(../img/sprites/sprite.png); background-position: 0px -225px; width: 22px; height: 22px; }
 
-.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_facebook { background-image: url(../img/sprites/sprite.png); background-position: -208px -225px; width: 22px; height: 22px; }
+.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_facebook { background-image: url(../img/sprites/sprite.png); background-position: -26px -225px; width: 22px; height: 22px; }
 
-.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_google { background-image: url(../img/sprites/sprite.png); background-position: -130px -225px; width: 22px; height: 22px; }
+.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_google { background-image: url(../img/sprites/sprite.png); background-position: -78px -225px; width: 22px; height: 22px; }
 
-.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_naver { background-image: url(../img/sprites/sprite.png); background-position: -272px 0px; width: 22px; height: 22px; }
+.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_naver { background-image: url(../img/sprites/sprite.png); background-position: -52px -225px; width: 22px; height: 22px; }
 
-.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_apple { background-image: url(../img/sprites/sprite.png); background-position: -156px -225px; width: 22px; height: 22px; }
+.login_signin .songe_signin_bx .songe_signin_lst a .logo.logo_apple { background-image: url(../img/sprites/sprite.png); background-position: -244px -139px; width: 22px; height: 22px; }
 
 .login_findid { max-width: 650px; margin: 50px auto; }
 
