@@ -128,6 +128,7 @@
 						</dl>
 					</form>
 				</div>
+				<p class="songe_txt_caution"></p>
 				<div class="songe_btn_bx">
 					<ul class="songe_btn_lst">
 						<li><button type="button" class="songe_btn" onclick="fn_cancel()"><span>취소</span></button></li>
@@ -172,9 +173,20 @@ function changeImageUrl(input) {
 		reader.readAsDataURL(welTargetInput.files[0]);
 	}
 }
-  
+
+function checkNecessary() {
+	if (!$('#post_subject').val() || !$('#post_text').val()) {
+		$('.songe_txt_caution').css('display','block').text('내용을 입력해주세요.');
+		return false;
+	}
+	else {
+		$('.songe_txt_caution').css('display','none');
+		return true;
+	}
+}
+
 $(".songe_atch .songe_inp").change(function(){
-   changeImageUrl(this);
+	changeImageUrl(this);
 });
 
 function fn_post() {
