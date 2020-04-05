@@ -6,7 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 유형 선택 > 송이마켓</title>
+<title>나의 문의 등록 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
@@ -48,82 +48,76 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content login_signin">
+		<div id="content" class="songe_content myask_post">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>로그인</span></h2>
+				<h2 class="songe_tit"><span>나의 문의 등록</span></h2>
 			</div>
 			<div class="songe_cont_area">
 				<div class="songe_dlst_bx">
-					<form id="frmLoginInfo" name="frmLoginInfo" method="post">
+					<form id="frmMyaskPost" name="frmMyaskPost" method="post">
 						<dl class="songe_dlst">
-							<dt><label for="usr_id">아이디</label></dt>
+							<dt>문의 유형 선택</dt>
 							<dd>
-								<div class="songe_inptxt">
-									<input type="text" class="songe_inp" id="usr_id" placeholder="이메일을 입력해주세요.">
+								<div class="songe_select">
+									<select title="문의 유형을 선택하세요.">
+										<option>문의 유형 선택</option>
+										<option>상품 제안</option>
+										<option>시스템 오류</option>
+										<option>서비스 불만족</option>
+										<option>기타</option>
+									</select>
 								</div>
 							</dd>
 						</dl>
 						<dl class="songe_dlst">
-							<dt><label for="mem_pw">비밀번호</label></dt>
+							<dt><label for="post_subject">문의 제목</label></dt>
 							<dd>
-								<!-- [D] 입력 값이 맞을 경우 .songe_inptxt에 .on_valid 추가,
-													입력 값이 틀릴 경우 .songe_inptxt에 .on_invalid 추가 -->
 								<div class="songe_inptxt">
-									<input type="password" class="songe_inp" id="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()">
-									<span class="songe_invalid"></span>
-									<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
+									<input type="text" class="songe_inp" id="post_subject" name="post_subject" placeholder="문의 제목을 입력해주세요.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="songe_dlst">
+							<dt><label for="post_text">문의 내용</label></dt>
+							<dd>
+								<div class="songe_inptxt">
+									<textarea class="songe_ta" name="post_text" id="post_text" cols="30" rows="10" placeholder="문의 내용을 입력해주세요."></textarea>
+								</div>
+							</dd>
+							<dd>
+								<div class="songe_attach_bx">
+									<ul class="songe_attach_lst">
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+										<li>
+											<div class="songe_atch">
+												<input type="file"  class="songe_inp" name="atchFile" accept="image/*" title="첨부파일을 선택해주세요.">
+											</div>
+										</li>
+									</ul>
+									<ul class="songe_info_lst">
+										<li>최대 3장의 사진을 첨부할 수 있습니다.</li>
+										<li>2MB미만의 JPG, GIF, PNG 파일만 첨부하실 수 있습니다.</li>
+										<li>모든 법적책임은 작성자에게 있습니다.</li>
+									</ul>
 								</div>
 							</dd>
 						</dl>
 					</form>
-					<div class="songe_login_chk">
-						<span class="songe_chk">
-							<input type="checkbox" name="keepLogin" id="keepLogin">
-							<label for="keepLogin">로그인 상태 유지</label>
-						</span>
-					</div>
-					<div class="songe_login_guide">
-						<a href="#" class="songe_guide_link">회원정보 찾기</a>
-						<a href="#" class="songe_guide_link">비밀번호 찾기</a>
-						<a href="#" class="songe_guide_link">회원가입</a>
-					</div>
 				</div>
+				<p class="songe_txt_caution"></p>
 				<div class="songe_btn_bx">
 					<ul class="songe_btn_lst">
-						<li><button type="submit" class="songe_btn songe_btn_green"><span>로그인</span></button></li>
-					</ul>
-				</div>
-				<div class="songe_signin_bx">
-					<ul class="songe_signin_lst">
-						<li>
-							<a href="#">
-								<i class="logo logo_facebook"></i>
-								<strong>Facebook</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="logo logo_google"></i>
-								<strong>Google</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="logo logo_naver"></i>
-								<strong>Naver</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-							
-						<li>
-							<a href="#">
-								<i class="logo logo_apple"></i>
-								<strong>Apple</strong>
-								<span>로그인</span>
-							</a>
-						</li>
+						<li><button type="button" class="songe_btn" onclick="fn_cancel()"><span>취소</span></button></li>
+						<li><button type="button" class="songe_btn songe_btn_green" onclick="fn_post()"><span>확인</span></button></li>
 					</ul>
 				</div>
 			</div>
@@ -149,5 +143,47 @@
 		</div>
 	</div>
 </div>
+<script>
+function changeImageUrl(input) {
+	var welTargetInput = input,
+			welTargetImg = $(input).siblings('img');
+
+	if (welTargetInput.files && welTargetInput.files[0]) {
+		var reader = new FileReader();
+
+		reader.onload = function (e) {
+			welTargetImg.attr('src', e.target.result);  
+	}
+
+		reader.readAsDataURL(welTargetInput.files[0]);
+	}
+}
+
+function checkNecessary() {
+	if (!$('#post_subject').val() || !$('#post_text').val()) {
+		$('.songe_txt_caution').css('display','block').text('내용을 입력해주세요.');
+		return false;
+	}
+	else {
+		$('.songe_txt_caution').css('display','none');
+		return true;
+	}
+}
+
+$(".songe_atch .songe_inp").change(function(){
+	changeImageUrl(this);
+});
+
+function fn_post() {
+	if (checkNecessary()) {
+		document.getElementById('frmMyaskPost').submit();
+		location.href = "/01.market-project/html/board/myask_detail.html";
+	}
+}
+
+function fn_cancel() {
+	location.href = "/01.market-project/html/customer/customer_main.html";
+}
+</script>
 </body>
 </html>

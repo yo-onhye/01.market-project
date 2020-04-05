@@ -6,11 +6,10 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>투표 리스트 > 송이마켓</title>
+<title>자주 묻는 질문 리스트 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/masonry.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -48,64 +47,96 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content board_list">
+		<div id="content" class="songe_content question_list">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>VOTE</span></h2>
+				<h2 class="songe_tit"><span>자주 묻는 질문</span></h2>
 			</div>
 
 			<div class="songe_cont_area">
 				<div class="songe_sort_bx _js_sort_bx">
 					<div class="songe_sort_item">
 						<div class="songe_select">
-							<select title="게시글 정렬 방식을 선택하세요.">
-								<option>최신순</option>
-								<option>인기순</option>
+							<select title="자주 묻는 질문 정렬 방식을 선택하세요.">
+								<option>전체</option>
+								<option>회원문의</option>
+								<option>상품문의</option>
+								<option>구매문의</option>
 							</select>
 						</div>
 					</div>
 				</div>
 
-				<div class="songe_vote_bx">
-					<ul class="songe_vote_lst">
-						<li class="songe_vote_item">
-							<a href="/01.market-project/html/board/vote_detail.html" class="songe_vote_bx">
-								<div class="songe_vote_top">
-									<span class="songe_vote_tit">흩날리는 벚꽃 아래 손잡고 걷고 싶은 스타는?</span>
-									<span class="songe_vote_period">2020.03.15 ~ 03.29</span>
-								</div>
-								<div class="songe_vote_cont">
-									<span class="songe_vote_tmumb">
-										<img src="/01.market-project/dist/img/vote/@vote.png" alt="">
-									</span>
-									<span class="songe_vote_txt">후보 : 아이린, 아이유, 수지, 하성운, 로운, 차은우</span>
-									<span class="songe_vote_txt">하루에 기본 1회, 송이를 사용하여 최대 5회 투표 가능<br>(득표량 집계는 5분마다 갱신됩니다)</span>
-								</div>
+				<div class="songe_cslst_bx">
+					<ul class="songe_cs_lst">
+						<li>
+							<a href="/01.market-project/html/customer/question_detail.html" class="songe_cs_link">
+								<span class="songe_cs_subject">[회원문의] 아이디,비밀번호를 분실했습니다.</span>
+								<span class="songe_cs_info">
+									<span class="blind">게시일</span>
+									<span class="date">2020.04.01</span>
+									<span class="blind">게시자</span>
+									<span class="publisher">송이마켓</span>
+									<span class="lookup">조회 9</span>
+								</span>
 							</a>
 						</li>
-						<li class="songe_vote_item">
-							<a href="/01.market-project/html/board/vote_detail.html" class="songe_vote_bx">
-								<div class="songe_vote_top">
-									<span class="songe_vote_tit">봄에 어울리는 달콤한 목소리를 가진 스타는?</span>
-									<span class="songe_vote_period">2020.03.10 ~ 03.24</span>
-								</div>
-								<div class="songe_vote_cont">
-									<span class="songe_vote_tmumb">
-										<img src="/01.market-project/dist/img/vote/@vote2.png" alt="">
-									</span>
-									<span class="songe_vote_txt">후보 : 태연, 진, 재윤, 황민현, 백예린, 세정</span>
-									<span class="songe_vote_txt">하루에 기본 1회, 송이를 사용하여 최대 5회 투표 가능<br>(득표량 집계는 5분마다 갱신됩니다)</span>
-								</div>
+						<li>
+							<a href="/01.market-project/html/customer/question_detail.html" class="songe_cs_link">
+								<span class="songe_cs_subject">[상품문의] 일반 상품과 펀딩 상품의 차이점이 궁금해요.</span>
+								<span class="songe_cs_info">
+									<span class="blind">게시일</span>
+									<span class="date">2020.03.17</span>
+									<span class="blind">게시자</span>
+									<span class="publisher">송이마켓</span>
+									<span class="lookup">조회 98</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="/01.market-project/html/customer/question_detail.html" class="songe_cs_link">
+								<span class="songe_cs_subject">[상품문의] 펀딩 상품 등록 절차가 궁금해요.</span>
+								<span class="songe_cs_info">
+									<span class="blind">게시일</span>
+									<span class="date">2020.03.15</span>
+									<span class="blind">게시자</span>
+									<span class="publisher">송이마켓</span>
+									<span class="lookup">조회 102</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="/01.market-project/html/customer/question_detail.html" class="songe_cs_link">
+								<span class="songe_cs_subject">[구매문의] 결제 및 배송에 대해 궁금해요.</span>
+								<span class="songe_cs_info">
+									<span class="blind">게시일</span>
+									<span class="date">2020.03.14</span>
+									<span class="blind">게시자</span>
+									<span class="publisher">송이마켓</span>
+									<span class="lookup">조회 110</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="/01.market-project/html/customer/question_detail.html" class="songe_cs_link">
+								<span class="songe_cs_subject">[구매문의] 물품 구매 시 사기당하면 어떻게 되나요.</span>
+								<span class="songe_cs_info">
+									<span class="blind">게시일</span>
+									<span class="date">2020.03.12</span>
+									<span class="blind">게시자</span>
+									<span class="publisher">송이마켓</span>
+									<span class="lookup">조회 143</span>
+								</span>
 							</a>
 						</li>
 					</ul>
 				</div>
 
 				<div class="sone_paginate_bx">
-						<div class="sone_paginate">
-							<a href="#" class="btn_prev"><span class="blind">이전</span></a>
-								<strong>1</strong>
-							<a href="#" class="btn_next"><span class="blind">다음</span></a>
-						</div>
+					<div class="sone_paginate">
+						<a href="#" class="btn_prev"><span class="blind">이전</span></a>
+							<strong>1</strong>
+						<a href="#" class="btn_next"><span class="blind">다음</span></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -131,12 +162,4 @@
 	</div>
 </div>
 </body>
-<script>
-$(function(){
-	var $grid = $('.songe_vote_lst').masonry({
-		// options
-		itemSelector: '.songe_vote_item'
-	});
-});
-</script>
 </html>

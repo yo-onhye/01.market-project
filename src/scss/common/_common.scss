@@ -301,6 +301,7 @@
 
 /* section */
 .songe_cont_sec {
+	position: relative;
 	margin-top: 50px;
 	&:first-child {
 		margin-top: 0;
@@ -385,6 +386,18 @@
 	}
 }
 
+.songe_btn_detail {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 8px;
+	border-radius: 5px;
+	background: $point_color1;
+	color: $white_color;
+	font-size: 13px;
+	line-height: 25px;
+}
+
 /* font */
 .songe_tit {
 	font-family: "S-CoreDream-4Regular", sans-serif;
@@ -411,8 +424,15 @@
 	margin-bottom: 10px;
 	font-family: "S-CoreDream-4Regular", sans-serif;
 	font-size: 19px;
+	line-height: 25px;
 	&.ty_center {
 		text-align: center;
+	}
+}
+.songe_subcont {
+	margin-top: 20px;
+	.songe_btn {
+		margin-top: 25px;
 	}
 }
 .songe_dsc {
@@ -428,6 +448,9 @@
 }
 .txt_point2 {
 	color: $point_color1;
+}
+.txt_point3 {
+	color: $grey_color2;
 }
 .songe_txt_info {
 	display: block;
@@ -466,7 +489,7 @@
 		height: 40px;
 		padding: 5px 0;
 		border: 0 none;
-		border-bottom: 2px solid $grey_color3;
+		border-bottom: 1px solid $grey_color3;
 		background: $white_color;
 		font-size: 13px;
 		line-height: 30px;
@@ -562,7 +585,7 @@
 		right: 10px;
 		width: 10px;
 		height: 5px;
-		border: 2px solid $point_color1;
+		border: 1px solid $point_color1;
 		border-width: 0 0 2px 2px;
 		-webkit-transform: rotate(-45deg);
 		-ms-transform: rotate(-45deg);
@@ -644,7 +667,7 @@
 		padding-left: 9px;
 		padding-right: 38px;
 		border: 0 none;
-		border-bottom: 2px solid $grey_color3;
+		border-bottom: 1px solid $grey_color3;
 		border-radius: 0;
 		background: $white_color;
 		font-size: 13px;
@@ -685,8 +708,8 @@
 		width: 8px;
 		height: 8px;
 		margin-top: -8px;
-		border-top: 2px solid $primary_color;
-		border-left: 2px solid $primary_color;
+		border-top: 1px solid $primary_color;
+		border-left: 1px solid $primary_color;
 	}
 }
 /* for IE9 */
@@ -1001,7 +1024,7 @@
 	height: 150px;
 	padding: 9px 0;
 	border: 0;
-	border-bottom: 2px solid $grey_color3;
+	border-bottom: 1px solid $grey_color3;
 	font-size: 13px;
 	line-height: 21px;
 	resize: none;
@@ -1013,11 +1036,12 @@
 }
 .songe_atch {
 	overflow: hidden;
-	position: relative;
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	border: 2px solid $grey_color3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid $grey_color3;
 	border-radius: 5px;
 	box-sizing: border-box;
 	vertical-align: top;
@@ -1107,13 +1131,20 @@
 	}
 }
 .songe_attach_bx {
-	margin-top: 25px;
+	margin-top: 15px;
 	.songe_attach_lst {
-		@include clearfix;
+		overflow: hidden;
 		li {
 			float: left;
+			position: relative;
 			width: 100px;
-			margin-left: 10px;
+			max-width: 100px;
+			margin: 10px 0 0 10px;
+			&:after {
+				display: block;
+				padding-bottom: 100%;
+				content: "";
+			}
 			&:first-child {
 				margin-left: 0;
 			}
@@ -1195,9 +1226,103 @@
 		}
 	}
 }
+.songe_scrl_lst {
+	overflow: hidden;
+	overflow-x: auto;
+	// -webkit-overflow-scrolling: touch;
+	font-size: 0;
+	white-space: nowrap;
+	&::-webkit-scrollbar {
+		height: 2px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $grey_color3;
+	}
+	li {
+		display: inline-block;
+		margin-left: 15px;
+		margin-bottom: 10px;
+		white-space: normal;
+		vertical-align: top;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.songe_scrl_link {
+		display: block;
+		width: 300px;
+		height: 200px;
+		padding: 20px 10px;
+		border: 1px solid $grey_color3;
+		border-radius: 10px;
+		box-sizing: border-box;
+		background: $white_color;
+		color: $primary_color;
+		.songe_scrl_tit {
+			@include ellipsis;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 15px;
+		}
+		.songe_scrl_txt {
+			margin-top: 15px;
+			font-size: 13px;
+			line-height: 1.5;
+		}
+	}
+}
+.songe_toggle_lst {
+	border-bottom: 1px solid $grey_color3;
+	& > li {
+		border-top: 1px solid $grey_color3;
+		&:first-child {
+			border-top: 0;
+		}
+	}
+	.songe_toggle_btn {
+		@include ellipsis;
+		position: relative;
+		width: 100%;
+		padding: 13px 50px 13px 10px;
+		color: $primary_color;
+		font-family: "S-CoreDream-5Medium";
+		font-size: 15px;
+		line-height: 24px;
+		text-align: left;
+		&:after {
+			position: absolute;
+			top: 50%;
+			right: 24px;
+			transform: rotate(-135deg);
+			width: 8px;
+			height: 8px;
+			margin-top: -6px;
+			border-top: 1px solid $primary_color;
+			border-left: 1px solid $primary_color;
+			content: "";
+		}
+		i {
+			display: inline-block;
+			font-weight: bold;
+			font-size: 18px;
+			font-style: normal;
+			vertical-align: top;
+		}
+	}
+	.songe_toggle_cont {
+		display: none;
+		overflow: hidden;
+		margin: 20px 10px;
+		padding: 20px;
+		border-radius: 10px;
+		background: #f5f5f5;
+		font-size: 13px;
+		line-height: 1.5;
+	}
+}
+
 .songe_dlst_bx {
 	padding: 40px 50px;
-	border: 2px solid $grey_color3;
+	border: 1px solid $grey_color3;
 	border-radius: 15px;
 	box-sizing: border-box;
 	.songe_dlst {
@@ -1292,130 +1417,130 @@
 	.songe_cunit_lst {
 		width: 100%;
 		font-size: 0;
-		.songe_cunit_item {
+	}
+	.songe_cunit_item {
+		position: relative;
+		display: inline-block;
+		width: 25%;
+		margin-top: 25px;
+		padding: 0 10px;
+		box-sizing: border-box;
+		vertical-align: top;
+		& > a {
+			display: block;
 			position: relative;
-			display: inline-block;
-			width: 25%;
-			margin-top: 25px;
-			padding: 0 10px;
-			box-sizing: border-box;
-			vertical-align: top;
-			& > a {
-				display: block;
-				position: relative;
-			}
-			&.cunit_soldout {
-				filter: grayscale(0.7);
-				.songe_cunit_tmumb {
-					&:after {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						padding: 15px 0;
-						background: rgba(34, 34, 34, 0.6);
-						color: $white_color;
-						font-size: 14px;
-						text-align: center;
-						content: "SOLD OUT";
-					}
-				}
-				.songe_cunit_info {
-					color: $grey_color1;
-				}
-			}
 		}
-		.songe_cunit_tmumb {
-			overflow: hidden;
-			display: inline-block;
-			position: relative;
-			width: 100%;
-			padding-bottom: 100%;
-			border-radius: 10px;
-			font-size: 0;
-			vertical-align: top;
-			&:before {
-				content: "";
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				background-color: rgba(0, 0, 0, 0.03);
-				z-index: 3;
-			}
-			img {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 100%;
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
-			}
-		}
-		.songe_cunit_info {
-			display: inline-block;
-			width: 100%;
-			margin-top: 15px;
-			font-family: "S-CoreDream-5Medium";
-			font-size: 14px;
-			line-height: 1.5;
-			vertical-align: top;
-			.songe_cunit_idol {
-				display: block;
-				em {
-					display: inline-block;
-					padding: 0 4px;
-					background-color: $primary_color;
+		&.cunit_soldout {
+			filter: grayscale(0.7);
+			.songe_cunit_tmumb {
+				&:after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					padding: 15px 0;
+					background: rgba(34, 34, 34, 0.6);
 					color: $white_color;
-					font-size: 11px;
-					line-height: 16px;
-					vertical-align: top;
+					font-size: 14px;
+					text-align: center;
+					content: "SOLD OUT";
 				}
 			}
-			.songe_cunit_txt {
-				display: block;
-				margin-top: 10px;
-				@include multi-ellipsis(2);
-			}
-			.songe_cunit_price {
-				display: block;
-				margin-top: 15px;
-				.txt_price {
-					font-family: "S-CoreDream-5Medium", sans-serif;
-					font-size: 16px;
-				}
-				.txt_won {
-					display: inline-block;
-					margin-left: 3px;
-				}
+			.songe_cunit_info {
+				color: $grey_color1;
 			}
 		}
-		.btn_item_keep {
+	}
+	.songe_cunit_tmumb {
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		padding-bottom: 100%;
+		border-radius: 10px;
+		font-size: 0;
+		vertical-align: top;
+		&:before {
+			content: "";
 			position: absolute;
-			top: 14px;
-			right: 24px;
-			@include sprite($sp-cunit_keep);
-			transform: perspective(1px) translateZ(0);
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.03);
 			z-index: 3;
-			&.on {
-				@include sprite($sp-cunit_keep_on);
-				animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
-				opacity: 1;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	}
+	.songe_cunit_info {
+		display: inline-block;
+		width: 100%;
+		margin-top: 15px;
+		font-family: "S-CoreDream-5Medium";
+		font-size: 14px;
+		line-height: 1.5;
+		vertical-align: top;
+		.songe_cunit_idol {
+			display: block;
+			em {
+				display: inline-block;
+				padding: 0 4px;
+				background-color: $primary_color;
+				color: $white_color;
+				font-size: 11px;
+				line-height: 16px;
+				vertical-align: top;
 			}
 		}
-		&.ty_list {
-			.songe_cunit_item {
+		.songe_cunit_txt {
+			display: block;
+			margin-top: 10px;
+			@include multi-ellipsis(2);
+		}
+		.songe_cunit_price {
+			display: block;
+			margin-top: 15px;
+			.txt_price {
+				font-family: "S-CoreDream-5Medium", sans-serif;
+				font-size: 16px;
+			}
+			.txt_won {
+				display: inline-block;
+				margin-left: 3px;
+			}
+		}
+	}
+	.btn_item_keep {
+		position: absolute;
+		top: 14px;
+		right: 24px;
+		@include sprite($sp-cunit_keep);
+		transform: perspective(1px) translateZ(0);
+		z-index: 3;
+		&.on {
+			@include sprite($sp-cunit_keep_on);
+			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+			opacity: 1;
+		}
+	}
+	&.ty_list {
+		.songe_cunit_item {
+			width: 50%;
+			.songe_cunit_tmumb {
 				width: 50%;
-				.songe_cunit_tmumb {
-					width: 50%;
-					padding-bottom: 50%;
-				}
-				.songe_cunit_info {
-					width: 50%;
-					padding-left: 15px;
-					box-sizing: border-box;
-				}
+				padding-bottom: 50%;
+			}
+			.songe_cunit_info {
+				width: 50%;
+				padding-left: 15px;
+				box-sizing: border-box;
 			}
 		}
 	}
@@ -1426,221 +1551,221 @@
 	.songe_dealunit_lst {
 		width: 100%;
 		font-size: 0;
-		.songe_dealunit_item {
+	}
+	.songe_dealunit_item {
+		position: relative;
+		display: inline-block;
+		width: 33.33%;
+		margin-top: 25px;
+		padding: 0 10px;
+		box-sizing: border-box;
+		vertical-align: top;
+		& > a {
+			display: block;
 			position: relative;
-			display: inline-block;
-			width: 33.33%;
-			margin-top: 25px;
-			padding: 0 10px;
-			box-sizing: border-box;
-			vertical-align: top;
-			& > a {
-				display: block;
-				position: relative;
-			}
-			&.dealunit_soldout {
-				filter: grayscale(0.7);
-				.songe_dealunit_tmumb {
-					&:after {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						padding: 15px 0;
-						background: rgba(34, 34, 34, 0.6);
-						color: $white_color;
-						font-size: 14px;
-						text-align: center;
-						content: "SOLD OUT";
-					}
+		}
+		&.dealunit_soldout {
+			filter: grayscale(0.7);
+			.songe_dealunit_tmumb {
+				&:after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					padding: 15px 0;
+					background: rgba(34, 34, 34, 0.6);
+					color: $white_color;
+					font-size: 14px;
+					text-align: center;
+					content: "SOLD OUT";
 				}
-				.songe_dealunit_item {
-					color: $grey_color5;
+			}
+			.songe_dealunit_item {
+				color: $grey_color5;
+			}
+		}
+	}
+	.songe_dealunit_tmumb {
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		padding-bottom: 57%;
+		border-radius: 10px;
+		font-size: 0;
+		vertical-align: top;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.03);
+			z-index: 3;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		.deal_badge_bx {
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			.deal_badge {
+				display: block;
+				padding: 5px 10px;
+				border-radius: 5px 5px 5px 0;
+				color: $white_color;
+				font-size: 13px;
+				line-height: 1.2;
+				opacity: 0.85;
+				&.deadline {
+					background-color: $point_color2;
+				}
+				&.d_day {
+					background-color: $point_color1;
+				}
+				&.new {
+					background-color: $point_color3;
+				}
+				& + .deal_badge {
+					margin-top: 5px;
 				}
 			}
 		}
-		.songe_dealunit_tmumb {
-			overflow: hidden;
-			display: inline-block;
-			position: relative;
-			width: 100%;
-			padding-bottom: 57%;
-			border-radius: 10px;
+	}
+	.songe_dealunit_info {
+		display: inline-block;
+		width: 100%;
+		margin-top: 15px;
+		font-family: "S-CoreDream-5Medium";
+		font-size: 14px;
+		vertical-align: top;
+		.songe_dealunit_idol {
+			display: block;
+			em {
+				display: inline-block;
+				padding: 0 4px;
+				background-color: $primary_color;
+				color: $white_color;
+				font-size: 11px;
+				line-height: 16px;
+				vertical-align: top;
+			}
+		}
+		.songe_dealunit_tit {
+			display: block;
+			margin-top: 10px;
+			@include ellipsis();
+		}
+		.songe_dealunit_txt {
+			display: block;
+			margin-top: 10px;
+			color: $grey_color2;
+			font-size: 12px;
+			@include multi-ellipsis(2);
+		}
+		.songe_dealunit_graph {
+			display: block;
+			height: 3px;
+			margin-top: 35px;
+			background-color: $grey_color3;
 			font-size: 0;
-			vertical-align: top;
-			&:before {
-				content: "";
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				background-color: rgba(0, 0, 0, 0.03);
-				z-index: 3;
-			}
-			img {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 100%;
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
-			}
-			.deal_badge_bx {
-				position: absolute;
-				bottom: 15px;
-				left: 0;
-				.deal_badge {
-					display: block;
-					padding: 5px 10px;
-					border-radius: 5px 5px 5px 0;
-					color: $white_color;
-					font-size: 13px;
-					line-height: 1.2;
-					opacity: 0.85;
-					&.deadline {
-						background-color: $point_color2;
-					}
-					&.d_day {
-						background-color: $point_color1;
-					}
-					&.new {
-						background-color: $point_color3;
-					}
-					& + .deal_badge {
-						margin-top: 5px;
-					}
-				}
-			}
-		}
-		.songe_dealunit_info {
-			display: inline-block;
-			width: 100%;
-			margin-top: 15px;
-			font-family: "S-CoreDream-5Medium";
-			font-size: 14px;
-			vertical-align: top;
-			.songe_dealunit_idol {
-				display: block;
-				em {
-					display: inline-block;
-					padding: 0 4px;
-					background-color: $primary_color;
-					color: $white_color;
-					font-size: 11px;
-					line-height: 16px;
-					vertical-align: top;
-				}
-			}
-			.songe_dealunit_tit {
-				display: block;
-				margin-top: 10px;
-				@include ellipsis();
-			}
-			.songe_dealunit_txt {
-				display: block;
-				margin-top: 10px;
-				color: $grey_color2;
-				font-size: 12px;
-				@include multi-ellipsis(2);
-			}
-			.songe_dealunit_graph {
-				display: block;
+			line-height: 0;
+			.graph_bar {
+				position: relative;
+				float: left;
+				width: 0;
+				max-width: 100%;
 				height: 3px;
-				margin-top: 35px;
-				background-color: $grey_color3;
+				background-color: $point_color2;
 				font-size: 0;
 				line-height: 0;
-				.graph_bar {
-					position: relative;
-					float: left;
-					width: 0;
-					max-width: 100%;
-					height: 3px;
-					background-color: $point_color2;
-					font-size: 0;
-					line-height: 0;
-					.graph_per {
+				.graph_per {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					min-width: 50px;
+					&:before {
 						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						min-width: 50px;
-						&:before {
-							position: absolute;
-							top: -22px;
-							right: 0;
-							min-width: 40px;
-							padding: 0 5px;
-							border-radius: 5px 5px 5px 0;
-							background-color: $point_color2;
-							color: $white_color;
-							font-size: 11px;
-							line-height: 17px;
-							text-align: center;
-							content: attr(data-graph-rate);
-						}
+						top: -22px;
+						right: 0;
+						min-width: 40px;
+						padding: 0 5px;
+						border-radius: 5px 5px 5px 0;
+						background-color: $point_color2;
+						color: $white_color;
+						font-size: 11px;
+						line-height: 17px;
+						text-align: center;
+						content: attr(data-graph-rate);
 					}
 				}
 			}
-			.songe_dealunit_fund {
-				display: block;
-				margin-top: 5px;
-				color: $point_color2;
-				font-size: 11px;
-				@include clearfix;
-				.songe_deadline {
-					float: left;
-				}
-				.songe_goal {
-					float: right;
-				}
+		}
+		.songe_dealunit_fund {
+			display: block;
+			margin-top: 5px;
+			color: $point_color2;
+			font-size: 11px;
+			@include clearfix;
+			.songe_deadline {
+				float: left;
 			}
-			.songe_dealunit_price {
-				display: block;
-				margin-top: 15px;
-				.txt_price {
-					font-family: "S-CoreDream-5Medium", sans-serif;
-					font-size: 16px;
-				}
-				.txt_won {
-					display: inline-block;
-					margin-left: 3px;
-				}
+			.songe_goal {
+				float: right;
 			}
 		}
-		.btn_item_keep {
-			position: absolute;
-			top: 14px;
-			right: 24px;
-			@include sprite($sp-cunit_keep);
-			transform: perspective(1px) translateZ(0);
-			z-index: 3;
-			&.on {
-				@include sprite($sp-cunit_keep_on);
-				animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
-				opacity: 1;
+		.songe_dealunit_price {
+			display: block;
+			margin-top: 15px;
+			.txt_price {
+				font-family: "S-CoreDream-5Medium", sans-serif;
+				font-size: 16px;
+			}
+			.txt_won {
+				display: inline-block;
+				margin-left: 3px;
 			}
 		}
-		&.ty_list {
-			.songe_dealunit_item {
+	}
+	.btn_item_keep {
+		position: absolute;
+		top: 14px;
+		right: 24px;
+		@include sprite($sp-cunit_keep);
+		transform: perspective(1px) translateZ(0);
+		z-index: 3;
+		&.on {
+			@include sprite($sp-cunit_keep_on);
+			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+			opacity: 1;
+		}
+	}
+	&.ty_list {
+		.songe_dealunit_item {
+			width: 50%;
+			.songe_dealunit_tmumb {
 				width: 50%;
-				.songe_dealunit_tmumb {
-					width: 50%;
-					padding-bottom: 50%;
-				}
-				.songe_dealunit_info {
-					width: 50%;
-					padding-left: 15px;
-					box-sizing: border-box;
-				}
+				padding-bottom: 50%;
+			}
+			.songe_dealunit_info {
+				width: 50%;
+				padding-left: 15px;
+				box-sizing: border-box;
 			}
 		}
 	}
 }
 
-@keyframes heart-in {
+@keyframes ani_keep {
 	0% {
 		opacity: 0;
 		transform: scale(0);
@@ -1696,8 +1821,8 @@
 				width: 8px;
 				height: 8px;
 				margin: -4px -4px 0 0;
-				border-top: 2px solid $primary_color;
-				border-left: 2px solid $primary_color;
+				border-top: 1px solid $primary_color;
+				border-left: 1px solid $primary_color;
 			}
 		}
 		.btn_next {
@@ -1710,8 +1835,8 @@
 				width: 8px;
 				height: 8px;
 				margin: -4px -4px 0 0;
-				border-top: 2px solid $primary_color;
-				border-left: 2px solid $primary_color;
+				border-top: 1px solid $primary_color;
+				border-left: 1px solid $primary_color;
 			}
 		}
 	}
@@ -1724,7 +1849,7 @@
 	.songe_board_bx {
 		display: block;
 		padding: 20px 10px;
-		border: 2px solid $grey_color3;
+		border: 1px solid $grey_color3;
 		border-radius: 10px;
 		background: $white_color;
 		color: $primary_color;
@@ -1804,7 +1929,7 @@
 					transform: perspective(1px) translateZ(0);
 					&.on {
 						@include sprite($sp-cunit_keep_on);
-						animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+						animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
 						opacity: 1;
 					}
 				}
@@ -1836,8 +1961,8 @@
 }
 
 .songe_board_article {
-	padding: 50px 30px;
-	border: 2px solid $grey_color3;
+	padding: 30px 20px;
+	border: 1px solid $grey_color3;
 	border-radius: 15px;
 	box-sizing: border-box;
 	.songe_board_top {
@@ -1933,7 +2058,7 @@
 			max-width: 650px;
 			margin: 15px auto 0;
 			color: $primary_color;
-			font-size: 14px;
+			font-size: 13px;
 			line-height: 1.5;
 		}
 		.songe_vote_info {
@@ -1946,12 +2071,12 @@
 	.songe_board_ranking {
 		max-width: 650px;
 		margin: 30px auto 0;
-		border-top: 2px solid $grey_color3;
+		border-top: 1px solid $grey_color3;
 		.songe_ranking_lst {
 			li {
 				position: relative;
 				padding: 5px 100px 5px 10px;
-				border-bottom: 2px solid $grey_color3;
+				border-bottom: 1px solid $grey_color3;
 				font-size: 0;
 
 				@include clearfix;
@@ -2024,7 +2149,7 @@
 					}
 					&.on {
 						&:before {
-							animation-name: likeAnimation;
+							animation-name: ani-heart;
 							animation-iteration-count: 1;
 							animation-duration: 0.65s;
 						}
@@ -2060,7 +2185,7 @@
 				transform: perspective(1px) translateZ(0);
 				&.on {
 					@include sprite($sp-cunit_keep_on);
-					animation: heart-in 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+					animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
 					opacity: 1;
 				}
 			}
@@ -2120,7 +2245,7 @@
 		width: 100%;
 		table-layout: fixed;
 		margin-top: 50px;
-		border: 2px solid $grey_color3;
+		border: 1px solid $grey_color3;
 		border-width: 2px 0;
 		&:before {
 			position: absolute;
@@ -2180,7 +2305,7 @@
 	}
 }
 
-@keyframes likeAnimation {
+@keyframes ani-heart {
 	0% {
 		transform: scale(1.5);
 	}
@@ -2196,7 +2321,7 @@
 	.songe_vote_bx {
 		display: block;
 		padding: 20px 10px;
-		border: 2px solid $grey_color3;
+		border: 1px solid $grey_color3;
 		border-radius: 10px;
 		background: $white_color;
 		color: $primary_color;
@@ -2258,6 +2383,202 @@
 				color: $grey_color2;
 				font-size: 12px;
 				line-height: 1.5;
+			}
+		}
+	}
+}
+
+.songe_cs_lst {
+	border-bottom: 1px solid $grey_color3;
+	& > li {
+		border-top: 1px solid $grey_color3;
+	}
+	.songe_cs_link {
+		display: block;
+		position: relative;
+		padding: 15px 13px;
+		text-align: left;
+		.songe_cs_subject {
+			@include ellipsis;
+			color: $primary_color;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 15px;
+			line-height: 24px;
+		}
+		.songe_cs_info {
+			display: block;
+			margin-top: 2px;
+			color: $grey_color2;
+			font-size: 12px;
+			line-height: 18px;
+			span {
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.songe_cs_noresult {
+	position: relative;
+	margin: 20px auto 30px;
+	padding-top: 100px;
+	.ico_noresult {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		width: 80px;
+		height: 80px;
+		transform: translateX(-50%);
+		border: 4px solid $grey_color3;
+		border-radius: 50%;
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 4px;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background: $grey_color3;
+			content: "";
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 4px;
+			transform: translate(-50%, -50%) rotate(-45deg);
+			background: $grey_color3;
+			content: "";
+		}
+	}
+	p {
+		padding: 15px 10px;
+		color: $grey_color1;
+		font-family: "S-CoreDream-5Medium";
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		word-break: keep-all;
+	}
+}
+
+.songe_cs_article {
+	padding: 30px 20px;
+	border: 1px solid $grey_color3;
+	border-radius: 15px;
+	box-sizing: border-box;
+	.songe_cs_top {
+		@include clearfix;
+		.songe_cs_tit {
+			h3 {
+				display: inline-block;
+				color: $primary_color;
+				font-size: 17px;
+				line-height: 26px;
+				vertical-align: top;
+			}
+		}
+		.songe_cs_titinfo {
+			display: block;
+			margin-top: 8px;
+			color: $grey_color2;
+			font-size: 13px;
+			line-height: 20px;
+			& > span {
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: top;
+			}
+		}
+	}
+	.songe_cs_content {
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid $grey_color3;
+		img {
+			display: inline-block;
+			max-width: 650px;
+			width: 100%;
+			margin-top: 10px;
+			vertical-align: top;
+		}
+		p {
+			margin: 15px auto 0;
+			color: $primary_color;
+			font-size: 13px;
+			line-height: 1.5;
+		}
+		.songe_vote_info {
+			margin-top: 5px;
+			color: $grey_color2;
+			font-size: 12px;
+			text-align: left;
+		}
+	}
+	.songe_cs_paginate {
+		display: table;
+		position: relative;
+		width: 100%;
+		table-layout: fixed;
+		margin-top: 50px;
+		border: 1px solid $grey_color3;
+		border-width: 1px 0;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 1px;
+			height: 100%;
+			margin-left: -1px;
+			background: $grey_color3;
+			content: "";
+		}
+		.songe_paginate_cell {
+			display: table-cell;
+			width: 50%;
+			a {
+				display: block;
+			}
+			.prev_article,
+			.next_article {
+				@include ellipsis;
+				position: relative;
+				padding: 0 10px;
+				font-size: 12px;
+				line-height: 40px;
+				box-sizing: border-box;
+				&:before {
+					position: absolute;
+					top: 50%;
+					display: inline-block;
+					width: 0px;
+					height: 0px;
+					margin-top: -3px;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid $primary_color;
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					content: "";
+				}
+			}
+			.prev_article {
+				padding-left: 20px;
+				&:before {
+					left: 10px;
+					content: "";
+				}
+			}
+			.next_article {
+				padding-right: 20px;
+				&:before {
+					right: 10px;
+					transform: rotate(225deg);
+					-webkit-transform: rotate(225deg);
+					content: "";
+				}
 			}
 		}
 	}
@@ -2383,6 +2704,9 @@
 			width: 50%;
 		}
 	}
+	.songe_scrl_lst {
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 @include mobile-media {
@@ -2421,6 +2745,17 @@
 		.songe_board_item {
 			width: 50%;
 		}
+	}
+	.songe_attach_bx {
+		.songe_attach_lst {
+			li {
+				width: 30.33%;
+				margin-left: 3%;
+			}
+		}
+	}
+	.songe_scrl_lst {
+		-webkit-overflow-scrolling: touch;
 	}
 }
 
