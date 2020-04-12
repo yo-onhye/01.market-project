@@ -57,7 +57,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 #idx_header { position: absolute; top: 0; left: 0; width: 256px; height: 75px; padding: 20px 0; text-align: center; }
 
-#idx_header .idx_logo { display: inline-block; background-image: url(../img/sprites/sprite.png); background-position: 0px -74px; width: 134px; height: 35px; vertical-align: top; }
+#idx_header .idx_logo { display: inline-block; background-image: url(../img/sprites/sprite.png); background-position: -272px -95px; width: 134px; height: 35px; vertical-align: top; }
 
 #idx_aside { position: relative; z-index: 2; float: left; width: 256px; min-height: 100%; padding-top: 75px; box-sizing: border-box; }
 

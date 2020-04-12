@@ -25,8 +25,8 @@
 			</h1>
 			<div class="songe_gnb_inner">
 				<div class="songe_gnb_member">
-					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">로그인</span></i><span class="songe_member_txt" aria-hidden="true">로그인</span></a>
-					<a href="#" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">Keep</span></i><span class="songe_member_txt" aria-hidden="true">Keep</span></a>
+					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a>
+					<a href="/01.market-project/html/mypage/my_like.html" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">MY LIKE</span></i><span class="songe_member_txt" aria-hidden="true">MY LIKE</span></a>
 				</div>
 				<div class="songe_gnb_menu">
 					<ul class="songe_gnb_lst">
@@ -281,6 +281,27 @@
 						</li>
 					</ul>
 				</div>
+				<div class="songe_cont_sec">
+					<h3 class="songe_subtit">Tab</h3>
+					<div class="songe_tab_bx">
+						<ul class="songe_tab_lst" role="tablist">
+							<li role="presentation" class="active">
+								<button type="button" class="songe_tab_btn" role="tab" aria-selected="true"><span>tab1</span></button>
+							</li>
+							<li role="presentation">
+								<button type="button" class="songe_tab_btn" role="tab" aria-selected="false"><span>tab2</span></button>
+							</li>
+						</ul>
+						<div class="songe_tab_cont">
+							<div class="songe_tab_panel active" role="tabpanel">
+								tab1
+							</div>
+							<div class="songe_tab_panel" role="tabpanel">
+								tab2
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -304,6 +325,20 @@
 		</div>
 	</div>
 </div>
-
+<script>
+// $(function() {
+// 		$('.songe_tab').tabs({
+// 			'sActiveClass' : 'on',
+// 			'elTabBtn' : '>.songe_tab_lst li',
+// 			'elTabPanel' : '>.songe_tab_cont >.songe_tab_panel',
+// 			'elFilter' : '.cmbn_tab_btn',
+// 			'fnChange' : function(welPanel){
+// 				if ($(this).is('[role="tab"]')) {
+// 					$(this).attr('aria-selected','true').parent().siblings().children().attr('aria-selected','false');
+// 				}
+// 			}
+// 		});
+// 	});
+</script>
 </body>
 </html>

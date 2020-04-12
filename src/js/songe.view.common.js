@@ -2,21 +2,21 @@ var Songe = Songe || {};
 
 Songe.View = $.extend(
 	{
-		hasElement: function(el) {
+		hasElement: function (el) {
 			return $(el).length > 0;
 		},
-		getReady: function() {
+		getReady: function () {
 			var dfReady = $.Deferred();
 
 			$(document).ready(dfReady.resolve);
 
 			return dfReady.promise();
 		},
-		wait: function(timeout) {
+		wait: function (timeout) {
 			var deferred = $.Deferred();
 			setTimeout(deferred.resolve, timeout);
 			return deferred.promise();
-		}
+		},
 	},
 	Songe.util || {}
 );
@@ -24,12 +24,12 @@ Songe.View = $.extend(
 Songe.View.common = Songe.View.common || {};
 
 Songe.View.common.ctrlItemList = {
-	init: function() {
+	init: function () {
 		this._assignElements();
 		this._attachEventHandlers();
 		this._setDisabledBtn();
 	},
-	_assignElements: function() {
+	_assignElements: function () {
 		this._elSortBox = $("._js_sort_bx");
 		this._elSortInner = this._elSortBox.find(".songe_sort_type");
 		this._elSortBtn = this._elSortBox.find(".songe_sort_btn");
@@ -38,12 +38,12 @@ Songe.View.common.ctrlItemList = {
 		this._elUnitIdol = this._elUnitItem.find(".songe_cunit_idol em");
 		this._elKeepBtn = this._elUnitItem.find("._js_btn_keep");
 	},
-	_attachEventHandlers: function() {
+	_attachEventHandlers: function () {
 		this._elSortBtn.on("click", $.proxy(this._onClickSortBtn, this));
 		this._elKeepBtn.on("click", $.proxy(this._onClickKeepBtn, this));
 	},
-	_setDisabledBtn: function() {
-		this._elUnitItem.each(function(i, el) {
+	_setDisabledBtn: function () {
+		this._elUnitItem.each(function (i, el) {
 			var welItem = $(el),
 				welItemBtn = welItem.find("._js_btn_keep");
 
@@ -52,7 +52,7 @@ Songe.View.common.ctrlItemList = {
 			}
 		});
 	},
-	_onClickKeepBtn: function(e) {
+	_onClickKeepBtn: function (e) {
 		var welTarget = $(e.currentTarget),
 			welTargetText = welTarget.find("span");
 
@@ -64,13 +64,13 @@ Songe.View.common.ctrlItemList = {
 			welTargetText.text("상품 찜하기");
 		}
 	},
-	_onClickSortBtn: function(e) {
+	_onClickSortBtn: function (e) {
 		var welTarget = $(e.currentTarget);
 
 		this._ctrlSortBtn(welTarget);
 		this._ctrlSortlList(welTarget);
 	},
-	_ctrlSortBtn: function(welTarget) {
+	_ctrlSortBtn: function (welTarget) {
 		var welTargetParent = welTarget.parent(".songe_sort_type");
 
 		if (welTargetParent.hasClass("ty_img")) {
@@ -79,7 +79,7 @@ Songe.View.common.ctrlItemList = {
 			this._elSortInner.removeClass("ty_list").addClass("ty_img");
 		}
 	},
-	_ctrlSortlList: function(welTarget) {
+	_ctrlSortlList: function (welTarget) {
 		var welTargetParent = welTarget.parent(".songe_sort_type");
 
 		if (welTargetParent.hasClass("ty_img")) {
@@ -87,28 +87,28 @@ Songe.View.common.ctrlItemList = {
 		} else {
 			this._elUnitList.addClass("ty_list");
 		}
-	}
+	},
 };
 
 Songe.View.common.ctrlAttachList = {
-	init: function() {
+	init: function () {
 		this._assignElements();
 		this._assignComponents();
 		this._setControlImage();
 	},
-	_assignElements: function() {
+	_assignElements: function () {
 		this._welAttachListWrap = $(".songe_attach_bx");
 		this._welAttachList = this._welAttachListWrap.find(".songe_attach_lst");
 		this._welAttachItem = this._welAttachList.find("> li");
 		this._welAttachBtn = this._welAttachList.find(".songe_atch");
 	},
-	_assignComponents: function() {
+	_assignComponents: function () {
 		var oSelf = this;
-		this._welAttachItem.each(function(i, el) {
+		this._welAttachItem.each(function (i, el) {
 			var welTarget = $(el),
 				welAttachBtn = welTarget.find(".songe_atch input");
 
-			welAttachBtn.on("change", function(e) {
+			welAttachBtn.on("change", function (e) {
 				e.preventDefault();
 				var welTargetBtn = $(e.currentTarget);
 
@@ -118,19 +118,19 @@ Songe.View.common.ctrlAttachList = {
 
 		this._ctrlBtnFocus();
 	},
-	_ctrlBtnFocus: function() {
-		this._welAttachItem.each(function(i, el) {
+	_ctrlBtnFocus: function () {
+		this._welAttachItem.each(function (i, el) {
 			var welTarget = $(el),
 				welAttachBtn = welTarget.find(".songe_atch input");
 
-			welAttachBtn.on("focus", function(e) {
+			welAttachBtn.on("focus", function (e) {
 				var welTargetBtn = $(e.currentTarget),
 					welTargetParent = welTargetBtn.closest(".songe_atch");
 
 				welTargetParent.addClass("focus");
 			});
 
-			welAttachBtn.on("focusout", function(e) {
+			welAttachBtn.on("focusout", function (e) {
 				var welTargetBtn = $(e.currentTarget),
 					welTargetParent = welTargetBtn.closest(".songe_atch");
 
@@ -138,8 +138,8 @@ Songe.View.common.ctrlAttachList = {
 			});
 		});
 	},
-	_setControlImage: function() {
-		this._welAttachItem.each(function(i, el) {
+	_setControlImage: function () {
+		this._welAttachItem.each(function (i, el) {
 			var welItem = $(el),
 				welItemIndex = welItem.index(),
 				welItemBtn = welItem.find(".songe_atch input");
@@ -147,35 +147,35 @@ Songe.View.common.ctrlAttachList = {
 			welItemBtn.after('<img src="" alt="" id="attach_file' + welItemIndex + '">');
 		});
 	},
-	_changeImageUrl: function(welBtn) {
+	_changeImageUrl: function (welBtn) {
 		var welTarget = welBtn,
 			welTargetInput = welTarget.find("input"),
 			welTargetImg = welTarget.find("img");
 		console.log("on");
 		// welTargetImg.addClass("on");
-	}
+	},
 };
 
 Songe.View.common.ctrlToggleList = {
-	init: function() {
+	init: function () {
 		this._assignElements();
 		this._assignComponents();
 		this._setControlIndex();
 	},
-	_assignElements: function() {
+	_assignElements: function () {
 		this._welFaqListWrap = $(".songe_toggle_bx");
 		this._welFaqListIndex = this._welFaqListWrap.index();
 		this._welFaqList = this._welFaqListWrap.find(".songe_toggle_lst");
 		this._welFaqItem = this._welFaqList.find("> li");
 		this._welTotalItem = $(".songe_toggle_lst").index();
 	},
-	_assignComponents: function() {
+	_assignComponents: function () {
 		var oSelf = this;
-		this._welFaqItem.each(function(i, el) {
+		this._welFaqItem.each(function (i, el) {
 			var welTarget = $(el),
 				welFaqBtn = welTarget.find(".songe_toggle_btn");
 
-			welFaqBtn.on("click", function(e) {
+			welFaqBtn.on("click", function (e) {
 				e.preventDefault();
 				var welTarget = $(e.currentTarget);
 
@@ -183,8 +183,8 @@ Songe.View.common.ctrlToggleList = {
 			});
 		});
 	},
-	_setControlIndex: function() {
-		this._welFaqItem.each(function(i, el) {
+	_setControlIndex: function () {
+		this._welFaqItem.each(function (i, el) {
 			var welItem = $(el),
 				welTotalIndex = i,
 				welItemBtn = welItem.find(".songe_toggle_btn"),
@@ -192,12 +192,12 @@ Songe.View.common.ctrlToggleList = {
 
 			welItemBtn.attr({
 				"aria-controls": "toggle_cont" + welTotalIndex,
-				"aria-expanded": "false"
+				"aria-expanded": "false",
 			});
 			welItemContent.attr("id", "toggle_cont" + welTotalIndex);
 		});
 	},
-	_controlExpand: function(welTarget) {
+	_controlExpand: function (welTarget) {
 		var welTargetCont = welTarget.siblings(".songe_toggle_cont"),
 			welTargetText = welTarget.find(".blind");
 
@@ -210,19 +210,51 @@ Songe.View.common.ctrlToggleList = {
 			welTarget.attr("aria-expanded", "false");
 			welTargetText.html("펼치기");
 		}
-	}
+	},
 };
 
-$(function() {
+Songe.View.common.ctrlTab = {
+	init: function () {
+		this._assignElements();
+		this._attachEventHandlers();
+	},
+	_assignElements: function () {
+		this._welTabListWBox = $(".songe_tab_bx");
+		this._welTabList = this._welTabListWBox.find(".songe_tab_lst");
+		this._welTabItem = this._welTabList.find("> li");
+		this._welTabBtn = this._welTabList.find(".songe_tab_btn");
+		this._welTabPanelWrap = this._welTabListWBox.find(".songe_tab_cont");
+		this._welTabPanel = this._welTabPanelWrap.find(".songe_tab_panel");
+	},
+	_attachEventHandlers: function () {
+		this._welTabBtn.on("click", $.proxy(this._onClickTabBtn, this));
+	},
+	_onClickTabBtn: function (e) {
+		var welTarget = $(e.currentTarget),
+			welTargetWrap = welTarget.closest("li"),
+			welTargetIndex = welTargetWrap.index();
+
+		welTargetWrap.addClass("active").siblings().removeClass("active");
+		welTarget.attr("aria-selected", "true").parent().siblings().children().attr("aria-selected", "false");
+
+		this._controlTabpanel(welTargetIndex);
+	},
+	_controlTabpanel: function (welTargetIndex) {
+		this._welTabPanel.eq(welTargetIndex).addClass("active").siblings().removeClass("active");
+	},
+};
+
+$(function () {
 	Songe.View.common.ctrlItemList.init();
 	Songe.View.common.ctrlAttachList.init();
 	Songe.View.common.ctrlToggleList.init();
+	Songe.View.common.ctrlTab.init();
 
-	$(".btn_gnb_menu").click(function() {
+	$(".btn_gnb_menu").click(function () {
 		$(".songe_gnb, .btn_gnb_menu").toggleClass("is-active");
 	});
 
-	$(".songe_btn_like").click(function() {
+	$(".songe_btn_like").click(function () {
 		var welTargetText = $(this).find(".blind");
 		$(this).toggleClass("on");
 
@@ -233,7 +265,7 @@ $(function() {
 		}
 	});
 
-	$(".ranking_btn").click(function() {
+	$(".ranking_btn").click(function () {
 		$(this).addClass("on");
 	});
 });
