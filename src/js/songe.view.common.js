@@ -213,7 +213,7 @@ Songe.View.common.ctrlToggleList = {
 	},
 };
 
-Songe.View.common.ctrlTab = {
+Songe.View.common.ctrlTabList = {
 	init: function () {
 		this._assignElements();
 		this._attachEventHandlers();
@@ -248,7 +248,7 @@ $(function () {
 	Songe.View.common.ctrlItemList.init();
 	Songe.View.common.ctrlAttachList.init();
 	Songe.View.common.ctrlToggleList.init();
-	Songe.View.common.ctrlTab.init();
+	Songe.View.common.ctrlTabList.init();
 
 	$(".btn_gnb_menu").click(function () {
 		$(".songe_gnb, .btn_gnb_menu").toggleClass("is-active");

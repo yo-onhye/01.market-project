@@ -1414,14 +1414,52 @@
 
 .songe_cunit_bx {
 	margin: -25px -10px 20px;
-	.songe_cunit_lst {
-		width: 100%;
-		font-size: 0;
+	&.ty_scroll {
+		margin-top: 20px;
+		padding-bottom: 20px;
+		.songe_cunit_lst {
+			.songe_cunit_tmumb {
+				padding-bottom: 100%;
+			}
+			.songe_cunit_item {
+				margin-top: 0;
+				width: 20%;
+			}
+			.songe_cunit_info {
+				font-size: 12px;
+				.songe_cunit_tit {
+					@include multi-ellipsis(2);
+				}
+			}
+		}
+	}
+}
+.songe_cunit_lst {
+	width: 100%;
+	font-size: 0;
+	&.ty_list {
+		.songe_cunit_item {
+			width: 50%;
+			.songe_cunit_tmumb {
+				width: 50%;
+				padding-bottom: 50%;
+			}
+			.songe_cunit_info {
+				width: 50%;
+				padding-left: 15px;
+				box-sizing: border-box;
+				.songe_cunit_price {
+					.txt_price {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 	}
 	.songe_cunit_item {
 		position: relative;
 		display: inline-block;
-		width: 25%;
+		width: 33.33%;
 		margin-top: 25px;
 		padding: 0 10px;
 		box-sizing: border-box;
@@ -1446,146 +1484,12 @@
 					content: "SOLD OUT";
 				}
 			}
-			.songe_cunit_info {
-				color: $grey_color1;
-			}
-		}
-	}
-	.songe_cunit_tmumb {
-		overflow: hidden;
-		display: inline-block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 100%;
-		border-radius: 10px;
-		font-size: 0;
-		vertical-align: top;
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background-color: rgba(0, 0, 0, 0.03);
-			z-index: 3;
-		}
-		img {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			width: 100%;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-		}
-	}
-	.songe_cunit_info {
-		display: inline-block;
-		width: 100%;
-		margin-top: 15px;
-		font-family: "S-CoreDream-5Medium";
-		font-size: 14px;
-		line-height: 1.5;
-		vertical-align: top;
-		.songe_cunit_idol {
-			display: block;
-			em {
-				display: inline-block;
-				padding: 0 4px;
-				background-color: $primary_color;
-				color: $white_color;
-				font-size: 11px;
-				line-height: 16px;
-				vertical-align: top;
-			}
-		}
-		.songe_cunit_txt {
-			display: block;
-			margin-top: 10px;
-			@include multi-ellipsis(2);
-		}
-		.songe_cunit_price {
-			display: block;
-			margin-top: 15px;
-			.txt_price {
-				font-family: "S-CoreDream-5Medium", sans-serif;
-				font-size: 16px;
-			}
-			.txt_won {
-				display: inline-block;
-				margin-left: 3px;
-			}
-		}
-	}
-	.btn_item_keep {
-		position: absolute;
-		top: 14px;
-		right: 24px;
-		@include sprite($sp-cunit_keep);
-		transform: perspective(1px) translateZ(0);
-		z-index: 3;
-		&.on {
-			@include sprite($sp-cunit_keep_on);
-			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
-			opacity: 1;
-		}
-	}
-	&.ty_list {
-		.songe_cunit_item {
-			width: 50%;
-			.songe_cunit_tmumb {
-				width: 50%;
-				padding-bottom: 50%;
-			}
-			.songe_cunit_info {
-				width: 50%;
-				padding-left: 15px;
-				box-sizing: border-box;
-			}
-		}
-	}
-}
-
-.songe_dealunit_bx {
-	margin: -25px -10px 20px;
-	.songe_dealunit_lst {
-		width: 100%;
-		font-size: 0;
-	}
-	.songe_dealunit_item {
-		position: relative;
-		display: inline-block;
-		width: 33.33%;
-		margin-top: 25px;
-		padding: 0 10px;
-		box-sizing: border-box;
-		vertical-align: top;
-		& > a {
-			display: block;
-			position: relative;
-		}
-		&.dealunit_soldout {
-			filter: grayscale(0.7);
-			.songe_dealunit_tmumb {
-				&:after {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					padding: 15px 0;
-					background: rgba(34, 34, 34, 0.6);
-					color: $white_color;
-					font-size: 14px;
-					text-align: center;
-					content: "SOLD OUT";
-				}
-			}
-			.songe_dealunit_item {
+			.songe_cunit_item {
 				color: $grey_color5;
 			}
 		}
 	}
-	.songe_dealunit_tmumb {
+	.songe_cunit_tmumb {
 		overflow: hidden;
 		display: inline-block;
 		position: relative;
@@ -1612,7 +1516,7 @@
 			-webkit-transform: translateY(-50%);
 			transform: translateY(-50%);
 		}
-		.deal_badge_bx {
+		.cunit_badge_bx {
 			position: absolute;
 			bottom: 15px;
 			left: 0;
@@ -1639,14 +1543,14 @@
 			}
 		}
 	}
-	.songe_dealunit_info {
+	.songe_cunit_info {
 		display: inline-block;
 		width: 100%;
 		margin-top: 15px;
 		font-family: "S-CoreDream-5Medium";
 		font-size: 14px;
 		vertical-align: top;
-		.songe_dealunit_idol {
+		.songe_cunit_idol {
 			display: block;
 			em {
 				display: inline-block;
@@ -1658,19 +1562,22 @@
 				vertical-align: top;
 			}
 		}
-		.songe_dealunit_tit {
+		.songe_cunit_tit {
 			display: block;
 			margin-top: 10px;
 			@include ellipsis();
+			&:first-child {
+				margin-top: 0;
+			}
 		}
-		.songe_dealunit_txt {
+		.songe_cunit_txt {
 			display: block;
 			margin-top: 10px;
 			color: $grey_color2;
 			font-size: 12px;
 			@include multi-ellipsis(2);
 		}
-		.songe_dealunit_graph {
+		.songe_cunit_graph {
 			display: block;
 			height: 3px;
 			margin-top: 35px;
@@ -1710,7 +1617,7 @@
 				}
 			}
 		}
-		.songe_dealunit_fund {
+		.songe_cunit_fund {
 			display: block;
 			margin-top: 5px;
 			color: $point_color2;
@@ -1723,7 +1630,7 @@
 				float: right;
 			}
 		}
-		.songe_dealunit_price {
+		.songe_cunit_price {
 			display: block;
 			margin-top: 15px;
 			.txt_price {
@@ -1747,20 +1654,6 @@
 			@include sprite($sp-cunit_keep_on);
 			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
 			opacity: 1;
-		}
-	}
-	&.ty_list {
-		.songe_dealunit_item {
-			width: 50%;
-			.songe_dealunit_tmumb {
-				width: 50%;
-				padding-bottom: 50%;
-			}
-			.songe_dealunit_info {
-				width: 50%;
-				padding-left: 15px;
-				box-sizing: border-box;
-			}
 		}
 	}
 }
@@ -2743,14 +2636,16 @@
 		}
 	}
 	.songe_cunit_bx {
-		.songe_cunit_lst {
-			.songe_cunit_item {
-				width: 33.33%;
+		&.ty_scroll {
+			.songe_cunit_lst {
+				.songe_cunit_item {
+					width: 25%;
+				}
 			}
 		}
 	}
-	.songe_dealunit_lst {
-		.songe_dealunit_item {
+	.songe_cunit_lst {
+		.songe_cunit_item {
 			width: 50%;
 		}
 	}
@@ -2773,22 +2668,17 @@
 		padding: 30px 20px;
 	}
 	.songe_cunit_bx {
-		.songe_cunit_lst {
-			.songe_cunit_item {
-				width: 50%;
-			}
-			&.ty_list {
+		&.ty_scroll {
+			.songe_cunit_lst {
 				.songe_cunit_item {
-					width: 100%;
+					width: 33.33%;
 				}
 			}
 		}
 	}
-	.songe_dealunit_bx {
-		.songe_dealunit_lst {
-			.songe_dealunit_item {
-				width: 100%;
-			}
+	.songe_cunit_lst {
+		.songe_cunit_item {
+			width: 100%;
 		}
 	}
 	.songe_board_lst {
@@ -2810,6 +2700,15 @@
 }
 
 @include small-mobile-media {
+	.songe_cunit_bx {
+		&.ty_scroll {
+			.songe_cunit_lst {
+				.songe_cunit_item {
+					width: 50%;
+				}
+			}
+		}
+	}
 	.songe_board_article {
 		.songe_board_ranking {
 			.songe_ranking_lst {
@@ -2833,5 +2732,180 @@
 				}
 			}
 		}
+	}
+}
+
+/* swiper */
+.swiper-container {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	z-index: 1;
+}
+.swiper-container-no-flexbox {
+	.swiper-slide {
+		float: left;
+	}
+}
+.swiper-container-vertical {
+	> .swiper-wrapper {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	transition-property: transform, -webkit-transform;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.swiper-container-android {
+	.swiper-slide {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+.swiper-container-multirow {
+	> .swiper-wrapper {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+.swiper-container-free-mode {
+	> .swiper-wrapper {
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		margin: 0 auto;
+	}
+}
+.swiper-slide {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	transition-property: transform, -webkit-transform;
+}
+.swiper-invisible-blank-slide {
+	visibility: hidden;
+}
+.swiper-container-autoheight {
+	height: auto;
+	.swiper-slide {
+		height: auto;
+	}
+	.swiper-wrapper {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		-webkit-transition-property: height, -webkit-transform;
+		transition-property: height, -webkit-transform;
+		transition-property: transform, height;
+		transition-property: transform, height, -webkit-transform;
+	}
+}
+.swiper-container-fade.swiper-container-free-mode {
+	.swiper-slide {
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+	}
+}
+.swiper-container-fade {
+	.swiper-slide {
+		pointer-events: none;
+		-webkit-transition-property: opacity;
+		transition-property: opacity;
+		.swiper-slide {
+			pointer-events: none;
+		}
+	}
+	.swiper-slide-active {
+		pointer-events: auto;
+		.swiper-slide-active {
+			pointer-events: auto;
+		}
+	}
+}
+.swiper-pagination {
+	position: absolute;
+	text-align: center;
+	transition: 0.3s opacity;
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
+}
+.swiper-pagination-progressbar {
+	background: $grey_color3;
+	position: absolute;
+	.swiper-pagination-progressbar-fill {
+		background: $primary_color;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: scale(0);
+		transform-origin: left top;
+	}
+}
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+	width: 100%;
+	height: 2px;
+	left: 0;
+	bottom: 0;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 30px;
+	height: 50px;
+	transform: translateY(-100%);
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 10;
+	&.swiper-button-disabled {
+		display: none;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: rotate(-45deg);
+		width: 8px;
+		height: 8px;
+		margin: -3px 0 0 -2px;
+		border-top: 1px solid $white_color;
+		border-left: 1px solid $white_color;
+	}
+}
+.swiper-button-next {
+	left: auto;
+	right: 0;
+	&:after {
+		margin: -3px 0 0 -6px;
+		transform: rotate(135deg);
 	}
 }
