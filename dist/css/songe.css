@@ -537,7 +537,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_cunit_bx.ty_scroll { margin-top: 20px; padding-bottom: 20px; }
 
-.songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_tmumb { padding-bottom: 100%; }
+.songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_thumb { padding-bottom: 100%; }
 
 .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { margin-top: 0; width: 20%; }
 
@@ -549,7 +549,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_cunit_lst.ty_list .songe_cunit_item { width: 50%; }
 
-.songe_cunit_lst.ty_list .songe_cunit_item .songe_cunit_tmumb { width: 50%; padding-bottom: 50%; }
+.songe_cunit_lst.ty_list .songe_cunit_item .songe_cunit_thumb { width: 50%; padding-bottom: 50%; }
 
 .songe_cunit_lst.ty_list .songe_cunit_item .songe_cunit_info { width: 50%; padding-left: 15px; box-sizing: border-box; }
 
@@ -561,27 +561,27 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_cunit_lst .songe_cunit_item.cunit_soldout { filter: grayscale(0.7); }
 
-.songe_cunit_lst .songe_cunit_item.cunit_soldout .songe_cunit_tmumb:after { position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px 0; background: rgba(34, 34, 34, 0.6); color: #fff; font-size: 14px; text-align: center; content: "SOLD OUT"; }
+.songe_cunit_lst .songe_cunit_item.cunit_soldout .songe_cunit_thumb:after { position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px 0; background: rgba(34, 34, 34, 0.6); color: #fff; font-size: 14px; text-align: center; content: "SOLD OUT"; }
 
 .songe_cunit_lst .songe_cunit_item.cunit_soldout .songe_cunit_item { color: #f1f1f1; }
 
-.songe_cunit_lst .songe_cunit_tmumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 57%; border-radius: 10px; font-size: 0; vertical-align: top; }
+.songe_cunit_lst .songe_cunit_thumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 57%; border-radius: 10px; font-size: 0; vertical-align: top; }
 
-.songe_cunit_lst .songe_cunit_tmumb:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.03); z-index: 3; }
+.songe_cunit_lst .songe_cunit_thumb:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.03); z-index: 3; }
 
-.songe_cunit_lst .songe_cunit_tmumb img { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.songe_cunit_lst .songe_cunit_thumb img { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx { position: absolute; bottom: 15px; left: 0; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx { position: absolute; bottom: 15px; left: 0; }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx .deal_badge { display: block; padding: 5px 10px; border-radius: 5px 5px 5px 0; color: #fff; font-size: 13px; line-height: 1.2; opacity: 0.85; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx .deal_badge { display: block; padding: 5px 10px; border-radius: 5px 5px 5px 0; color: #fff; font-size: 13px; line-height: 1.2; opacity: 0.85; }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx .deal_badge.deadline { background-color: #a9372c; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx .deal_badge.deadline { background-color: #a9372c; }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx .deal_badge.d_day { background-color: #3b574f; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx .deal_badge.d_day { background-color: #3b574f; }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx .deal_badge.new { background-color: #c5a76a; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx .deal_badge.new { background-color: #c5a76a; }
 
-.songe_cunit_lst .songe_cunit_tmumb .cunit_badge_bx .deal_badge + .deal_badge { margin-top: 5px; }
+.songe_cunit_lst .songe_cunit_thumb .cunit_badge_bx .deal_badge + .deal_badge { margin-top: 5px; }
 
 .songe_cunit_lst .songe_cunit_info { display: inline-block; width: 100%; margin-top: 15px; font-family: "S-CoreDream-5Medium"; font-size: 14px; vertical-align: top; }
 
@@ -1157,3 +1157,65 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .songe_recent_bx { padding: 30px 0; }
 
 .songe_recent_bx .songe_recent_tit { margin-bottom: 10px; font-family: "S-CoreDream-4Regular", sans-serif; font-size: 16px; line-height: 25px; }
+
+.songe_period_bx .songe_period_btn { position: relative; display: block; width: 100%; border: 1px solid #e0e0e0; border-width: 1px 0; box-sizing: border-box; line-height: 40px; text-align: center; }
+
+.songe_period_bx .songe_period_btn:before { content: ""; position: absolute; display: block; width: 1px; height: 14px; background-color: #e0e0e0; top: 50%; right: 0; margin-top: -7px; }
+
+.songe_period_bx .songe_period_lst { display: table; width: 100%; table-layout: fixed; }
+
+.songe_period_bx .songe_period_lst li { display: table-cell; width: 25%; }
+
+.songe_period_bx .songe_period_lst li:first-child .songe_period_btn { border-left: 1px solid #e0e0e0; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+
+.songe_period_bx .songe_period_lst li:last-child .songe_period_btn { border-right: 1px solid #e0e0e0; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+.songe_period_bx .songe_period_lst li:last-child .songe_period_btn:before { display: none; }
+
+.songe_period_bx .songe_period_lst li.on .songe_period_btn { background: #3b574f; border-color: #3b574f; color: #fff; }
+
+.songe_period_bx .songe_period_lst li.on .songe_period_btn:before { display: none; }
+
+.songe_mydeal_bx { margin-top: 30px; }
+
+.songe_mydeal_bx .songe_mydeal_lst > li { margin-top: 30px; }
+
+.songe_mydeal_bx .songe_mydeal_item { overflow: hidden; padding-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 15px; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_top { padding: 15px 20px; background-color: #f9f8f7; color: #666; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont { display: flex; padding: 20px 20px 0; align-items: center; justify-content: space-between; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_thumb { overflow: hidden; flex-grow: 1; flex-shrink: 1; flex-basis: 20%; min-width: 90px; border-radius: 5px; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_thumb img { display: inline-block; width: 100%; vertical-align: top; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info { padding-left: 15px; flex-grow: 1; flex-shrink: 1; flex-basis: 80%; align-self: flex-start; color: #666; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info a { display: block; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info .songe_mydeal_idol { display: block; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info .songe_mydeal_idol em { display: inline-block; padding: 0 4px; background-color: #2f332f; color: #fff; font-size: 11px; line-height: 16px; vertical-align: top; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info .songe_mydeal_tit { display: block; margin-top: 5px; font-size: 13px; display: -webkit-box; max-width: 100%; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_cont .songe_mydeal_info .songe_mydeal_price { display: block; margin-top: 10px; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_btm { padding: 20px 20px 0; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_btm .songe_mydeal_btn { display: block; width: 100%; border: 1px solid #3b574f; border-radius: 5px; color: #3b574f; font-size: 13px; line-height: 30px; text-align: center; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_btm .songe_mydeal_btn.disabled { border-color: #e0e0e0; color: #888; }
+
+.songe_mydeal_bx .songe_mydeal_item .songe_mydeal_btm .songe_mydeal_btn + .songe_mydeal_btn { margin-top: 10px; }
+
+.songe_mydeal_bx .songe_mydeal_noresult { position: relative; margin: 30px auto; padding-top: 100px; }
+
+.songe_mydeal_bx .songe_mydeal_noresult .ico_noresult { position: absolute; top: 10px; left: 50%; width: 80px; height: 80px; transform: translateX(-50%); border: 4px solid #e0e0e0; border-radius: 50%; }
+
+.songe_mydeal_bx .songe_mydeal_noresult .ico_noresult:before { position: absolute; top: 50%; left: 50%; width: 50px; height: 4px; transform: translate(-50%, -50%) rotate(45deg); background: #e0e0e0; content: ""; }
+
+.songe_mydeal_bx .songe_mydeal_noresult .ico_noresult:after { position: absolute; top: 50%; left: 50%; width: 50px; height: 4px; transform: translate(-50%, -50%) rotate(-45deg); background: #e0e0e0; content: ""; }
+
+.songe_mydeal_bx .songe_mydeal_noresult p { padding: 15px 10px; color: #888; font-family: "S-CoreDream-5Medium"; font-size: 16px; line-height: 24px; text-align: center; word-break: keep-all; }

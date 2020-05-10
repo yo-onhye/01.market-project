@@ -1418,7 +1418,7 @@
 		margin-top: 20px;
 		padding-bottom: 20px;
 		.songe_cunit_lst {
-			.songe_cunit_tmumb {
+			.songe_cunit_thumb {
 				padding-bottom: 100%;
 			}
 			.songe_cunit_item {
@@ -1440,7 +1440,7 @@
 	&.ty_list {
 		.songe_cunit_item {
 			width: 50%;
-			.songe_cunit_tmumb {
+			.songe_cunit_thumb {
 				width: 50%;
 				padding-bottom: 50%;
 			}
@@ -1470,7 +1470,7 @@
 		}
 		&.cunit_soldout {
 			filter: grayscale(0.7);
-			.songe_cunit_tmumb {
+			.songe_cunit_thumb {
 				&:after {
 					position: absolute;
 					bottom: 0;
@@ -1489,7 +1489,7 @@
 			}
 		}
 	}
-	.songe_cunit_tmumb {
+	.songe_cunit_thumb {
 		overflow: hidden;
 		display: inline-block;
 		position: relative;
