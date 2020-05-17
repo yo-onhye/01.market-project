@@ -1169,11 +1169,11 @@
 	}
 	thead {
 		tr {
-			border-color: $point_color3;
+			border-color: $base_color;
 		}
 		th {
-			border-color: $point_color3;
-			background: $point_color3;
+			border-color: $base_color;
+			background: $base_color;
 		}
 	}
 	tbody {
@@ -1200,8 +1200,11 @@
 		color: $primary_color;
 	}
 	th:first-child,
-	td:frst-child {
+	td:first-child {
 		border-left: 0;
+	}
+	.songe_tbl_tit {
+		text-align: left;
 	}
 }
 
