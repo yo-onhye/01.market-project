@@ -6,7 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 정보 기입 > 송이마켓</title>
+<title>회원 정보 수정 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
@@ -34,7 +34,7 @@
 						<li><a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a></li>
 						<li><a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a></li>
 						<li><a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a></li>
-						<li><a href="#"><span>EVENT</span></a></li>
+						<li><a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a></li>
 						<li><a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a></li>
 					</ul>
 				</div>
@@ -331,7 +331,7 @@ function verifyPhone() {
 function fn_join() {
 	if (checkNecessary()) {
 		document.getElementById('frmUserInfo').submit();
-		location.href = "/01.market-project/html/mem_result.html";
+		location.href = "/01.market-project/html/mem/mem_result.html";
 	}
 }
 
