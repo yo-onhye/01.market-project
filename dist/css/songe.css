@@ -641,41 +641,61 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .sone_paginate_bx .sone_paginate .btn_next:before { content: ""; position: absolute; top: 50%; right: 50%; transform: rotate(135deg); width: 8px; height: 8px; margin: -4px -4px 0 0; border-top: 1px solid #2f332f; border-left: 1px solid #2f332f; }
 
+.songe_community_lst { width: 100%; margin: 0 -3px; font-size: 0; }
+
+.songe_community_lst .songe_community_bx { display: block; padding: 20px 10px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff; color: #2f332f; }
+
+.songe_community_lst .songe_community_item { display: inline-block; width: 33.33%; padding: 5px; box-sizing: border-box; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_top:after { clear: both; content: ""; display: block; }
+
+.songe_community_lst .songe_community_item .songe_community_top .songe_community_idol { display: inline-block; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_top .songe_community_idol em { display: inline-block; padding: 0 4px; background-color: #2f332f; color: #fff; font-size: 11px; line-height: 16px; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_top .songe_community_publisher { float: right; font-size: 12px; line-height: 16px; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_top .songe_community_post { display: block; margin-top: 5px; color: #666; font-size: 12px; line-height: 16px; }
+
+.songe_community_lst .songe_community_item .songe_community_cont { margin-top: 10px; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_tmumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 100%; border-radius: 10px; font-size: 0; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_tmumb:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.03); z-index: 3; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_tmumb img { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_btn { display: block; margin-top: 15px; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_btn .songe_btn_like { display: inline-block; margin-right: 7px; background-image: url(../img/sprites/sprite.png); background-position: -228px -207px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_btn .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -250px -207px; width: 18px; height: 17px; animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_btn .songe_like_num { display: inline-block; font-size: 11px; line-height: 17px; vertical-align: top; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_tit { display: block; margin-top: 10px; font-family: "S-CoreDream-5Medium"; font-size: 15px; color: #2f332f; display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.songe_community_lst .songe_community_item .songe_community_cont .songe_community_txt { display: block; margin-top: 10px; color: #666; font-size: 13px; line-height: 1.5; display: -webkit-box; max-width: 100%; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; white-space: normal; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
 .songe_board_lst { width: 100%; margin: 0 -3px; font-size: 0; }
 
-.songe_board_lst .songe_board_bx { display: block; padding: 20px 10px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff; color: #2f332f; }
+.songe_board_lst .songe_board_link { display: block; padding: 20px 10px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff; color: #2f332f; }
 
-.songe_board_lst .songe_board_item { display: inline-block; width: 33.33%; padding: 5px; box-sizing: border-box; vertical-align: top; }
+.songe_board_lst .songe_board_item { display: inline-block; width: 50%; padding: 5px; box-sizing: border-box; vertical-align: top; }
 
-.songe_board_lst .songe_board_item .songe_board_top:after { clear: both; content: ""; display: block; }
+.songe_board_lst .songe_board_item .songe_board_top .songe_board_tit { display: block; color: #2f332f; font-family: "S-CoreDream-5Medium"; font-size: 15px; }
 
-.songe_board_lst .songe_board_item .songe_board_top .songe_board_idol { display: inline-block; vertical-align: top; }
-
-.songe_board_lst .songe_board_item .songe_board_top .songe_board_idol em { display: inline-block; padding: 0 4px; background-color: #2f332f; color: #fff; font-size: 11px; line-height: 16px; vertical-align: top; }
-
-.songe_board_lst .songe_board_item .songe_board_top .songe_board_publisher { float: right; font-size: 12px; line-height: 16px; vertical-align: top; }
-
-.songe_board_lst .songe_board_item .songe_board_top .songe_board_post { display: block; margin-top: 5px; color: #666; font-size: 12px; line-height: 16px; }
+.songe_board_lst .songe_board_item .songe_board_top .songe_board_period { display: block; margin-top: 10px; color: #666; font-size: 12px; line-height: 16px; }
 
 .songe_board_lst .songe_board_item .songe_board_cont { margin-top: 10px; }
 
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_tmumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 100%; border-radius: 10px; font-size: 0; vertical-align: top; }
+.songe_board_lst .songe_board_item .songe_board_cont .songe_board_tmumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 57%; border-radius: 10px; font-size: 0; vertical-align: top; }
 
 .songe_board_lst .songe_board_item .songe_board_cont .songe_board_tmumb:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.03); z-index: 3; }
 
 .songe_board_lst .songe_board_item .songe_board_cont .songe_board_tmumb img { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn { display: block; margin-top: 15px; }
-
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like { display: inline-block; margin-right: 7px; background-image: url(../img/sprites/sprite.png); background-position: -228px -207px; width: 18px; height: 17px; transform: perspective(1px) translateZ(0); }
-
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_btn_like.on { background-image: url(../img/sprites/sprite.png); background-position: -250px -207px; width: 18px; height: 17px; animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate; opacity: 1; }
-
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_btn .songe_like_num { display: inline-block; font-size: 11px; line-height: 17px; vertical-align: top; }
-
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_tit { display: block; margin-top: 10px; font-family: "S-CoreDream-5Medium"; font-size: 15px; color: #2f332f; display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.songe_board_lst .songe_board_item .songe_board_cont .songe_board_txt { display: block; margin-top: 10px; color: #666; font-size: 13px; line-height: 1.5; display: -webkit-box; max-width: 100%; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; white-space: normal; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.songe_board_lst .songe_board_item .songe_board_cont .songe_board_txt { display: block; margin-top: 15px; color: #666; font-size: 12px; line-height: 1.5; }
 
 .songe_board_article { padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 15px; box-sizing: border-box; }
 
@@ -794,26 +814,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 @keyframes ani-heart { 0% { transform: scale(1.5); }
   100% { transform: scale(1); } }
 
-.songe_vote_lst { width: 100%; margin: 0 -3px; font-size: 0; }
-
-.songe_vote_lst .songe_vote_bx { display: block; padding: 20px 10px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff; color: #2f332f; }
-
-.songe_vote_lst .songe_vote_item { display: inline-block; width: 50%; padding: 5px; box-sizing: border-box; vertical-align: top; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_top .songe_vote_tit { display: block; color: #2f332f; font-family: "S-CoreDream-5Medium"; font-size: 15px; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_top .songe_vote_period { display: block; margin-top: 10px; color: #666; font-size: 12px; line-height: 16px; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_cont { margin-top: 10px; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_cont .songe_vote_tmumb { overflow: hidden; display: inline-block; position: relative; width: 100%; padding-bottom: 57%; border-radius: 10px; font-size: 0; vertical-align: top; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_cont .songe_vote_tmumb:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.03); z-index: 3; }
-
-.songe_vote_lst .songe_vote_item .songe_vote_cont .songe_vote_tmumb img { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-
-.songe_vote_lst .songe_vote_item .songe_vote_cont .songe_vote_txt { display: block; margin-top: 15px; color: #666; font-size: 12px; line-height: 1.5; }
-
 .songe_cs_lst { border-bottom: 1px solid #e0e0e0; }
 
 .songe_cs_lst > li { border-top: 1px solid #e0e0e0; }
@@ -920,9 +920,10 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   .songe_dlst_bx { padding: 30px 20px; }
   .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { width: 33.33%; }
   .songe_cunit_lst .songe_cunit_item { width: 100%; }
-  .songe_board_lst .songe_board_item { width: 50%; }
+  .songe_community_lst .songe_community_item { width: 50%; }
   .songe_attach_bx .songe_attach_lst li { width: 30.33%; margin-left: 3%; }
-  .songe_scrl_lst { -webkit-overflow-scrolling: touch; } }
+  .songe_scrl_lst { -webkit-overflow-scrolling: touch; }
+  .songe_board_lst .songe_board_item { width: 100%; } }
 
 @media screen and (max-width: 440px) { .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { width: 50%; }
   .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_num { display: block; margin: 0; line-height: 28px; text-align: center; }

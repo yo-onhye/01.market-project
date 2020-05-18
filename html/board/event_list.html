@@ -6,10 +6,11 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>참여한 이벤트 > 송이마켓</title>
+<title>이벤트 리스트 > 송이마켓</title>
 <link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
 <script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+<script type="text/javascript" src="/01.market-project/dist/js/masonry.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -47,46 +48,62 @@
 	</div>
 
 	<div id="container" class="songe_container">
-		<div id="content" class="songe_content main">
+		<div id="content" class="songe_content board_list">
 			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>참여한 이벤트</span></h2>
+				<h2 class="songe_tit"><span>EVNET</span></h2>
 			</div>
+
 			<div class="songe_cont_area">
-				<div class="songe_period_bx">
-					<ul class="songe_period_lst">
-						<li class="on"><button type="button" class="songe_period_btn"><span>최근1개월</span></button></li>
-						<li><button type="button" class="songe_period_btn"><span>04월</span></button></li>
-						<li><button type="button" class="songe_period_btn"><span>03월</span></button></li>
-						<li><button type="button" class="songe_period_btn"><span>기간조회</span></button></li>
-					</ul>
-				</div>
-				<div class="songe_myinfolst_bx">
-					<ul class="songe_myinfo_lst">
-						<li>
-							<div class="songe_myinfo_subject">
-								<a href="/01.market-project/html/board/event_detail.html" class="songe_myinfo_link">
-									<span class="songe_myinfo_tit"><span class="blind">이벤트 명</span>[오픈기념] 송이 마켓 친구초대 이벤트</span>
-								</a>
-								<span class="songe_myinfo_date"><span class="blind">이벤트 기간</span>2020.04.10 ~ 06.30</span>
-							</div>
-							<span class="songe_myinfo_result"><span class="blind">이벤트 당첨결과</span><em class="tx_winning">당첨</em></span>
-						</li>
-						<li>
-							<div class="songe_myinfo_subject">
-								<a href="/01.market-project/html/board/event_detail.html" class="songe_myinfo_link">
-									<span class="songe_myinfo_tit"><span class="blind">이벤트 명</span>[오픈기념] 송이 마켓 친구초대 이벤트</span>
-								</a>
-								<span class="songe_myinfo_date"><span class="blind">이벤트 기간</span>2020.04.10 ~ 06.30</span>
-							</div>
-							<span class="songe_myinfo_result"><span class="blind">이벤트 당첨결과</span><em class="tx_notwinning">미당첨</em></span>
-						</li>
-					</ul>
-				</div>
-				<div class="songe_myinfolst_bx" style="display:none">
-					<div class="songe_myinfo_noresult">
-						<i class="ico_noresult">&nbsp;</i>
-						<p>이벤트 응모내역이 없습니다.</p>
+				<div class="songe_sort_bx _js_sort_bx">
+					<div class="songe_sort_item">
+						<div class="songe_select">
+							<select title="게시글 정렬 방식을 선택하세요.">
+								<option>최신순</option>
+								<option>인기순</option>
+							</select>
+						</div>
 					</div>
+				</div>
+
+				<div class="songe_event_bx">
+					<ul class="songe_board_lst">
+						<li class="songe_board_item">
+							<a href="/01.market-project/html/board/event_detail.html" class="songe_board_link">
+								<div class="songe_board_top">
+									<span class="songe_board_tit">[오픈기념] 송이 마켓 친구초대 이벤트</span>
+									<span class="songe_board_period">2020.03.15 ~ 03.29</span>
+								</div>
+								<div class="songe_board_cont">
+									<span class="songe_board_tmumb">
+										<img src="/01.market-project/dist/img/event/@event.png" alt="">
+									</span>
+									<span class="songe_board_txt">송이 마켓 오픈 기념 친구 초대 이벤트로 송이를 받아가세요!</span>
+								</div>
+							</a>
+						</li>
+						<li class="songe_board_item">
+							<a href="/01.market-project/html/board/event_detail.html" class="songe_board_link">
+								<div class="songe_board_top">
+									<span class="songe_board_tit">[이벤트] 첫구매 무료배송 쿠폰 발급!</span>
+									<span class="songe_board_period">2020.03.10 ~ 03.24</span>
+								</div>
+								<div class="songe_board_cont">
+									<span class="songe_board_tmumb">
+										<img src="/01.market-project/dist/img/event/@event2.png" alt="">
+									</span>
+									<span class="songe_board_txt">송이 마켓, 오늘부터 1일~</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="sone_paginate_bx">
+						<div class="sone_paginate">
+							<a href="#" class="btn_prev"><span class="blind">이전</span></a>
+								<strong>1</strong>
+							<a href="#" class="btn_next"><span class="blind">다음</span></a>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -112,31 +129,10 @@
 	</div>
 </div>
 <script>
-$(function () {
-	$(".songe_period_lst").on('click', '.songe_period_btn', function (e) {
-		var welTarget = $(e.currentTarget),
-				welTargetParent = welTarget.closest('li'),
-				welTargetIndex = welTargetParent.index(),
-				welTargetContent = $('.songe_myinfolst_bx');
-
-		if (!welTargetParent.hasClass("on")) {
-			welTargetParent.addClass('on').siblings().removeClass('on');
-		}
-
-		switch (welTargetIndex){
-			case 0 :
-				$('.songe_myinfolst_bx').eq(0).show();
-				$('.songe_myinfolst_bx').eq(1).hide();
-				break;
-			case 1 :
-				$('.songe_myinfolst_bx').eq(0).show();
-				$('.songe_myinfolst_bx').eq(1).hide();
-				break;
-			case 2 :
-				$('.songe_myinfolst_bx').eq(0).hide();
-				$('.songe_myinfolst_bx').eq(1).show();
-				break;
-		}
+$(function(){
+	var $grid = $('.songe_board_lst').masonry({
+		// options
+		itemSelector: '.songe_board_item'
 	});
 });
 </script>
