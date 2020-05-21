@@ -348,7 +348,7 @@
 .songe_btn {
 	display: inline-block;
 	width: 100%;
-	padding-top: 1px;
+	height: 50px;
 	border: none;
 	background: $base_color;
 	font-family: "S-CoreDream-4Regular", sans-serif;
@@ -372,6 +372,17 @@
 		background: $point_color1;
 		color: $white_color;
 	}
+	&.songe_btn_keep {
+		border: 1px solid $primary_color;
+		background-color: $white_color;
+		&:before {
+			display: inline-block;
+			margin-right: 5px;
+			@include sprite($sp-keep2);
+			vertical-align: middle;
+			content: "";
+		}
+	}
 }
 
 .songe_btn_bx {
@@ -382,6 +393,10 @@
 		table-layout: fixed;
 		li {
 			display: table-cell;
+			&.btn_keep {
+				width: 120px;
+				padding-left: 10px;
+			}
 		}
 	}
 }
@@ -423,8 +438,8 @@
 .songe_subtit {
 	margin-bottom: 10px;
 	font-family: "S-CoreDream-4Regular", sans-serif;
-	font-size: 19px;
-	line-height: 25px;
+	font-size: 16px;
+	line-height: 21px;
 	&.ty_center {
 		text-align: center;
 	}
@@ -1088,15 +1103,15 @@
 	}
 	.songe_select {
 		float: left;
-		width: 49%;
-		margin-right: 1%;
+		width: 48%;
+		margin-right: 2%;
 		& + .songe_select {
-			margin-left: 1%;
+			margin-left: 2%;
 			margin-right: 0;
 		}
 		& + .songe_inptxt {
-			width: 49%;
-			margin-left: 1%;
+			width: 48%;
+			margin-left: 2%;
 			margin-right: 0;
 		}
 	}
@@ -1127,6 +1142,25 @@
 			font-size: 12px;
 			line-height: 1.5;
 			color: $point_color1;
+		}
+	}
+	&.ty_period {
+		.songe_inptxt {
+			float: left;
+			width: 48%;
+			& + .songe_inptxt {
+				position: relative;
+				width: 48%;
+				padding-left: 4%;
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 2%;
+					transform: translateY(-50%);
+					width: 2%;
+					content: "~";
+				}
+			}
 		}
 	}
 }
@@ -1282,14 +1316,9 @@
 		}
 	}
 	.songe_toggle_btn {
-		@include ellipsis;
 		position: relative;
 		width: 100%;
-		padding: 13px 50px 13px 10px;
-		color: $primary_color;
-		font-family: "S-CoreDream-5Medium";
-		font-size: 15px;
-		line-height: 24px;
+		padding: 13px 50px 13px 15px;
 		text-align: left;
 		&:after {
 			position: absolute;
@@ -1310,16 +1339,87 @@
 			font-style: normal;
 			vertical-align: top;
 		}
+		.songe_toggle_badge {
+			display: block;
+			.state_badge {
+				display: inline-block;
+				padding: 0 5px;
+				border-radius: 5px 5px 5px 0;
+				background-color: $grey_color1;
+				color: $white_color;
+				font-size: 11px;
+				line-height: 18px;
+				text-align: center;
+				&.complete {
+					background-color: $point_color2;
+				}
+			}
+		}
+		.songe_toggle_tit {
+			@include ellipsis;
+			display: inline-block;
+			color: $primary_color;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 15px;
+			line-height: 24px;
+			vertical-align: top;
+		}
+		.songe_toggle_sub {
+			display: block;
+			margin-top: 5px;
+			color: $grey_color1;
+			font-size: 12px;
+			line-height: 18px;
+			.songe_toggle_date,
+			.songe_toggle_writter {
+				display: inline-block;
+				margin-right: 5px;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
 	}
 	.songe_toggle_cont {
 		display: none;
 		overflow: hidden;
-		margin: 20px 10px;
+		margin: 0 10px 20px;
 		padding: 20px;
 		border-radius: 10px;
 		background: #f5f5f5;
 		font-size: 13px;
-		line-height: 1.5;
+		line-height: 18px;
+		.songe_question {
+			position: relative;
+			padding-left: 20px;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-weight: bold;
+				font-size: 15px;
+				line-height: 1;
+				content: "Q";
+			}
+		}
+		.songe_answer {
+			position: relative;
+			margin-top: 20px;
+			padding: 20px 0 0 20px;
+			border-top: 1px solid $grey_color3;
+			&:before {
+				position: absolute;
+				top: 20px;
+				left: 0;
+				font-weight: bold;
+				font-size: 15px;
+				line-height: 1;
+				content: "A";
+			}
+		}
+	}
+	.songe_detail_area & {
+		margin-top: -20px;
 	}
 }
 
@@ -1354,6 +1454,7 @@
 }
 
 .songe_sort_bx {
+	overflow: hidden;
 	margin-bottom: 20px;
 	@include clearfix;
 	.songe_sort_type {
@@ -1530,6 +1631,7 @@
 				color: $white_color;
 				font-size: 13px;
 				line-height: 1.2;
+				text-align: center;
 				opacity: 0.85;
 				&.deadline {
 					background-color: $point_color2;
@@ -1657,6 +1759,378 @@
 			@include sprite($sp-cunit_keep_on);
 			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
 			opacity: 1;
+		}
+	}
+}
+
+.songe_cunit_top {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	margin-bottom: 50px;
+	.songe_cunit_thumb {
+		position: relative;
+		display: table-cell;
+		width: 35%;
+		.songe_cunit_img {
+			overflow: hidden;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 100%;
+			border-radius: 10px;
+			font-size: 0;
+			vertical-align: top;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.03);
+				z-index: 3;
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+		}
+		.cunit_badge_bx {
+			position: absolute;
+			top: 15px;
+			left: 0;
+			.deal_badge {
+				display: block;
+				padding: 5px 10px;
+				border-radius: 5px 5px 5px 0;
+				color: $white_color;
+				font-size: 13px;
+				line-height: 1.2;
+				text-align: center;
+				opacity: 0.85;
+				&.deadline {
+					background-color: $point_color2;
+				}
+				&.d_day {
+					background-color: $point_color1;
+				}
+				&.new {
+					background-color: $point_color3;
+				}
+				& + .deal_badge {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	.songe_cunit_info {
+		display: table-cell;
+		width: 65%;
+		padding-left: 30px;
+		font-size: 14px;
+		vertical-align: top;
+		.songe_cunit_idol {
+			display: block;
+			em {
+				display: inline-block;
+				padding: 0 8px;
+				background-color: $primary_color;
+				color: $white_color;
+				line-height: 24px;
+				vertical-align: top;
+			}
+		}
+		.songe_cunit_tit {
+			display: block;
+			margin-top: 15px;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 24px;
+			line-height: 35px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.songe_cunit_pay {
+			margin-top: 30px;
+			li {
+				position: relative;
+				border-top: 1px solid $grey_color3;
+				padding: 20px 10px 20px 100px;
+				color: $grey_color1;
+				font-size: 14px;
+				text-align: right;
+				.songe_pay_tit {
+					position: absolute;
+					top: 50%;
+					left: 10px;
+					transform: translateY(-50%);
+					color: $primary_color;
+				}
+				&.songe_pay_total {
+					.txt_price {
+						display: inline-block;
+						padding-right: 5px;
+						font-family: "S-CoreDream-5Medium";
+						font-size: 28px;
+					}
+				}
+			}
+		}
+		.songe_cunit_graph {
+			display: block;
+			height: 5px;
+			margin-top: 50px;
+			background-color: $grey_color3;
+			font-size: 0;
+			line-height: 0;
+			.graph_bar {
+				position: relative;
+				float: left;
+				width: 0;
+				max-width: 100%;
+				height: 5px;
+				background-color: $point_color2;
+				font-size: 0;
+				line-height: 0;
+				.graph_per {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					min-width: 50px;
+					&:before {
+						position: absolute;
+						top: -26px;
+						right: 0;
+						min-width: 40px;
+						padding: 0 5px;
+						border-radius: 5px 5px 5px 0;
+						background-color: $point_color2;
+						color: $white_color;
+						font-size: 14px;
+						line-height: 21px;
+						text-align: center;
+						content: attr(data-graph-rate);
+					}
+				}
+			}
+		}
+		.songe_cunit_fund {
+			display: block;
+			margin-top: 5px;
+			color: $point_color2;
+			font-size: 14px;
+			@include clearfix;
+			.songe_deadline {
+				float: left;
+			}
+			.songe_goal {
+				float: right;
+			}
+		}
+	}
+	.btn_item_keep {
+		position: absolute;
+		top: 14px;
+		right: 24px;
+		@include sprite($sp-cunit_keep);
+		transform: perspective(1px) translateZ(0);
+		z-index: 3;
+		&.on {
+			@include sprite($sp-cunit_keep_on);
+			animation: ani_keep 0.3s 1 cubic-bezier(0.875, 0.085, 0.625, 0.965) alternate;
+			opacity: 1;
+		}
+	}
+}
+.songe_fixed_bx {
+	.songe_fixed_tab {
+		.songe_fixed_btn {
+			position: relative;
+			display: block;
+			width: 100%;
+			border: 1px solid $grey_color3;
+			border-width: 1px 0;
+			background-color: $white_color;
+			box-sizing: border-box;
+			line-height: 40px;
+			text-align: center;
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1px;
+				height: 14px;
+				background-color: $grey_color3;
+				top: 50%;
+				right: 0;
+				margin-top: -7px;
+			}
+		}
+		.songe_fixed_lst {
+			display: table;
+			width: 100%;
+			table-layout: fixed;
+			li {
+				display: table-cell;
+				width: 33.33%;
+				&:first-child {
+					.songe_fixed_btn {
+						border-left: 1px solid $grey_color3;
+						border-top-left-radius: 4px;
+						border-bottom-left-radius: 4px;
+					}
+				}
+				&:last-child {
+					.songe_fixed_btn {
+						border-right: 1px solid $grey_color3;
+						border-top-right-radius: 4px;
+						border-bottom-right-radius: 4px;
+						&:before {
+							display: none;
+						}
+					}
+				}
+				&.on {
+					.songe_fixed_btn {
+						background: $point_color1;
+						border-color: $point_color1;
+						color: $white_color;
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.stuck {
+		.songe_fixed_tab {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 100;
+		}
+	}
+}
+
+.songe_detail_bx {
+	padding-top: 50px;
+	.songe_detail_titarea {
+		border-bottom: 2px solid $point_color1;
+		.songe_detail_tit {
+			font-family: "S-CoreDream-5Medium", sans-serif;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 30px;
+			color: $point_color1;
+		}
+	}
+	.songe_detail_area {
+		padding-top: 20px;
+		p,
+		strong,
+		img {
+			display: block;
+			margin-top: 5px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		strong {
+			margin-top: 10px;
+		}
+		img {
+			max-width: 650px;
+			width: 100%;
+			margin: 10px auto 0;
+		}
+	}
+}
+
+.songe_review_bx {
+	margin-top: -20px;
+}
+.songe_review_lst {
+	li {
+		display: table;
+		width: 100%;
+		padding: 13px 15px;
+		border-bottom: 1px solid $grey_color3;
+		box-sizing: border-box;
+		table-layout: fixed;
+	}
+	.songe_review_star {
+		display: block;
+		@include sprite($sp-star);
+		.songe_star_on {
+			display: inline-block;
+			@include sprite($sp-star_on);
+		}
+	}
+	.songe_review_thumb {
+		display: table-cell;
+		width: 15%;
+		vertical-align: top;
+		.songe_review_img {
+			overflow: hidden;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 100%;
+			border-radius: 10px;
+			font-size: 0;
+			vertical-align: top;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.03);
+				z-index: 3;
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.songe_review_cont {
+		display: table-cell;
+		padding-left: 20px;
+		vertical-align: top;
+		&:only-child {
+			padding: 0;
+		}
+		.songe_review_item {
+			display: block;
+			margin-top: 10px;
+			font-family: "S-CoreDream-5Medium";
+			font-size: 15px;
+			line-height: 21px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.songe_review_txt {
+			display: block;
+			margin-top: 5px;
+			font-size: 13px;
+			line-height: 18px;
+			color: $grey_color2;
 		}
 	}
 }
@@ -2533,14 +3007,16 @@
 	.songe_content {
 		width: 964px;
 	}
+	.songe_fixed_bx {
+		.songe_fixed_tab {
+			width: 964px;
+			margin: 0 auto;
+		}
+	}
 }
 
 @include tablet-media {
-	.songe_wrap {
-		padding-top: 66px;
-	}
 	.songe_header {
-		position: fixed;
 		.songe_gnb {
 			overflow: visible;
 			padding: 0;
@@ -2655,6 +3131,14 @@
 	.songe_scrl_lst {
 		-webkit-overflow-scrolling: touch;
 	}
+	.songe_fixed_bx {
+		&.stuck {
+			.songe_fixed_tab {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
 }
 
 @include mobile-media {
@@ -2703,6 +3187,19 @@
 	.songe_board_lst {
 		.songe_board_item {
 			width: 100%;
+		}
+	}
+	.songe_cunit_top {
+		display: block;
+		.songe_cunit_thumb {
+			display: block;
+			width: 100%;
+		}
+		.songe_cunit_info {
+			display: block;
+			width: 100%;
+			margin-top: 20px;
+			padding: 0;
 		}
 	}
 }
