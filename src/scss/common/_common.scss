@@ -64,6 +64,9 @@
 #content {
 	position: relative;
 	padding: 0 30px;
+	&.main {
+		padding: 0;
+	}
 }
 #footer {
 	margin-top: 30px;
@@ -314,6 +317,9 @@
 
 .songe_content {
 	margin: 50px auto;
+	&.main {
+		margin: 0;
+	}
 	.songe_section {
 		margin-top: 50px;
 		&:first-child {
@@ -1519,7 +1525,6 @@
 .songe_cunit_bx {
 	margin: -25px -10px 20px;
 	&.ty_scroll {
-		margin-top: 20px;
 		padding-bottom: 20px;
 		.songe_cunit_lst {
 			.songe_cunit_thumb {
@@ -3003,9 +3008,95 @@
 		}
 	}
 }
+
+.songe_main_wrap {
+	.songe_main_sec {
+		position: relative;
+		margin-top: 50px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.songe_main_tit {
+		margin-bottom: 20px;
+		text-align: center;
+		.songe_main_tittx {
+			margin-bottom: 5px;
+			font-family: "S-CoreDream-4Regular", sans-serif;
+			font-size: 24px;
+			letter-spacing: 1px;
+			span {
+				position: relative;
+				display: inline-block;
+				&:before {
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+					right: -3px;
+					height: 17px;
+					background-color: $point_color3;
+					opacity: 0.3;
+					z-index: -1;
+					content: "";
+				}
+			}
+		}
+		.songe_main_subtx {
+			display: block;
+			font-family: "S-CoreDream-4Regular", sans-serif;
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+	.songe_main_slide {
+		position: relative;
+		.songe_slide_item {
+			> a {
+				display: block;
+				text-align: center;
+			}
+			.songe_slide_img {
+				display: inline-block;
+				vertical-align: top;
+				img {
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+		.swiper-button-prev,
+		.swiper-button-next {
+			transform: translateY(-50%);
+		}
+	}
+	.songe_flow_bx {
+		padding-top: 340px;
+		background-color: #efeae9;
+		background-image: url("/01.market-project/dist/img/collection-loop.jpg");
+		background-size: 2757px 325px;
+		background-repeat: repeat-x;
+		animation: collection-loop 300s linear infinite;
+	}
+	.songe_detail_bx {
+		padding: 0 30px;
+	}
+}
+
+@keyframes collection-loop {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: -2757px;
+	}
+}
+
 @include desktop-media {
 	.songe_content {
 		width: 964px;
+		&.main {
+			width: 100%;
+		}
 	}
 	.songe_fixed_bx {
 		.songe_fixed_tab {
@@ -3351,16 +3442,31 @@
 		}
 	}
 }
-.swiper-pagination {
+.swiper-pagination-bullets {
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+}
+.swiper-pagination-fraction {
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+	.swiper-ico-slash {
+		display: inline-block;
+		margin: 0 5px;
+		vertical-align: top;
+	}
+	.swiper-pagination-total {
+		font-weight: bold;
+	}
+}
+.swiper-pagination-progressbar {
 	position: absolute;
+	background: $grey_color3;
 	text-align: center;
 	transition: 0.3s opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
-}
-.swiper-pagination-progressbar {
-	background: $grey_color3;
-	position: absolute;
 	.swiper-pagination-progressbar-fill {
 		background: $primary_color;
 		position: absolute;

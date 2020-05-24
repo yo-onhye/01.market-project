@@ -74,6 +74,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 #content { position: relative; padding: 0 30px; }
 
+#content.main { padding: 0; }
+
 #footer { margin-top: 30px; }
 
 /* menu */
@@ -170,6 +172,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .songe_cont_header { margin-bottom: 50px; }
 
 .songe_content { margin: 50px auto; }
+
+.songe_content.main { margin: 0; }
 
 .songe_content .songe_section { margin-top: 50px; }
 
@@ -573,7 +577,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_cunit_bx { margin: -25px -10px 20px; }
 
-.songe_cunit_bx.ty_scroll { margin-top: 20px; padding-bottom: 20px; }
+.songe_cunit_bx.ty_scroll { padding-bottom: 20px; }
 
 .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_thumb { padding-bottom: 100%; }
 
@@ -1050,7 +1054,39 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .songe_tab_bx .songe_tab_panel.active { display: block; }
 
+.songe_main_wrap .songe_main_sec { position: relative; margin-top: 50px; }
+
+.songe_main_wrap .songe_main_sec:first-child { margin-top: 0; }
+
+.songe_main_wrap .songe_main_tit { margin-bottom: 20px; text-align: center; }
+
+.songe_main_wrap .songe_main_tit .songe_main_tittx { margin-bottom: 5px; font-family: "S-CoreDream-4Regular", sans-serif; font-size: 24px; letter-spacing: 1px; }
+
+.songe_main_wrap .songe_main_tit .songe_main_tittx span { position: relative; display: inline-block; }
+
+.songe_main_wrap .songe_main_tit .songe_main_tittx span:before { position: absolute; bottom: -5px; left: 0; right: -3px; height: 17px; background-color: #c5a76a; opacity: 0.3; z-index: -1; content: ""; }
+
+.songe_main_wrap .songe_main_tit .songe_main_subtx { display: block; font-family: "S-CoreDream-4Regular", sans-serif; font-size: 16px; line-height: 21px; }
+
+.songe_main_wrap .songe_main_slide { position: relative; }
+
+.songe_main_wrap .songe_main_slide .songe_slide_item > a { display: block; text-align: center; }
+
+.songe_main_wrap .songe_main_slide .songe_slide_item .songe_slide_img { display: inline-block; vertical-align: top; }
+
+.songe_main_wrap .songe_main_slide .songe_slide_item .songe_slide_img img { width: 100%; max-width: 100%; }
+
+.songe_main_wrap .songe_main_slide .swiper-button-prev, .songe_main_wrap .songe_main_slide .swiper-button-next { transform: translateY(-50%); }
+
+.songe_main_wrap .songe_flow_bx { padding-top: 340px; background-color: #efeae9; background-image: url("/01.market-project/dist/img/collection-loop.jpg"); background-size: 2757px 325px; background-repeat: repeat-x; animation: collection-loop 300s linear infinite; }
+
+.songe_main_wrap .songe_detail_bx { padding: 0 30px; }
+
+@keyframes collection-loop { from { background-position-x: 0; }
+  to { background-position-x: -2757px; } }
+
 @media screen and (min-width: 1024px) { .songe_content { width: 964px; }
+  .songe_content.main { width: 100%; }
   .songe_fixed_bx .songe_fixed_tab { width: 964px; margin: 0 auto; } }
 
 @media screen and (max-width: 1023px) { .songe_header .songe_gnb { overflow: visible; padding: 0; height: auto; }
@@ -1126,9 +1162,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 .swiper-container-fade .swiper-slide-active .swiper-slide-active { pointer-events: auto; }
 
-.swiper-pagination { position: absolute; text-align: center; transition: 0.3s opacity; transform: translate3d(0, 0, 0); z-index: 10; }
+.swiper-pagination-bullets { position: relative; margin-top: 10px; text-align: center; }
 
-.swiper-pagination-progressbar { background: #e0e0e0; position: absolute; }
+.swiper-pagination-fraction { position: relative; margin-top: 10px; text-align: center; }
+
+.swiper-pagination-fraction .swiper-ico-slash { display: inline-block; margin: 0 5px; vertical-align: top; }
+
+.swiper-pagination-fraction .swiper-pagination-total { font-weight: bold; }
+
+.swiper-pagination-progressbar { position: absolute; background: #e0e0e0; text-align: center; transition: 0.3s opacity; transform: translate3d(0, 0, 0); z-index: 10; }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill { background: #2f332f; position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform: scale(0); transform-origin: left top; }
 
