@@ -1104,7 +1104,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   .songe_header .songe_gnb.is-active .songe_gnb_member { height: auto; margin-top: 2px; padding-top: 15px; opacity: 1; }
   .songe_header .songe_gnb.is-active .songe_gnb_member .songe_member_link { margin: 0; padding: 0 20px; }
   .songe_header .songe_gnb.is-active .songe_gnb_member .songe_member_link .songe_member_txt { display: inline-block; }
-  .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { width: 25%; }
   .songe_cunit_lst .songe_cunit_item { width: 50%; }
   .songe_scrl_lst { -webkit-overflow-scrolling: touch; }
   .songe_fixed_bx.stuck .songe_fixed_tab { left: 30px; right: 30px; } }
@@ -1112,7 +1111,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 @media screen and (max-width: 768px) { .songe_inpset .songe_inptxt { width: 60%; }
   .songe_inpset .songe_btn { width: 38%; font-size: 12px; }
   .songe_dlst_bx { padding: 30px 20px; }
-  .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { width: 33.33%; }
   .songe_cunit_lst .songe_cunit_item { width: 100%; }
   .songe_community_lst .songe_community_item { width: 50%; }
   .songe_attach_bx .songe_attach_lst li { width: 30.33%; margin-left: 3%; }
@@ -1122,8 +1120,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   .songe_cunit_top .songe_cunit_thumb { display: block; width: 100%; }
   .songe_cunit_top .songe_cunit_info { display: block; width: 100%; margin-top: 20px; padding: 0; } }
 
-@media screen and (max-width: 440px) { .songe_cunit_bx.ty_scroll .songe_cunit_lst .songe_cunit_item { width: 50%; }
-  .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_num { display: block; margin: 0; line-height: 28px; text-align: center; }
+@media screen and (max-width: 440px) { .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_num { display: block; margin: 0; line-height: 28px; text-align: center; }
   .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_artist_img { display: block; margin: 0 auto; text-align: center; }
   .songe_board_article .songe_board_ranking .songe_ranking_lst li .ranking_artist_info { display: block; padding: 5px 0 0; text-align: center; } }
 

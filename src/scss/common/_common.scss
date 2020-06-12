@@ -3205,15 +3205,6 @@
 			}
 		}
 	}
-	.songe_cunit_bx {
-		&.ty_scroll {
-			.songe_cunit_lst {
-				.songe_cunit_item {
-					width: 25%;
-				}
-			}
-		}
-	}
 	.songe_cunit_lst {
 		.songe_cunit_item {
 			width: 50%;
@@ -3244,15 +3235,6 @@
 	}
 	.songe_dlst_bx {
 		padding: 30px 20px;
-	}
-	.songe_cunit_bx {
-		&.ty_scroll {
-			.songe_cunit_lst {
-				.songe_cunit_item {
-					width: 33.33%;
-				}
-			}
-		}
 	}
 	.songe_cunit_lst {
 		.songe_cunit_item {
@@ -3296,15 +3278,6 @@
 }
 
 @include small-mobile-media {
-	.songe_cunit_bx {
-		&.ty_scroll {
-			.songe_cunit_lst {
-				.songe_cunit_item {
-					width: 50%;
-				}
-			}
-		}
-	}
 	.songe_board_article {
 		.songe_board_ranking {
 			.songe_ranking_lst {

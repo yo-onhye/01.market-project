@@ -1,435 +1,477 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-<meta name="format-detection" content="telephone=no">
-<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>상품 상세 > 송이마켓</title>
-<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
-<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/swiper.min.js"></script>
-</head>
-<body>
-
-<div id="skip">
-	<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
-</div>
-
-<div id="wrap" class="songe_wrap">
-	<div id="header" class="songe_header">
-		<div class="songe_gnb">
-			<h1 class="songe_gnb_logo">
-				<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
-			</h1>
-			<div class="songe_gnb_inner">
-				<div class="songe_gnb_member">
-					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a>
-					<a href="/01.market-project/html/mypage/my_like.html" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">MY LIKE</span></i><span class="songe_member_txt" aria-hidden="true">MY LIKE</span></a>
-				</div>
-				<div class="songe_gnb_menu">
-					<ul class="songe_gnb_lst">
-						<li><a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a></li>
-						<li><a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a></li>
-						<li><a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a></li>
-						<li><a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a></li>
-						<li><a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a></li>
-					</ul>
-				</div>
-				<button type="button" class="btn_gnb_menu">
-					<span class="btn_menu_box">
-						<span class="btn_menu_inner"></span>
-					</span>
-				</button>
-			</div>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico" />
+		<title>상품 상세 > 송이마켓</title>
+		<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
+		<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+		<script type="text/javascript" src="/01.market-project/dist/js/swiper.min.js"></script>
+	</head>
+	<body>
+		<div id="skip">
+			<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
 		</div>
-	</div>
 
-	<div id="container" class="songe_container">
-		<div id="content" class="songe_content">
-			<h2 class="blind">상품 상세 페이지</h2>
-			<div class="songe_cont_area">
-				<div class="songe_cunit_top">
-					<div class="songe_cunit_thumb">
-						<span class="songe_cunit_img">
-							<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-						</span>
-						<span class="cunit_badge_bx">
-							<span class="deal_badge new">NEW</span>
-							<span class="deal_badge d_day">D-3</span>
-							<span class="deal_badge deadline">마감임박</span>
-						</span>
-					</div>
-					<div class="songe_cunit_info">
-						<span class="songe_cunit_idol"><em style="background-color:#95c5f5;">SF9</em></span>
-						<h2 class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</h2>
-						<span class="songe_cunit_graph">
-							<span class="graph_bar" style="width:30%">
-								<em class="graph_per" data-graph-rate="30% 달성"></em>
+		<div id="wrap" class="songe_wrap">
+			<div id="header" class="songe_header">
+				<div class="songe_gnb">
+					<h1 class="songe_gnb_logo">
+						<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
+					</h1>
+					<div class="songe_gnb_inner">
+						<div class="songe_gnb_member">
+							<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"
+								><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i
+								><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a
+							>
+							<a href="/01.market-project/html/mypage/my_like.html" class="songe_member_link"
+								><i class="songe_member_ico ico_keep"><span class="blind">MY LIKE</span></i
+								><span class="songe_member_txt" aria-hidden="true">MY LIKE</span></a
+							>
+						</div>
+						<div class="songe_gnb_menu">
+							<ul class="songe_gnb_lst">
+								<li>
+									<a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="btn_gnb_menu">
+							<span class="btn_menu_box">
+								<span class="btn_menu_inner"></span>
 							</span>
-						</span>
-						<span class="songe_cunit_fund">
-							<span class="songe_deadline">마감일:2020.03.31</span>
-							<span class="songe_goal">목표수량:100개</span>
-						</span>
-						<div class="songe_cunit_pay">
-							<ul class="songe_unit_paylst">
-								<li><em class="songe_pay_tit">판매가</em><em class="txt_price">12,000</em><span class="txt_won">원</span></li>
-								<li><em class="songe_pay_tit">수량</em>1개</li>
-								<li><em class="songe_pay_tit">배송비</em>2,000원</li>
-								<li class="songe_pay_total"><em class="songe_pay_tit">합계금액</em><em class="txt_price">12,000</em><span class="txt_won">원</span></li>
-							</ul>
-						</div>
-						<div class="songe_btn_bx">
-							<ul class="songe_btn_lst">
-								<li><button class="songe_btn" type="button"><span>판매자에게 연락하기</span></button></li>
-								<li class="btn_keep"><button class="songe_btn songe_btn_keep" type="button"><span>찜하기</span></button></li>
-							</ul>
-						</div>
+						</button>
 					</div>
 				</div>
-				<div class="songe_cunit_detail">
-					<div class="songe_fixed_bx">
-						<div class="songe_fixed_tab">
-							<ul class="songe_fixed_lst">
-								<li class="on"><button type="button" class="songe_fixed_btn"><span>상품상세정보</span></button></li>
-								<li><button type="button" class="songe_fixed_btn"><span>판매자리뷰</span></button></li>
-								<li><button type="button" class="songe_fixed_btn"><span>Q&amp;A</span></button></li>
-							</ul>
-						</div>
-						<div class="songe_fixed_cont">
-							<div class="songe_detail_bx">
-								<div class="songe_detail_titarea">
-									<h3 class="songe_detail_tit">상품상세 정보</h3>
+			</div>
+
+			<div id="container" class="songe_container">
+				<div id="content" class="songe_content">
+					<h2 class="blind">상품 상세 페이지</h2>
+					<div class="songe_cont_area">
+						<div class="songe_cunit_top">
+							<div class="songe_cunit_thumb">
+								<span class="songe_cunit_img">
+									<img src="/01.market-project/dist/img/@temp.jpg" alt="" />
+								</span>
+								<span class="cunit_badge_bx">
+									<span class="deal_badge new">NEW</span>
+									<span class="deal_badge d_day">D-3</span>
+									<span class="deal_badge deadline">마감임박</span>
+								</span>
+							</div>
+							<div class="songe_cunit_info">
+								<span class="songe_cunit_idol"><em style="background-color: #95c5f5;">SF9</em></span>
+								<h2 class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</h2>
+								<span class="songe_cunit_graph">
+									<span class="graph_bar" style="width: 30%;">
+										<em class="graph_per" data-graph-rate="30% 달성"></em>
+									</span>
+								</span>
+								<span class="songe_cunit_fund">
+									<span class="songe_deadline">마감일:2020.03.31</span>
+									<span class="songe_goal">목표수량:100개</span>
+								</span>
+								<div class="songe_cunit_pay">
+									<ul class="songe_unit_paylst">
+										<li><em class="songe_pay_tit">판매가</em><em class="txt_price">12,000</em><span class="txt_won">원</span></li>
+										<li><em class="songe_pay_tit">수량</em>1개</li>
+										<li><em class="songe_pay_tit">배송비</em>2,000원</li>
+										<li class="songe_pay_total"><em class="songe_pay_tit">합계금액</em><em class="txt_price">12,000</em><span class="txt_won">원</span></li>
+									</ul>
 								</div>
-								<div class="songe_detail_area">
-									<strong class="songe_subtit">상품 안내</strong>
-									<ul class="songe_info_lst">
-										<li>지정 기간 내 목표 금액 100% 이상 달성시 최종 구매 완료를 통한 상품 배송이 시작되며, 목표 미달성한 경우 최종 결제는 진행되지 않습니다.</li>
-										<li>목표 금액 500,000원</li>
-										<li>진행 기간 2020.05.13 ~ 2020.05.24</li>
+								<div class="songe_btn_bx">
+									<ul class="songe_btn_lst">
+										<li>
+											<button class="songe_btn" type="button"><span>판매자에게 연락하기</span></button>
+										</li>
+										<li class="btn_keep">
+											<button class="songe_btn songe_btn_keep" type="button"><span>찜하기</span></button>
+										</li>
 									</ul>
-									<strong class="songe_subtit">결제/취소/변경에 대한 안내</strong>
-									<ul class="songe_info_lst">
-										<li>결제는 예약 상태로 유지 후, 진행기간 종료일의 + 1일에 진행 됩니다.(결제예정일: 2020.05.25 11:00)</li>
-										<li>기간 종료 전까지 결제 정보 변경 및 취소는 주문배송조회 메뉴에서 언제나 가능 합니다.</li>
-										<li>기간 종료 2020.05.24까지 성공 시 정해진 혜택에 따른 상품 준비 또는 제작이 시작됩니다.</li>
-									</ul>
-									<strong class="songe_subtit">상품 발송 안내</strong>
-									<p class="songe_dsc">본 상품의 가장 빠른 발송은 2020.05.25 부터 시작됩니다. 단, 상품 준비 또는 제작 과정에서 배송 지연 또는 불가할 수 있습니다.</p>
-									<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									<p class="songe_dsc">Good Guy 앨범 Black 버전 양도합니다.<br>개봉하여 구성품만 확인 했으며 구성품은 태양 등신대, 휘영 포카입니다.</p>
 								</div>
 							</div>
-							<div class="songe_detail_bx">
-								<div class="songe_detail_titarea">
-									<h3 class="songe_detail_tit">판매자 리뷰</h3>
+						</div>
+						<div class="songe_cunit_detail">
+							<div class="songe_fixed_bx">
+								<div class="songe_fixed_tab">
+									<ul class="songe_fixed_lst">
+										<li class="on">
+											<button type="button" class="songe_fixed_btn"><span>상품상세정보</span></button>
+										</li>
+										<li>
+											<button type="button" class="songe_fixed_btn"><span>판매자리뷰</span></button>
+										</li>
+										<li>
+											<button type="button" class="songe_fixed_btn"><span>Q&amp;A</span></button>
+										</li>
+									</ul>
 								</div>
-								<div class="songe_detail_area">
-									<div class="songe_review_bx">
-										<ul class="songe_review_lst">
-											<li>
-												<div class="songe_review_thumb">
-													<span class="songe_review_img">
-														<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-													</span>
-												</div>
-												<div class="songe_review_cont">
-													<span class="songe_review_star">
-														<span class="songe_star_on" style="width:95%">
-															<span class="blind">구매 고객 평점 별 5개 중 <em>4.5</em>개</span>
-														</span>
-													</span>
-													<span class="songe_review_item">SF9 맘마미아 미개봉 앨범 (+ 포스터 포함)</span>
-													<span class="songe_review_txt">SF9에 입덕해서 데뷔 초 앨범을 구하고 있엇는데, 싸게 잘 구매했어요! 제품 상태도 좋고 친절하게 응대해주셔서 좋은 거래 했습니다. 배송도 당일에 발송해주셔서 빨리 받을 수 있엇어요</span>
-												</div>
-											</li>
-											<li>
-												<div class="songe_review_cont">
-													<span class="songe_review_star">
-														<span class="songe_star_on" style="width:80%">
-															<span class="blind">구매 고객 평점 별 5개 중 <em>4</em>개</span>
-														</span>
-													</span>
-													<span class="songe_review_item">SF9 맘마미아 미개봉 앨범 (+ 포스터 포함)</span>
-													<span class="songe_review_txt">SF9에 입덕해서 데뷔 초 앨범을 구하고 있엇는데, 싸게 잘 구매했어요! 제품 상태도 좋고 친절하게 응대해주셔서 좋은 거래 했습니다. 배송도 당일에 발송해주셔서 빨리 받을 수 있엇어요</span>
-												</div>
-											</li>
-											<li>
-												<div class="songe_review_cont">
-													<span class="songe_review_star">
-														<span class="songe_star_on" style="width:90%">
-															<span class="blind">구매 고객 평점 별 5개 중 <em>4/5</em>개</span>
-														</span>
-													</span>
-													<span class="songe_review_item">엑소 네이쳐리퍼블릭 브로마이드 (카이, 세훈)</span>
-													<span class="songe_review_txt">동네에 네이쳐리퍼블릭이 없어 못구했던 한정 브로마이드를 살 수 있어 만족했습니다.</span>
-												</div>
-											</li>
-										</ul>
+								<div class="songe_fixed_cont">
+									<div class="songe_detail_bx">
+										<div class="songe_detail_titarea">
+											<h3 class="songe_detail_tit">상품상세 정보</h3>
+										</div>
+										<div class="songe_detail_area">
+											<strong class="songe_subtit">상품 안내</strong>
+											<ul class="songe_info_lst">
+												<li>지정 기간 내 목표 금액 100% 이상 달성시 최종 구매 완료를 통한 상품 배송이 시작되며, 목표 미달성한 경우 최종 결제는 진행되지 않습니다.</li>
+												<li>목표 금액 500,000원</li>
+												<li>진행 기간 2020.05.13 ~ 2020.05.24</li>
+											</ul>
+											<strong class="songe_subtit">결제/취소/변경에 대한 안내</strong>
+											<ul class="songe_info_lst">
+												<li>결제는 예약 상태로 유지 후, 진행기간 종료일의 + 1일에 진행 됩니다.(결제예정일: 2020.05.25 11:00)</li>
+												<li>기간 종료 전까지 결제 정보 변경 및 취소는 주문배송조회 메뉴에서 언제나 가능 합니다.</li>
+												<li>기간 종료 2020.05.24까지 성공 시 정해진 혜택에 따른 상품 준비 또는 제작이 시작됩니다.</li>
+											</ul>
+											<strong class="songe_subtit">상품 발송 안내</strong>
+											<p class="songe_dsc">본 상품의 가장 빠른 발송은 2020.05.25 부터 시작됩니다. 단, 상품 준비 또는 제작 과정에서 배송 지연 또는 불가할 수 있습니다.</p>
+											<img src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											<p class="songe_dsc">Good Guy 앨범 Black 버전 양도합니다.<br />개봉하여 구성품만 확인 했으며 구성품은 태양 등신대, 휘영 포카입니다.</p>
+										</div>
+									</div>
+									<div class="songe_detail_bx">
+										<div class="songe_detail_titarea">
+											<h3 class="songe_detail_tit">판매자 리뷰</h3>
+										</div>
+										<div class="songe_detail_area">
+											<div class="songe_review_bx">
+												<ul class="songe_review_lst">
+													<li>
+														<div class="songe_review_thumb">
+															<span class="songe_review_img">
+																<img src="/01.market-project/dist/img/@temp.jpg" alt="" />
+															</span>
+														</div>
+														<div class="songe_review_cont">
+															<span class="songe_review_star">
+																<span class="songe_star_on" style="width: 95%;">
+																	<span class="blind">구매 고객 평점 별 5개 중 <em>4.5</em>개</span>
+																</span>
+															</span>
+															<span class="songe_review_item">SF9 맘마미아 미개봉 앨범 (+ 포스터 포함)</span>
+															<span class="songe_review_txt">SF9에 입덕해서 데뷔 초 앨범을 구하고 있엇는데, 싸게 잘 구매했어요! 제품 상태도 좋고 친절하게 응대해주셔서 좋은 거래 했습니다. 배송도 당일에 발송해주셔서 빨리 받을 수 있엇어요</span>
+														</div>
+													</li>
+													<li>
+														<div class="songe_review_cont">
+															<span class="songe_review_star">
+																<span class="songe_star_on" style="width: 80%;">
+																	<span class="blind">구매 고객 평점 별 5개 중 <em>4</em>개</span>
+																</span>
+															</span>
+															<span class="songe_review_item">SF9 맘마미아 미개봉 앨범 (+ 포스터 포함)</span>
+															<span class="songe_review_txt">SF9에 입덕해서 데뷔 초 앨범을 구하고 있엇는데, 싸게 잘 구매했어요! 제품 상태도 좋고 친절하게 응대해주셔서 좋은 거래 했습니다. 배송도 당일에 발송해주셔서 빨리 받을 수 있엇어요</span>
+														</div>
+													</li>
+													<li>
+														<div class="songe_review_cont">
+															<span class="songe_review_star">
+																<span class="songe_star_on" style="width: 90%;">
+																	<span class="blind">구매 고객 평점 별 5개 중 <em>4/5</em>개</span>
+																</span>
+															</span>
+															<span class="songe_review_item">엑소 네이쳐리퍼블릭 브로마이드 (카이, 세훈)</span>
+															<span class="songe_review_txt">동네에 네이쳐리퍼블릭이 없어 못구했던 한정 브로마이드를 살 수 있어 만족했습니다.</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="songe_detail_bx">
+										<div class="songe_detail_titarea">
+											<h3 class="songe_detail_tit">Q&amp;A</h3>
+										</div>
+										<div class="songe_detail_area">
+											<div class="songe_toggle_bx">
+												<ul class="songe_toggle_lst">
+													<li>
+														<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont1">
+															<span class="songe_toggle_badge">
+																<span class="state_badge">답변대기</span>
+															</span>
+															<span class="songe_toggle_tit">[상품문의] 화이트 버전과 교환 가능할까요?</span>
+															<span class="songe_toggle_sub">
+																<span class="songe_toggle_date">2020.04.30</span>
+																<span class="songe_toggle_writter">아토***</span>
+															</span>
+															<span class="blind">펼치기</span>
+														</button>
+														<div class="songe_toggle_cont" id="toggle_cont1">
+															<div class="songe_question">
+																화이트버전과 블랙버전 교환 가능할까요?
+															</div>
+														</div>
+													</li>
+													<li>
+														<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont2">
+															<span class="songe_toggle_badge">
+																<span class="state_badge">답변대기</span>
+															</span>
+															<span class="songe_toggle_tit">[배송문의] 지금 구매하면 콘서트 전까지 수령 가능할까요?</span>
+															<span class="songe_toggle_sub">
+																<span class="songe_toggle_date">2020.04.29</span>
+																<span class="songe_toggle_writter">석우***</span>
+															</span>
+															<span class="blind">펼치기</span>
+														</button>
+														<div class="songe_toggle_cont" id="toggle_cont2">
+															<div class="songe_question">
+																제품 구매 시 당일 배송해주시나요? 직거래 가능한가요?
+															</div>
+														</div>
+													</li>
+													<li>
+														<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont3">
+															<span class="songe_toggle_badge">
+																<span class="state_badge complete">답변완료</span>
+															</span>
+															<span class="songe_toggle_tit">[상품문의] 미개봉 상품인가요?</span>
+															<span class="songe_toggle_sub">
+																<span class="songe_toggle_date">2020.04.28</span>
+																<span class="songe_toggle_writter">아이***</span>
+															</span>
+															<span class="blind">펼치기</span>
+														</button>
+														<div class="songe_toggle_cont" id="toggle_cont3">
+															<div class="songe_question">
+																앨범은 상태가 괜찮나요? 직거래 가능한가요?
+															</div>
+															<div class="songe_answer">
+																넵. 개봉하여 구성품만 확인하고 보관하여 상태가 좋습니다. 지방에 거주하여 직거래는 어렵습니다.
+															</div>
+														</div>
+													</li>
+													<li>
+														<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont4">
+															<span class="songe_toggle_badge">
+																<span class="state_badge complete">답변완료</span>
+															</span>
+															<span class="songe_toggle_tit">[상품문의] 앨범 없이 구성품만 구매 가능할까요?</span>
+															<span class="songe_toggle_sub">
+																<span class="songe_toggle_date">2020.04.27</span>
+																<span class="songe_toggle_writter">호이***</span>
+															</span>
+															<span class="blind">펼치기</span>
+														</button>
+														<div class="songe_toggle_cont" id="toggle_cont4">
+															<div class="songe_question">
+																앨범 없이 구성품만 구매하고 싶은데 가능할까요?
+															</div>
+															<div class="songe_answer">
+																앨범 처분 목적이라 구성품만 별도로 판매하지 않습니다.
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="songe_detail_bx">
 								<div class="songe_detail_titarea">
-									<h3 class="songe_detail_tit">Q&amp;A</h3>
+									<h3 class="songe_detail_tit">판매자 다른 상품</h3>
 								</div>
 								<div class="songe_detail_area">
-									<div class="songe_toggle_bx">
-										<ul class="songe_toggle_lst">
-											<li>
-												<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont1">
-													<span class="songe_toggle_badge">
-														<span class="state_badge">답변대기</span>
+									<div class="songe_cunit_bx ty_scroll swiper-container">
+										<ul class="songe_cunit_lst swiper-wrapper">
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
 													</span>
-													<span class="songe_toggle_tit">[상품문의] 화이트 버전과 교환 가능할까요?</span>
-													<span class="songe_toggle_sub">
-														<span class="songe_toggle_date">2020.04.30</span>
-														<span class="songe_toggle_writter">아토***</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
 													</span>
-													<span class="blind">펼치기</span>
-												</button>
-												<div class="songe_toggle_cont" id="toggle_cont1">
-													<div class="songe_question">
-														화이트버전과 블랙버전 교환 가능할까요?
-													</div>
-												</div>
+												</a>
 											</li>
-											<li>
-												<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont2">
-													<span class="songe_toggle_badge">
-														<span class="state_badge">답변대기</span>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
 													</span>
-													<span class="songe_toggle_tit">[배송문의] 지금 구매하면 콘서트 전까지 수령 가능할까요?</span>
-													<span class="songe_toggle_sub">
-														<span class="songe_toggle_date">2020.04.29</span>
-														<span class="songe_toggle_writter">석우***</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
 													</span>
-													<span class="blind">펼치기</span>
-												</button>
-												<div class="songe_toggle_cont" id="toggle_cont2">
-													<div class="songe_question">
-														제품 구매 시 당일 배송해주시나요? 직거래 가능한가요?
-													</div>
-												</div>
+												</a>
 											</li>
-											<li>
-												<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont3">
-													<span class="songe_toggle_badge">
-														<span class="state_badge complete">답변완료</span>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
 													</span>
-													<span class="songe_toggle_tit">[상품문의] 미개봉 상품인가요?</span>
-													<span class="songe_toggle_sub">
-														<span class="songe_toggle_date">2020.04.28</span>
-														<span class="songe_toggle_writter">아이***</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
 													</span>
-													<span class="blind">펼치기</span>
-												</button>
-												<div class="songe_toggle_cont" id="toggle_cont3">
-													<div class="songe_question">
-														앨범은 상태가 괜찮나요? 직거래 가능한가요?
-													</div>
-													<div class="songe_answer">
-														넵. 개봉하여 구성품만 확인하고 보관하여 상태가 좋습니다. 지방에 거주하여 직거래는 어렵습니다.
-													</div>
-												</div>
+												</a>
 											</li>
-											<li>
-												<button type="button" class="songe_toggle_btn" aria-expanded="false" aria-controls="toggle_cont4">
-													<span class="songe_toggle_badge">
-														<span class="state_badge complete">답변완료</span>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
 													</span>
-													<span class="songe_toggle_tit">[상품문의] 앨범 없이 구성품만 구매 가능할까요?</span>
-													<span class="songe_toggle_sub">
-														<span class="songe_toggle_date">2020.04.27</span>
-														<span class="songe_toggle_writter">호이***</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
 													</span>
-													<span class="blind">펼치기</span>
-												</button>
-												<div class="songe_toggle_cont" id="toggle_cont4">
-													<div class="songe_question">
-														앨범 없이 구성품만 구매하고 싶은데 가능할까요?
-													</div>
-													<div class="songe_answer">
-														앨범 처분 목적이라 구성품만 별도로 판매하지 않습니다.
-													</div>
-												</div>
+												</a>
+											</li>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+													</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+													</span>
+												</a>
+											</li>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+													</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+													</span>
+												</a>
+											</li>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+													</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+													</span>
+												</a>
+											</li>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+													</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+													</span>
+												</a>
+											</li>
+											<li class="songe_cunit_item swiper-slide">
+												<a href="/01.market-project/html/item/item_detail.html">
+													<span class="songe_cunit_thumb">
+														<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+													</span>
+													<span class="songe_cunit_info">
+														<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+														<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+													</span>
+												</a>
 											</li>
 										</ul>
+										<div class="swiper-pagination"></div>
+										<button class="swiper-button-prev"><span class="blind">이전 상품보기</span></button>
+										<button class="swiper-button-next"><span class="blind">다음 상품보기</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="songe_detail_bx">
-						<div class="songe_detail_titarea">
-							<h3 class="songe_detail_tit">판매자 다른 상품</h3>
-						</div>
-						<div class="songe_detail_area">
-							<div class="songe_cunit_bx ty_scroll swiper-container">
-								<ul class="songe_cunit_lst swiper-wrapper">
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-									<li class="songe_cunit_item swiper-slide">
-										<a href="/01.market-project/html/item/item_detail.html">
-											<span class="songe_cunit_thumb">
-												<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-											</span>
-											<span class="songe_cunit_info">
-												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-											</span>
-										</a>
-									</li>
-								</ul>
-								<div class="swiper-pagination"></div>
-								<button class="swiper-button-prev"><span class="blind">이전 상품보기</span></button>
-								<button class="swiper-button-next"><span class="blind">다음 상품보기</span></button>
-							</div>
+				</div>
+			</div>
+
+			<div id="footer" class="songe_footer">
+				<div class="songe_support">
+					<div class="songe_support_in">
+						<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
+						<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+					</div>
+				</div>
+				<div class="songe_corp">
+					<div class="songe_footer_in">
+						<div class="songe_corp_info">
+							<p class="songe_corp_tit">(주)송이마켓</p>
+							<p class="songe_corp_infotx">대표 : 송이</p>
+							<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
+							<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<script>
+			var elItemSlider = $(".songe_cunit_bx.ty_scroll");
 
-	<div id="footer" class="songe_footer">
-		<div class="songe_support">
-			<div class="songe_support_in">
-				<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
-				<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
-			</div>
-		</div>
-		<div class="songe_corp">
-			<div class="songe_footer_in">
-				<div class="songe_corp_info">
-					<p class="songe_corp_tit">(주)송이마켓</p>
-					<p class="songe_corp_infotx">대표 : 송이</p>
-					<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
-					<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<script>
-var elItemSlider =  $('.songe_cunit_bx.ty_scroll');
+			var oItemSlider = new Swiper(elItemSlider, {
+				slidesPerView: "auto",
+				observer: true,
+				watchSlidesVisibility: true,
+				lazy: {
+					loadPrevNext: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					type: "progressbar",
+					renderProgressbar: function (progressbarFillClass) {
+						return '<span class="blind">슬라이드 진행률</span><span class="' + progressbarFillClass + '">' + this.progress + "%</span>";
+					},
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				on: {
+					init: function () {
+						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
+					},
+					slideChangeTransitionEnd: function () {
+						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
+						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden", "true");
+						$(".swiper-pagination-progressbar-fill").html((this.progress * 100).toFixed(1) + "%");
+					},
+					resize: function () {
+						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true");
+						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden");
+					},
+				},
+			});
 
-var oItemSlider = new Swiper(elItemSlider, {
-	slidesPerView:"auto",
-	observer: true,
-	watchSlidesVisibility: true,
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'progressbar',
-		renderProgressbar: function (progressbarFillClass) {
-      return '<span class="blind">슬라이드 진행률</span><span class="' + progressbarFillClass + '">'+ this.progress +'%</span>';
-  	}
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	on: {
-		init: function() {
-			elItemSlider.find('.swiper-slide').not('.swiper-slide-visible').attr('aria-hidden', 'true');
-		},
-		slideChangeTransitionEnd: function () {
-			elItemSlider.find('.swiper-slide').not('.swiper-slide-visible').attr('aria-hidden', 'true');
-			elItemSlider.find('.swiper-slide-visible').removeAttr('aria-hidden', 'true');
-			$('.swiper-pagination-progressbar-fill').html((this.progress*100).toFixed(1)+'%');
-		}
-	}
-});
+			$(window).resize(function () {
+				var nWindowSize = $(window).width();
 
-</script>
-</body>
+				if (nWindowSize > 1024) oItemSlider.params.slidesPerView = 5;
+				if (nWindowSize > 768 && nWindowSize <= 1024) oItemSlider.params.slidesPerView = 4;
+				if (nWindowSize <= 440) oItemSlider.params.slidesPerView = 2;
+				oItemSlider.update();
+			});
+
+			$(window).trigger("resize");
+		</script>
+	</body>
 </html>

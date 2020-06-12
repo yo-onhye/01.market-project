@@ -1,250 +1,283 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-<meta name="format-detection" content="telephone=no">
-<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>마이 페이지 메인 > 송이마켓</title>
-<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
-<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/swiper.min.js"></script>
-</head>
-<body>
-
-<div id="skip">
-	<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
-</div>
-
-<div id="wrap" class="songe_wrap">
-	<div id="header" class="songe_header">
-		<div class="songe_gnb">
-			<h1 class="songe_gnb_logo">
-				<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
-			</h1>
-			<div class="songe_gnb_inner">
-				<div class="songe_gnb_member">
-					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a>
-					<a href="/01.market-project/html/customer/service_detail.html" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">Keep</span></i><span class="songe_member_txt" aria-hidden="true">Keep</span></a>
-				</div>
-				<div class="songe_gnb_menu">
-					<ul class="songe_gnb_lst">
-						<li><a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a></li>
-						<li><a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a></li>
-						<li><a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a></li>
-						<li><a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a></li>
-						<li><a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a></li>
-					</ul>
-				</div>
-				<button type="button" class="btn_gnb_menu">
-					<span class="btn_menu_box">
-						<span class="btn_menu_inner"></span>
-					</span>
-				</button>
-			</div>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico" />
+		<title>마이 페이지 메인 > 송이마켓</title>
+		<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
+		<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+		<script type="text/javascript" src="/01.market-project/dist/js/swiper.min.js"></script>
+	</head>
+	<body>
+		<div id="skip">
+			<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
 		</div>
-	</div>
 
-	<div id="container" class="songe_container">
-		<div id="content" class="songe_content mypage_main">
-			<h2 class="blind"><span>마이 페이지</span></h2>
-			<div class="songe_cont_area">
-				<div class="songe_usr_bx">
-					<div class="songe_usr_info">
-						<span class="songe_usr_img"><img src="/01.market-project/dist/img/@article.jpg" alt=""></span>
-						<h3 class="songe_usr_name"><span>우리석우최고</span>님</h3>
-						<p class="songe_usr_id">rowoon0807@gmail.com</p>
-						<a href="/01.market-project/html/mem/profile_modify.html" class="songe_usr_btn">프로필 수정</a>
-					</div>
-					<div class="songe_point_info">
-						<h4 class="songe_point_tit">나의 송이</h4>
-						<a href="/01.market-project/html/mypage/point_list.html"><span class="songe_point_num"><em>10</em>개</span></a>
-					</div>
-				</div>
-				<div class="songe_friendship_bx">
-					<div class="songe_friendship_tit">
-						<h3 class="songe_friendship_tittx">나의 친밀도</h3>
-						<span class="songe_friendship_subtittx">친구 및 구매자들이 평가한 나의 친밀도 입니다.</span>
-						<span class="songe_friendship_temper"><span class="blind">친밀도</span>80°C</span>
-					</div>
-					<span class="songe_friendship_graph">
-						<span class="graph_bar" style="width:80%">
-							<em class="graph_per"></em>
-						</span>
-					</span>
-				</div>
-				<div class="songe_history_bx">
-					<a href="/01.market-project/html/mypage/sale_list.html" class="songe_history_btn btn_sale"><span>판매 내역</span></a>
-					<a href="/01.market-project/html/mypage/purchase_list.html" class="songe_history_btn btn_purchase"><span>구매 내역</span></a>
-					<a href="/01.market-project/html/mypage/friend_list.html" class="songe_history_btn btn_friends"><span>친구 목록</span></a>
-				</div>
-				<div class="songe_recent_bx">
-					<div class="songe_recent_tit">
-						<h3 class="songe_recent_tittx">최근 본 상품</h3>
-					</div>
-					<div class="songe_cunit_bx ty_scroll swiper-container">
-						<ul class="songe_cunit_lst swiper-wrapper">
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-							<li class="songe_cunit_item swiper-slide">
-								<a href="/01.market-project/html/item/item_detail.html">
-									<span class="songe_cunit_thumb">
-										<img src="/01.market-project/dist/img/@temp.jpg" alt="">
-									</span>
-									<span class="songe_cunit_info">
-										<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
-										<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
-									</span>
-								</a>
-							</li>
-						</ul>
-						<div class="swiper-pagination"></div>
-						<button class="swiper-button-prev"><span class="blind">이전 상품보기</span></button>
-						<button class="swiper-button-next"><span class="blind">다음 상품보기</span></button>
+		<div id="wrap" class="songe_wrap">
+			<div id="header" class="songe_header">
+				<div class="songe_gnb">
+					<h1 class="songe_gnb_logo">
+						<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
+					</h1>
+					<div class="songe_gnb_inner">
+						<div class="songe_gnb_member">
+							<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"
+								><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i
+								><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a
+							>
+							<a href="/01.market-project/html/customer/service_detail.html" class="songe_member_link"
+								><i class="songe_member_ico ico_keep"><span class="blind">Keep</span></i
+								><span class="songe_member_txt" aria-hidden="true">Keep</span></a
+							>
+						</div>
+						<div class="songe_gnb_menu">
+							<ul class="songe_gnb_lst">
+								<li>
+									<a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="btn_gnb_menu">
+							<span class="btn_menu_box">
+								<span class="btn_menu_inner"></span>
+							</span>
+						</button>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 
-	<div id="footer" class="songe_footer">
-		<div class="songe_support">
-			<div class="songe_support_in">
-				<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
-				<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+			<div id="container" class="songe_container">
+				<div id="content" class="songe_content mypage_main">
+					<h2 class="blind"><span>마이 페이지</span></h2>
+					<div class="songe_cont_area">
+						<div class="songe_usr_bx">
+							<div class="songe_usr_info">
+								<span class="songe_usr_img"><img src="/01.market-project/dist/img/@article.jpg" alt="" /></span>
+								<h3 class="songe_usr_name"><span>우리석우최고</span>님</h3>
+								<p class="songe_usr_id">rowoon0807@gmail.com</p>
+								<a href="/01.market-project/html/mem/profile_modify.html" class="songe_usr_btn">프로필 수정</a>
+							</div>
+							<div class="songe_point_info">
+								<h4 class="songe_point_tit">나의 송이</h4>
+								<a href="/01.market-project/html/mypage/point_list.html"
+									><span class="songe_point_num"><em>10</em>개</span></a
+								>
+							</div>
+						</div>
+						<div class="songe_friendship_bx">
+							<div class="songe_friendship_tit">
+								<h3 class="songe_friendship_tittx">나의 친밀도</h3>
+								<span class="songe_friendship_subtittx">친구 및 구매자들이 평가한 나의 친밀도 입니다.</span>
+								<span class="songe_friendship_temper"><span class="blind">친밀도</span>80°C</span>
+							</div>
+							<span class="songe_friendship_graph">
+								<span class="graph_bar" style="width: 80%;">
+									<em class="graph_per"></em>
+								</span>
+							</span>
+						</div>
+						<div class="songe_history_bx">
+							<a href="/01.market-project/html/mypage/sale_list.html" class="songe_history_btn btn_sale"><span>판매 내역</span></a>
+							<a href="/01.market-project/html/mypage/purchase_list.html" class="songe_history_btn btn_purchase"><span>구매 내역</span></a>
+							<a href="/01.market-project/html/mypage/friend_list.html" class="songe_history_btn btn_friends"><span>친구 목록</span></a>
+						</div>
+						<div class="songe_recent_bx">
+							<div class="songe_recent_tit">
+								<h3 class="songe_recent_tittx">최근 본 상품</h3>
+							</div>
+							<div class="songe_cunit_bx ty_scroll swiper-container">
+								<ul class="songe_cunit_lst swiper-wrapper">
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+									<li class="songe_cunit_item swiper-slide">
+										<a href="/01.market-project/html/item/item_detail.html">
+											<span class="songe_cunit_thumb">
+												<img class="swiper-lazy" data-src="/01.market-project/dist/img/@temp.jpg" alt="" />
+											</span>
+											<span class="songe_cunit_info">
+												<span class="songe_cunit_tit">Good Guy 앨범 양도 (ver. Black) 태양 등신대, 휘영 포카</span>
+												<span class="songe_cunit_price"><em class="txt_price">12,000</em><span class="txt_won">원</span></span>
+											</span>
+										</a>
+									</li>
+								</ul>
+								<div class="swiper-pagination"></div>
+								<button class="swiper-button-prev"><span class="blind">이전 상품보기</span></button>
+								<button class="swiper-button-next"><span class="blind">다음 상품보기</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="songe_corp">
-			<div class="songe_footer_in">
-				<div class="songe_corp_info">
-					<p class="songe_corp_tit">(주)송이마켓</p>
-					<p class="songe_corp_infotx">대표 : 송이</p>
-					<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
-					<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+
+			<div id="footer" class="songe_footer">
+				<div class="songe_support">
+					<div class="songe_support_in">
+						<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
+						<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+					</div>
+				</div>
+				<div class="songe_corp">
+					<div class="songe_footer_in">
+						<div class="songe_corp_info">
+							<p class="songe_corp_tit">(주)송이마켓</p>
+							<p class="songe_corp_infotx">대표 : 송이</p>
+							<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
+							<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<script>
+		<script>
+			var elItemSlider = $(".songe_cunit_bx.ty_scroll");
 
-var elItemSlider =  $('.songe_cunit_bx.ty_scroll');
+			var oItemSlider = new Swiper(elItemSlider, {
+				slidesPerView: "auto",
+				observer: true,
+				watchSlidesVisibility: true,
+				lazy: {
+					loadPrevNext: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					type: "progressbar",
+					renderProgressbar: function (progressbarFillClass) {
+						return '<span class="blind">슬라이드 진행률</span><span class="' + progressbarFillClass + '">' + this.progress + "%</span>";
+					},
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				on: {
+					init: function () {
+						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
+					},
+					slideChangeTransitionEnd: function () {
+						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
+						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden", "true");
+						$(".swiper-pagination-progressbar-fill").html((this.progress * 100).toFixed(1) + "%");
+					},
+					resize: function () {
+						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true");
+						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden");
+					},
+				},
+			});
 
-var oItemSlider = new Swiper(elItemSlider, {
-	slidesPerView:"auto",
-	observer: true,
-	watchSlidesVisibility: true,
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'progressbar',
-		renderProgressbar: function (progressbarFillClass) {
-      return '<span class="blind">슬라이드 진행률</span><span class="' + progressbarFillClass + '">'+ this.progress +'%</span>';
-  	}
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	on: {
-		init: function() {
-			elItemSlider.find('.swiper-slide').not('.swiper-slide-visible').attr('aria-hidden', 'true');
-		},
-		slideChangeTransitionEnd: function () {
-			elItemSlider.find('.swiper-slide').not('.swiper-slide-visible').attr('aria-hidden', 'true');
-			elItemSlider.find('.swiper-slide-visible').removeAttr('aria-hidden', 'true');
-			$('.swiper-pagination-progressbar-fill').html((this.progress*100).toFixed(1)+'%');
-		}
-	}
-});
+			$(window).resize(function () {
+				var nWindowSize = $(window).width();
 
-</script>
-</body>
+				if (nWindowSize > 1024) oItemSlider.params.slidesPerView = 5;
+				if (nWindowSize > 768 && nWindowSize <= 1024) oItemSlider.params.slidesPerView = 4;
+				if (nWindowSize <= 440) oItemSlider.params.slidesPerView = 2;
+				oItemSlider.update();
+			});
+
+			$(window).trigger("resize");
+		</script>
+	</body>
 </html>
