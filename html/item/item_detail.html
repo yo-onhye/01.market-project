@@ -432,6 +432,7 @@
 				slidesPerView: "auto",
 				observer: true,
 				watchSlidesVisibility: true,
+				resizeReInit: true,
 				lazy: {
 					loadPrevNext: true,
 				},
@@ -448,16 +449,17 @@
 				},
 				on: {
 					init: function () {
-						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
+						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true").end().find(".swiper-slide-visible").removeAttr("aria-hidden");
+						elItemSlider.find(".swiper-slide > a").attr("tabindex", "-1").end().find(".swiper-slide-visible > a").removeAttr("tabindex");
 					},
-					slideChangeTransitionEnd: function () {
-						elItemSlider.find(".swiper-slide").not(".swiper-slide-visible").attr("aria-hidden", "true");
-						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden", "true");
+					transitionEnd: function () {
+						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true").end().find(".swiper-slide-visible").removeAttr("aria-hidden");
+						elItemSlider.find(".swiper-slide > a").attr("tabindex", "-1").end().find(".swiper-slide-visible > a").removeAttr("tabindex");
 						$(".swiper-pagination-progressbar-fill").html((this.progress * 100).toFixed(1) + "%");
 					},
 					resize: function () {
-						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true");
-						elItemSlider.find(".swiper-slide-visible").removeAttr("aria-hidden");
+						elItemSlider.find(".swiper-slide").attr("aria-hidden", "true").end().find(".swiper-slide-visible").removeAttr("aria-hidden");
+						elItemSlider.find(".swiper-slide > a").attr("tabindex", "-1").end().find(".swiper-slide-visible > a").removeAttr("tabindex");
 					},
 				},
 			});
