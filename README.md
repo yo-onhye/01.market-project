@@ -5,7 +5,9 @@
 - SASS(SCSS)
 - CSS Animation
 - Media Query
-- JavaScript, Gulp
+- JavaScript
+- Gulp
+- Nunjucks 적용예정
 
 ## Index Page
 https://yo-onhye.github.io/01.market-project/html/index.html
