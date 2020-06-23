@@ -1,153 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-<meta name="format-detection" content="telephone=no">
-<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico">
-<title>회원 유형 선택 > 송이마켓</title>
-<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
-<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
-</head>
-<body>
-
-<div id="skip">
-	<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
-</div>
-
-<div id="wrap" class="songe_wrap">
-	<div id="header" class="songe_header">
-		<div class="songe_gnb">
-			<h1 class="songe_gnb_logo">
-				<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
-			</h1>
-			<div class="songe_gnb_inner">
-				<div class="songe_gnb_member">
-					<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a>
-					<a href="/01.market-project/html/mypage/my_like.html" class="songe_member_link"><i class="songe_member_ico ico_keep"><span class="blind">MY LIKE</span></i><span class="songe_member_txt" aria-hidden="true">MY LIKE</span></a>
-
-				</div>
-				<div class="songe_gnb_menu">
-					<ul class="songe_gnb_lst">
-						<li><a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a></li>
-						<li><a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a></li>
-						<li><a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a></li>
-						<li><a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a></li>
-						<li><a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a></li>
-					</ul>
-				</div>
-				<button type="button" class="btn_gnb_menu">
-					<span class="btn_menu_box">
-						<span class="btn_menu_inner"></span>
-					</span>
-				</button>
-			</div>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="/01.market-project/dist/img/favicon.ico" />
+		<title>회원 유형 선택 > 송이마켓</title>
+		<link rel="stylesheet" type="text/css" href="/01.market-project/dist/css/songe.css" />
+		<script type="text/javascript" src="/01.market-project/dist/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/01.market-project/dist/js/songe.view.common.js"></script>
+	</head>
+	<body>
+		<div id="skip">
+			<a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a>
 		</div>
-	</div>
 
-	<div id="container" class="songe_container">
-		<div id="content" class="songe_content login_signin">
-			<div class="songe_cont_header">
-				<h2 class="songe_tit"><span>로그인</span></h2>
+		<div id="wrap" class="songe_wrap">
+			<div id="header" class="songe_header">
+				<div class="songe_gnb">
+					<h1 class="songe_gnb_logo">
+						<a href="/01.market-project/html/main.html" class="icon_logo"><span class="blind">송이마켓</span></a>
+					</h1>
+					<div class="songe_gnb_inner">
+						<div class="songe_gnb_member">
+							<a href="/01.market-project/html/login/login_signin.html" class="songe_member_link"
+								><i class="songe_member_ico ico_account"><span class="blind">LOGIN</span></i
+								><span class="songe_member_txt" aria-hidden="true">LOGIN</span></a
+							>
+							<a href="/01.market-project/html/mypage/my_like.html" class="songe_member_link"
+								><i class="songe_member_ico ico_keep"><span class="blind">MY LIKE</span></i
+								><span class="songe_member_txt" aria-hidden="true">MY LIKE</span></a
+							>
+						</div>
+						<div class="songe_gnb_menu">
+							<ul class="songe_gnb_lst">
+								<li>
+									<a href="/01.market-project/html/item/item_list.html"><span>GOODS</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/item/deal_list.html"><span>FUNDING</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/community_list.html"><span>COMUNITY</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/board/event_list.html"><span>EVENT</span></a>
+								</li>
+								<li>
+									<a href="/01.market-project/html/customer/customer_main.html"><span>CUSTOMER</span></a>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="btn_gnb_menu">
+							<span class="btn_menu_box">
+								<span class="btn_menu_inner"></span>
+							</span>
+						</button>
+					</div>
+				</div>
 			</div>
-			<div class="songe_cont_area">
-				<div class="songe_dlst_bx">
-					<form id="frmLoginInfo" name="frmLoginInfo" method="post">
-						<dl class="songe_dlst">
-							<dt><label for="usr_id">아이디</label></dt>
-							<dd>
-								<div class="songe_inptxt">
-									<input type="text" class="songe_inp" id="usr_id" placeholder="이메일을 입력해주세요.">
-								</div>
-							</dd>
-						</dl>
-						<dl class="songe_dlst">
-							<dt><label for="mem_pw">비밀번호</label></dt>
-							<dd>
-								<!-- [D] 입력 값이 맞을 경우 .songe_inptxt에 .on_valid 추가,
+
+			<div id="container" class="songe_container">
+				<div id="content" class="songe_content login_signin">
+					<div class="songe_cont_header">
+						<h2 class="songe_tit"><span>로그인</span></h2>
+					</div>
+					<div class="songe_cont_area">
+						<div class="songe_dlst_bx">
+							<form id="frmLoginInfo" name="frmLoginInfo" method="post">
+								<dl class="songe_dlst">
+									<dt><label for="usr_id">아이디</label></dt>
+									<dd>
+										<div class="songe_inptxt">
+											<input type="text" class="songe_inp" id="usr_id" placeholder="이메일을 입력해주세요." />
+										</div>
+									</dd>
+								</dl>
+								<dl class="songe_dlst">
+									<dt><label for="mem_pw">비밀번호</label></dt>
+									<dd>
+										<!-- [D] 입력 값이 맞을 경우 .songe_inptxt에 .on_valid 추가,
 													입력 값이 틀릴 경우 .songe_inptxt에 .on_invalid 추가 -->
-								<div class="songe_inptxt">
-									<input type="password" class="songe_inp" id="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()">
-									<span class="songe_invalid"></span>
-									<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
-								</div>
-							</dd>
-						</dl>
-					</form>
-					<div class="songe_login_chk">
-						<span class="songe_chk">
-							<input type="checkbox" name="keepLogin" id="keepLogin">
-							<label for="keepLogin">로그인 상태 유지</label>
-						</span>
-					</div>
-					<div class="songe_login_guide">
-						<a href="#" class="songe_guide_link">회원정보 찾기</a>
-						<a href="#" class="songe_guide_link">비밀번호 찾기</a>
-						<a href="#" class="songe_guide_link">회원가입</a>
-					</div>
-				</div>
-				<div class="songe_btn_bx">
-					<ul class="songe_btn_lst">
-						<li><button type="submit" class="songe_btn songe_btn_green"><span>로그인</span></button></li>
-					</ul>
-				</div>
-				<div class="songe_signin_bx">
-					<ul class="songe_signin_lst">
-						<li>
-							<a href="#">
-								<i class="logo logo_facebook"></i>
-								<strong>Facebook</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="logo logo_google"></i>
-								<strong>Google</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="logo logo_naver"></i>
-								<strong>Naver</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-							
-						<li>
-							<a href="#">
-								<i class="logo logo_apple"></i>
-								<strong>Apple</strong>
-								<span>로그인</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+										<div class="songe_inptxt">
+											<input type="password" class="songe_inp" id="mem_pw" placeholder="비밀번호를 입력해주세요." onchange="checkPassword()" />
+											<span class="songe_invalid"></span>
+											<span class="songe_invalid_txt">사용할 수 없는 비밀번호입니다.</span>
+										</div>
+									</dd>
+								</dl>
+							</form>
+							<div class="songe_login_chk">
+								<span class="songe_chk">
+									<input type="checkbox" name="keepLogin" id="keepLogin" />
+									<label for="keepLogin">로그인 상태 유지</label>
+								</span>
+							</div>
+							<div class="songe_login_guide">
+								<a href="/01.market-project/html/login/login_find_id.html" class="songe_guide_link">회원정보 찾기</a>
+								<a href="/01.market-project/html/login/login_find_pw.html" class="songe_guide_link">비밀번호 찾기</a>
+								<a href="/01.market-project/html/mem/mem_certify.html" class="songe_guide_link">회원가입</a>
+							</div>
+						</div>
+						<div class="songe_btn_bx">
+							<ul class="songe_btn_lst">
+								<li>
+									<button type="submit" class="songe_btn songe_btn_green"><span>로그인</span></button>
+								</li>
+							</ul>
+						</div>
+						<div class="songe_signin_bx">
+							<ul class="songe_signin_lst">
+								<li>
+									<a href="#">
+										<i class="logo logo_facebook"></i>
+										<strong>Facebook</strong>
+										<span>로그인</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="logo logo_google"></i>
+										<strong>Google</strong>
+										<span>로그인</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="logo logo_naver"></i>
+										<strong>Naver</strong>
+										<span>로그인</span>
+									</a>
+								</li>
 
-	<div id="footer" class="songe_footer">
-		<div class="songe_support">
-			<div class="songe_support_in">
-				<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
-				<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+								<li>
+									<a href="#">
+										<i class="logo logo_apple"></i>
+										<strong>Apple</strong>
+										<span>로그인</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="songe_corp">
-			<div class="songe_footer_in">
-				<div class="songe_corp_info">
-					<p class="songe_corp_tit">(주)송이마켓</p>
-					<p class="songe_corp_infotx">대표 : 송이</p>
-					<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
-					<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+
+			<div id="footer" class="songe_footer">
+				<div class="songe_support">
+					<div class="songe_support_in">
+						<a href="#" title="새창열림" class="songe_support_link">개인정보처리방침</a>
+						<a href="#" title="새창열림" class="songe_support_link">이용약관</a>
+					</div>
+				</div>
+				<div class="songe_corp">
+					<div class="songe_footer_in">
+						<div class="songe_corp_info">
+							<p class="songe_corp_tit">(주)송이마켓</p>
+							<p class="songe_corp_infotx">대표 : 송이</p>
+							<p class="songe_corp_infotx">주소 : 서울특별시 강남구 도산대로85길 46</p>
+							<p class="songe_corp_infotx">COPYRIGHT (c) YUNEYUNE&amp;GGYU. ALL RIGHTS RESERVED.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-</body>
+	</body>
 </html>
